@@ -1,0 +1,148 @@
+{
+  "questions": {
+    "-Mp1ZP_bzf8P1bbQQ6Z5": {
+      "category": "Astronomy",
+      "title": "Planets",
+      "questionText": "How many planets are in the Solar System?",
+      "options": ["7", "8", "9", "10"],
+      "correctAnswer": "8",
+      "players": {}
+    },
+    "-Mp3AA_xyz1M1ccZZ1A1": {
+      "category": "Astronomy",
+      "title": "Asteroids",
+      "questionText": "How many major asteroids are in the asteroid belt?",
+      "options": ["4", "5", "6", "7"],
+      "correctAnswer": "4",
+      "players": {}
+    },
+    "-Mp3AB_xyz2M2ccZZ2B2": {
+      "category": "Astronomy",
+      "title": "Surface Temperature",
+      "questionText": "Which planet has the highest surface temperature?",
+      "options": ["Venus", "Mercury", "Mars", "Jupiter"],
+      "correctAnswer": "Venus",
+      "players": {}
+    },
+    "-Mp1ZQ_czf9P2bbQQ7A6": {
+      "category": "Astronomy",
+      "title": "Moon",
+      "questionText": "What is the name of Earth's moon?",
+      "options": ["Luna", "Europa", "Phobos", "Titan"],
+      "correctAnswer": "Luna",
+      "players": {}
+    },
+    "-Mp2AA_abc1X1aaYZ1A1": {
+      "category": "Astronomy",
+      "title": "Stars",
+      "questionText": "What is the nearest star to Earth?",
+      "options": ["Proxima Centauri", "Sirius", "Vega", "Betelgeuse"],
+      "correctAnswer": "Proxima Centauri",
+      "players": {}
+    },
+    "-Mp2AB_bcd2Y2bbYZ2B2": {
+      "category": "Astronomy",
+      "title": "Galaxies",
+      "questionText": "Which galaxy is Earth located in?",
+      "options": ["Andromeda", "Milky Way", "Whirlpool", "Sombrero"],
+      "correctAnswer": "Milky Way",
+      "players": {}
+    },
+    "-Mp3AC_xyz3M3ccZZ3C3": {
+      "category": "Geography",
+      "title": "Rivers",
+      "questionText": "Which is the longest river in the world?",
+      "options": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+      "correctAnswer": "Nile",
+      "players": {}
+    },
+    "-Mp3AD_xyz4M4ccZZ4D4": {
+      "category": "Geography",
+      "title": "Deserts",
+      "questionText": "Which is the driest desert on Earth?",
+      "options": ["Sahara", "Atacama", "Kalahari", "Mojave"],
+      "correctAnswer": "Atacama",
+      "players": {}
+    },
+    "-Mp1ZR_dzf10P3bbQQ8B": {
+      "category": "Geography",
+      "title": "Ocean",
+      "questionText": "What is the largest ocean on Earth?",
+      "options": ["Atlantic", "Indian", "Pacific", "Arctic"],
+      "correctAnswer": "Pacific",
+      "players": {}
+    },
+    "-Mp1ZS_ezf11P4bbQQ9C": {
+      "category": "Geography",
+      "title": "Countries",
+      "questionText": "How many countries are there in the world?",
+      "options": ["192", "195", "198", "200"],
+      "correctAnswer": "195",
+      "players": {}
+    },
+    "-Mp2AC_cde3Z3ccYZ3C3": {
+      "category": "Geography",
+      "title": "Continents",
+      "questionText": "How many continents are there on Earth?",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": "7",
+      "players": {}
+    },
+    "-Mp2AD_def4A4ddYZ4D4": {
+      "category": "Geography",
+      "title": "Mountain Peaks",
+      "questionText": "Which is the second highest mountain in the world?",
+      "options": ["K2", "Everest", "Kangchenjunga", "Lhotse"],
+      "correctAnswer": "K2",
+      "players": {}
+    },
+    "-Mp1ZT_fzf12P5bbQQ10": {
+      "category": "Animals",
+      "title": "Speed",
+      "questionText": "Which is the fastest land animal?",
+      "options": ["Cheetah", "Leopard", "Tiger", "Lion"],
+      "correctAnswer": "Cheetah",
+      "players": {}
+    },
+    "-Mp3AE_xyz5M5ccZZ5E5": {
+      "category": "Animals",
+      "title": "Intelligence",
+      "questionText": "Which land animal is known for its exceptional memory?",
+      "options": ["Elephant", "Dolphin", "Chimpanzee", "Horse"],
+      "correctAnswer": "Elephant",
+      "players": {}
+    },
+    "-Mp3AF_xyz6M6ccZZ6F6": {
+      "category": "Animals",
+      "title": "Migration",
+      "questionText": "Which bird migrates the longest distance annually?",
+      "options": ["Arctic Tern", "Swallow", "Albatross", "Geese"],
+      "correctAnswer": "Arctic Tern",
+      "players": {}
+    },
+    "-Mp2AE_efg5B5eeYZ5E5": {
+      "category": "Animals",
+      "title": "Jump",
+      "questionText": "Which animal is known for its ability to jump the highest?",
+      "options": ["Kangaroo", "Flea", "Rabbit", "Grasshopper"],
+      "correctAnswer": "Flea",
+      "players": {}
+    },
+    "-Mp2AF_fgh6C6ffYZ6F6": {
+      "category": "Animals",
+      "title": "Communication",
+      "questionText": "Which animal uses clicks to communicate in deep water?",
+      "options": ["Dolphin", "Whale", "Seal", "Octopus"],
+      "correctAnswer": "Dolphin",
+      "players": {}
+    },
+    "-Mp1ZU_gzf13P6bbQQ11": {
+      "category": "Animals",
+      "title": "Largest Mammal",
+      "questionText": "What is the largest mammal on Earth?",
+      "options": ["Elephant", "Blue Whale", "Rhino", "Hippopotamus"],
+      "correctAnswer": "Blue Whale",
+      "players": {}
+    }
+  }
+}
