@@ -1,0 +1,31 @@
+.containerPage404 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../assets/images/not-found.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnGo {
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+  padding: 10px 20px;
+  background-color: var(--accent--color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btnGo:hover {
+  background-color: var(--hover-color);
+  color: var(--black-color);
+}

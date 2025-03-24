@@ -2,7 +2,7 @@ import 'modern-normalize';
 import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { auth } from './firebase/fireBaseConfig.js';
+import { auth } from './firebase/firebaseConfig.js';
 import { refreshUser } from './redux/auth/operationsAuth.js';
 import { selectIsRefreshing } from './redux/auth/selectorsAuth.js';
 
@@ -12,7 +12,10 @@ import Layout from './components/Layout/Layout.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
-const Home = lazy(() => import('./pages/Home/Home.jsx'));
+const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
+const NotFoundPage = lazy(() =>
+  import('./pages/NotFoundPage/NotFoundPage.jsx')
+);
 
 function App() {
   const dispatch = useDispatch();
@@ -35,7 +38,8 @@ function App() {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
+            <Route index element={<HomePage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </Suspense>
