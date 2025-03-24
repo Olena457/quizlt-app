@@ -2,9 +2,13 @@
   --accent--color: #115e95;
   --secondary-color: #1f9596;
   --hover-color: #32dedf;
+  --gray-color: #808080;
+  --red-color: #ff0000;
   --black-color: #121417;
   --white-color: #fbf9fa;
   --transition: 0.5s ease-in-out;
+  --box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5),
+    10px 0 10px -10px rgba(0, 0, 0, 0.5), 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   --background-color-transition: var(--background-color);
 }
 

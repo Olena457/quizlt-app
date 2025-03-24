@@ -13,6 +13,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
+const RegistrationPage = lazy(() =>
+  import('./pages/RegistrationPage/RegistrationPagejsx')
+);
+const LogInPage = lazy(() => import('./pages/LogInPage/LogInPage.jsx'));
 const NotFoundPage = lazy(() =>
   import('./pages/NotFoundPage/NotFoundPage.jsx')
 );
@@ -39,6 +43,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
+            <Route path="/register-user" element={<RegistrationPage />} />
+            <Route path="/login" element={<LogInPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

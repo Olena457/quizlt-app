@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  overflow-y: auto;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-top: 10px;
+  padding: 30px 50px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: var(--box-shadow);
+}
+
+.title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.2;
+  font-family: cursive;
+  letter-spacing: -0.02em;
+  color: var(--blue-color);
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 0 #161316, 2px 2px 0 #c50fe5, 3px 3px 0 #00eeff,
+    4px 4px 0 #191717, 5px 5px 0 #c50fe5, 6px 6px 0 #946e6e, 7px 7px 0 #dcd9d9,
+    8px 8px 7px #4f4a4a;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.375;
+  color: var(--black-color, black);
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form > :first-child {
+  margin-bottom: 20px;
+}
+.passwordWrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  color: var(--black-color, black);
+  border: 1px solid rgba(18, 20, 23, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px;
+  height: 54px;
+  width: 100%;
+}
+
+.submitBtn {
+  border-radius: 12px;
+  width: 100%;
+  height: 60px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55556;
+  color: var(--white-color);
+  cursor: pointer;
+  border: 1px solid var();
+  background-color: var(--accent-color);
+  box-shadow: var(--box-shadow);
+  transition: background-color var(--transition), color var(--transition);
+}
+.submitBtn:hover,
+.submitBtn:focus {
+  border: 1px solid var(--accent-color-dark);
+  box-shadow: 0 0 15px 5px rgba(93, 25, 106, 0.75);
+  background-color: var(--hover-color);
+  color: var(--black-color);
+}
+.emailWrapper {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.eyeBtn {
+  position: absolute;
+  top: 30px;
+  right: 17px;
+}
+
+.errorText {
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  color: var(--red-color);
+}
