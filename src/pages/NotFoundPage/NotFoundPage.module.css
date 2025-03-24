@@ -2,7 +2,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url('../../assets/images/not-found.jpg');
+  background-image: url('../../pages/NotFoundPage/NotFoundPage.module.css');
   background-size: cover;
   background-position: center;
   display: flex;

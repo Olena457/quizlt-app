@@ -14,7 +14,7 @@ import './App.css';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
 const RegistrationPage = lazy(() =>
-  import('./pages/RegistrationPage/RegistrationPagejsx')
+  import('./pages/RegistrationPage/RegistrationPage.jsx')
 );
 const LogInPage = lazy(() => import('./pages/LogInPage/LogInPage.jsx'));
 const NotFoundPage = lazy(() =>

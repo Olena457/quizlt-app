@@ -1,0 +1,22 @@
+.wrapperCard {
+  display: flex;
+  padding: 10px;
+  min-width: 100%;
+  min-height: 600px;
+}
+.wrapperNoEvent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+  min-width: 100%;
+  min-height: 750px;
+  align-items: stretch;
+}
+.message {
+  font-size: 56px;
+  color: black;
+  font-weight: 600;
+  align-self: baseline;
+  margin: 0 auto;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

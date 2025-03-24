@@ -1,4 +1,4 @@
-import css from './SingUpForm.module.css';
+import css from './SignUpForm.module.css';
 
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
@@ -32,7 +32,7 @@ const signUpSchema = yup.object({
     .max(maxPasswordLength, 'Too long'),
 });
 
-const SingUpForm = () => {
+const SignUpForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isPassword, setIsPassword] = useState(true);
@@ -154,4 +154,4 @@ const SingUpForm = () => {
   );
 };
 
-export default SingUpForm;
+export default SignUpForm;

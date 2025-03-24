@@ -3,8 +3,7 @@ import { logoutUser } from '../../redux/auth/operationsAuth.js';
 import Navigation from '../Navigation/Navigation.jsx';
 import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth.js';
 import css from './AppBar.module.css';
-import favicon from '../../../public/favicon.svg';
-
+import logoBubl from '../../assets/icons/logoBubl.svg';
 const AppBar = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -15,7 +14,13 @@ const AppBar = () => {
         <h2 className={css.title}>Quizlt game</h2>
 
         <div className={css.logoContainer}>
-          <img src={favicon} alt="favicon " className={css.logo} role="img" />
+          <img
+            src={logoBubl}
+            alt="logo"
+            width="20"
+            height="20"
+            className={css.logo}
+          />
         </div>
       </div>
       <Navigation />

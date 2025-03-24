@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: start;
   height: 100vh;
-  background-image: url('../../../assets/images/quizIt.jpg');
+  background-image: url('../../assets/images/home.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,13 +19,6 @@
   justify-content: start;
   gap: 120px;
 }
-/* .title {
-  font-size: 56px;
-  color: #f2cbefed;
-  text-shadow: 1px 1px 0 #161316, 2px 2px 0 #c50fe5, 3px 3px 0 #00eeff,
-    4px 4px 0 #191717, 5px 5px 0 #c50fe5, 6px 6px 0 #946e6e, 7px 7px 0 #dcd9d9,
-    8px 8px 7px #a9a9a9;
-} */
 
 .buttonWrapper {
   display: flex;

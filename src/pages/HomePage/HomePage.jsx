@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import css from './Home.module.css';
+import css from './HomePage.module.css';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
-      <div className={css.containerHome}>
+      <div className={css.containerHomePage}>
         <div className={css.containerWelcome}>
           <h4 className={css.title}> Welcome to Event Board!</h4>
           <div className={css.contWrapper}>
@@ -15,12 +15,12 @@ const Home = () => {
           <div className={css.buttonWrapper}>
             <NavLink
               to="/cards"
-              className={`${css.buttonHome} ${css.buttonMargin}`}
+              className={`${css.buttonHomePage} ${css.buttonMargin}`}
             >
-              Go Events
+              Go Quize
             </NavLink>
-            <NavLink to="/create-card" className={css.buttonHome}>
-              Create Card
+            <NavLink to="/create-card" className={css.buttonHomePage}>
+              Create Quize
             </NavLink>
           </div>
         </div>
@@ -29,4 +29,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

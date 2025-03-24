@@ -72,7 +72,7 @@
 }
 .buttonSign:hover,
 .buttonSign:focus {
-  border: 1px solid var(--accent-color-dark);
+  border: 1px solid var(--accent-color);
   box-shadow: 0 0 15px 5px rgba(93, 25, 106, 0.75);
   background-color: var(--hover-color);
   color: var(--black-color);

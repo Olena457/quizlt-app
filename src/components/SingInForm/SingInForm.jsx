@@ -10,7 +10,7 @@ import { loginUser } from '../../redux/auth/operationsAuth.js';
 const emailRegExp = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
 import eye from '../../assets/icons/eye.svg';
 import openEye from '../../assets/icons/openEye.svg';
-import css from './SingIn.module.css';
+import css from './SingInForm.module.css';
 
 const minPasswordLength = 7;
 const maxPasswordLength = 22;

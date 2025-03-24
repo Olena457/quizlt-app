@@ -59,7 +59,7 @@ import {
   deleteCard,
   fetchCards,
   editCard,
-} from './operationsCreateCard.js';
+} from './operationsCreteCard.js';
 
 const initialState = {
   data: [],

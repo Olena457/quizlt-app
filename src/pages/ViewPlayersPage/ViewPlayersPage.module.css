@@ -1,0 +1,38 @@
+.participPage {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.2;
+  font-family: cursive;
+  letter-spacing: -0.02em;
+  margin-bottom: 15px;
+  color: #32dedf;
+  text-shadow: 1px 1px 0 #121417, 2px 2px 0#32dedf, 3px 3px 0 #115e95,
+    4px 4px 0 #121417, 5px 5px 0 #115e95, 6px 6px 0 #808080, 7px 7px 0 #dcd9d9,
+    8px 8px 7px #4f4a4a;
+}
+
+.wrapperCard {
+  padding: 20px;
+}
+
+.error {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.2;
+  font-family: cursive;
+  letter-spacing: -0.02em;
+  color: var(--red-color);
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 0 #121417, 2px 2px 0#32dedf, 3px 3px 0 #115e95,
+    4px 4px 0 #121417, 5px 5px 0 #115e95, 6px 6px 0 #808080, 7px 7px 0 #dcd9d9,
+    8px 8px 7px #4f4a4a;
+}

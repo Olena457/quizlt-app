@@ -14,7 +14,7 @@ const Navigation = () => {
         Home
       </NavLink>
       <NavLink to="/cards" className={activeLink} aria-label="cards">
-        Events
+        Quiz
       </NavLink>
       {!isLoggedIn && (
         <>

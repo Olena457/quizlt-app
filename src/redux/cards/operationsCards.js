@@ -40,13 +40,13 @@ export const fetchCards = createAsyncThunk(
 // __________________register participant
 
 export const registerParticipant = createAsyncThunk(
-  'cards/participants',
+  'cards/players',
   async ({ fullname, email, phoneNumber, question, cardID }, thunkAPI) => {
     try {
       const user = auth.currentUser;
       const uid = user.uid;
 
-      const contactRef = ref(database, `participants/${cardID}/${uid}`);
+      const contactRef = ref(database, `players/${cardID}/${uid}`);
 
       await set(contactRef, {
         fullname,
@@ -54,7 +54,6 @@ export const registerParticipant = createAsyncThunk(
         phoneNumber,
         cardID,
         question,
-        createdAt: new Date().toISOString(),
       });
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

@@ -1,0 +1,38 @@
+.participantList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.participantCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  background: var(--hover-color);
+  align-items: center;
+  padding: 10px 25px;
+  border: 1px solid var(--hover-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+.participantAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.participantInfo {
+  text-align: center;
+}
+
+.participantName {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.participantEmail {
+  font-size: 19px;
+  color: var(--black-color);
+}

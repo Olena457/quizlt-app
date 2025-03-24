@@ -4,6 +4,7 @@ import { cardsReducer } from './cards/sliceCards.js';
 import { favoritesReducer } from './favorites/sliceFavorites.js';
 import { playersReducer } from './players/slicePlayers.js';
 import { createCardReducer } from './createCard/sliceCreateCard.js';
+
 const store = configureStore({
   reducer: {
     auth: authReducer,
