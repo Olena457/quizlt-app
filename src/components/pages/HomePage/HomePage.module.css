@@ -1,0 +1,74 @@
+.containerHome {
+  display: flex;
+  padding: 100px 50px 50px 50px;
+  flex-direction: column;
+  gap: 120px;
+  justify-content: space-between;
+  align-items: start;
+  height: 100vh;
+  background-image: url('../../../assets/images/quizIt.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.containerWelcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 120px;
+}
+/* .title {
+  font-size: 56px;
+  color: #f2cbefed;
+  text-shadow: 1px 1px 0 #161316, 2px 2px 0 #c50fe5, 3px 3px 0 #00eeff,
+    4px 4px 0 #191717, 5px 5px 0 #c50fe5, 6px 6px 0 #946e6e, 7px 7px 0 #dcd9d9,
+    8px 8px 7px #a9a9a9;
+} */
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+.message {
+  font-size: 46px;
+  color: black;
+  font-weight: 600;
+  align-self: baseline;
+  text-shadow: 2px 2px 5px var(--white-color);
+}
+
+.buttonHome {
+  width: 173px;
+  height: 56px;
+  display: flex;
+  margin-left: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 60px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+  background: var(--accent-color);
+  color: var(--white-color);
+  border: 1px solid #1f9596;
+  transition: background-color var(--transition), color var(--transition);
+  box-shadow: 0 0 15px 5px rgba(242, 238, 243, 0.799);
+}
+
+.buttonHome:hover,
+.buttonHome:focus {
+  color: var(--black-color);
+  background: var(--hover-color);
+  border: 1px solid var(--white-color);
+  box-shadow: 0 0 15px 5px rgba(93, 25, 106, 0.75);
+}
+.buttonMargin {
+  margin-left: 50px;
+}
