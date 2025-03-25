@@ -1,12 +1,29 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Quizlt
 
-Currently, two official plugins are available:
+## Quizlt is an interactive and educational game where you can participate in quizzes and even create your own quiz cards! Explore, learn, and share your knowledge in a fun and engaging way.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshot
 
-## Expanding the ESLint configuration
+<img src="./src/assets/images/home.jpg" alt="Quizlt Screenshot" width="420" height="280" />
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- **Technology Stack**: Built as a monorepo with React for the frontend and
+  Firebase for the backend.
+- **Routing**: Comprehensive routing for easy navigation through the
+  application.
+- **Authentication**: Includes forms for login and registration.
+- **Card Creation**: Allows users to create their own quiz cards with questions
+  for the game.
+- **Pagination**: Navigate through different pages seamlessly.
+- **Category Filtering**: Filter quiz cards by specific categories for a
+  personalized experience.
+- **Private Routes**: Includes a private section for your favorite cards, which
+  can be added or removed as needed.
+
+---
+
+_Sorry, I couldn't fix all the bugs due to limited time. Thank you for this
+opportunity!_
