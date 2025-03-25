@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { featchPlayers } from '../../redux/players/operationsPlayers.js';
+import { fetchPlayers } from '../../redux/players/operationsPlayers.js';
 import {
   selectPlayers,
   selectPlayersLoading,
   selectPlayersError,
-} from '../../redux/players/operationsPlayers.js';
+} from '../../redux/players/selectotsPlayers.js';
 import Loader from '../../components/Loader/Loader.jsx';
 import css from './ViewPlayersPage.module.css';
 import PlayersList from '../../components/PlayerList/PlayerList.jsx';
@@ -19,7 +19,7 @@ const ViewPlayersPage = () => {
   const error = useSelector(selectPlayersError);
 
   useEffect(() => {
-    dispatch(featchPlayers(id));
+    dispatch(fetchPlayers(id));
   }, [dispatch, id]);
 
   return (

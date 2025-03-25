@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   addCard,
   editCard,
-} from '../../redux/createCard/operationsCreateCard.js';
+} from '../../redux/createCard/operationsCreteCard.js';
 import { selectCardById } from '../../redux/createCard/selectorsCreateCard.js';
 import {
   selectIsLoggedIn,

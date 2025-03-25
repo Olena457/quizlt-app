@@ -1,4 +1,3 @@
-// ____________________________________
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ref, push, remove, get, update } from 'firebase/database';
 import { database } from '../../firebase/firebaseConfig.js';
