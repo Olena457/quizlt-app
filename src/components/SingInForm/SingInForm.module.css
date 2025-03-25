@@ -17,11 +17,13 @@
 .title {
   font-weight: 500;
   font-size: 40px;
-  font-family: cursive;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: var(--accent--color);
   margin-bottom: 30px;
+  color: var(--accent--color);
+  text-shadow: 1px 1px 0 #121417, 2px 2px 0#32dedf, 3px 3px 0 #115e95,
+    4px 4px 0 #121417, 5px 5px 0 #115e95, 6px 6px 0 #808080, 7px 7px 0 #ffc841,
+    8px 8px 7px #4f4a4a;
 }
 
 .text {

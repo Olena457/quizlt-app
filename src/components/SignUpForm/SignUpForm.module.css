@@ -18,12 +18,11 @@
   font-weight: 500;
   font-size: 28px;
   line-height: 1.2;
-  font-family: cursive;
   letter-spacing: -0.02em;
-  color: var(--blue-color);
   margin-bottom: 15px;
-  text-shadow: 1px 1px 0 #161316, 2px 2px 0 #c50fe5, 3px 3px 0 #00eeff,
-    4px 4px 0 #191717, 5px 5px 0 #c50fe5, 6px 6px 0 #946e6e, 7px 7px 0 #dcd9d9,
+  color: var(--accent--color);
+  text-shadow: 1px 1px 0 #121417, 2px 2px 0#32dedf, 3px 3px 0 #115e95,
+    4px 4px 0 #121417, 5px 5px 0 #115e95, 6px 6px 0 #808080, 7px 7px 0 #ffc841,
     8px 8px 7px #4f4a4a;
 }
 
@@ -67,14 +66,14 @@
   line-height: 1.55556;
   color: var(--white-color);
   cursor: pointer;
-  border: 1px solid var();
-  background-color: var(--accent-color);
+  border: 1px solid var(--hover-color);
+  background-color: var(--accent--color);
   box-shadow: var(--box-shadow);
   transition: background-color var(--transition), color var(--transition);
 }
 .submitBtn:hover,
 .submitBtn:focus {
-  border: 1px solid var(--accent-color-dark);
+  border: 1px solid var(--accent-color);
   box-shadow: 0 0 15px 5px rgba(93, 25, 106, 0.75);
   background-color: var(--hover-color);
   color: var(--black-color);

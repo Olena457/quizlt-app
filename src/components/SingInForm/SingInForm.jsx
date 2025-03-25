@@ -72,7 +72,7 @@ const SignInForm = () => {
       <h2 className={css.title}>Log In</h2>
       <p className={css.text}>
         Welcome back! Please enter your credentials to access your account and
-        continue your search for events.
+        continue your search for quiz.
       </p>
 
       <form

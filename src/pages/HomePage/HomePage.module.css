@@ -1,17 +1,3 @@
-.containerHome {
-  display: flex;
-  padding: 100px 50px 50px 50px;
-  flex-direction: column;
-  gap: 120px;
-  justify-content: space-between;
-  align-items: start;
-  height: 100vh;
-  background-image: url('../../assets/images/home.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .containerWelcome {
   display: flex;
   flex-direction: column;
@@ -23,13 +9,6 @@
 .buttonWrapper {
   display: flex;
   justify-content: space-evenly;
-}
-.message {
-  font-size: 46px;
-  color: black;
-  font-weight: 600;
-  align-self: baseline;
-  text-shadow: 2px 2px 5px var(--white-color);
 }
 
 .buttonHome {
@@ -64,4 +43,48 @@
 }
 .buttonMargin {
   margin-left: 50px;
+}
+.containerHome {
+  position: relative;
+  padding: 0;
+  height: 100vh;
+  background-image: url('../../assets/images/home.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.buttonWrapper {
+  position: absolute;
+  bottom: 85px;
+  left: 42%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttonHome {
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  background: #1f949b;
+  color: var(--hover-color);
+  border: 1px solid var(--hover-color);
+  transition: background-color var(--transition), color var(--transition);
+  box-shadow: 0 0 10px 3px var(--white-color);
+  cursor: pointer;
+}
+
+.buttonHome:hover,
+.buttonHome:focus {
+  color: var(--black-color);
+  background: var(--hover-color);
+  border: 1px solid var(--white-color);
+  box-shadow: 0 0 15px 5px rgba(93, 25, 106, 0.75);
 }

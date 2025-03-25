@@ -1,10 +1,11 @@
 .header {
   width: 100%;
   display: flex;
+  background: var(--accent-color);
   justify-content: space-between;
   align-items: center;
   padding: 0px 30px;
-  border-bottom: 1px solid #00eeff;
+  border-bottom: 1px solid var(--hover-color);
   box-shadow: var(--box-shadow);
 }
 
@@ -21,7 +22,7 @@
   font-family: cursive;
   color: #32dedf;
   text-shadow: 1px 1px 0 #121417, 2px 2px 0#32dedf, 3px 3px 0 #115e95,
-    4px 4px 0 #121417, 5px 5px 0 #115e95, 6px 6px 0 #808080, 7px 7px 0 #dcd9d9,
+    4px 4px 0 #121417, 5px 5px 0 #115e95, 6px 6px 0 #808080, 7px 7px 0 #ffc841,
     8px 8px 7px #4f4a4a;
 }
 

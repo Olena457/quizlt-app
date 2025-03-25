@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCards } from '../../redux/createCard/operationsCreateCard.js';
+import { fetchCards } from '../../redux/cards/operationsCards.js';
 import {
   selectCreateCardData,
   selectCreateCardLoading,

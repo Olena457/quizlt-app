@@ -10,8 +10,19 @@ import { ToastContainer } from 'react-toastify';
 import Loader from './components/Loader/Loader.jsx';
 import Layout from './components/Layout/Layout.jsx';
 import 'react-toastify/dist/ReactToastify.css';
+import PrivateRoute from './components/PrivateRoute.jsx';
 import './App.css';
 
+const CardFormPage = lazy(() =>
+  import('./pages/CardFormPage/CardFormPage.jsx')
+);
+const CardsPage = lazy(() => import('./pages/CardsPage/CardsPage.jsx'));
+const CreateCardPage = lazy(() =>
+  import('./pages/CreateCardPage/CreateCardPage.jsx')
+);
+const FavoriteCardPage = lazy(() =>
+  import('./pages/FavoriteCardPage/FavoriteCardPage.jsx')
+);
 const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
 const RegistrationPage = lazy(() =>
   import('./pages/RegistrationPage/RegistrationPage.jsx')
@@ -19,6 +30,9 @@ const RegistrationPage = lazy(() =>
 const LogInPage = lazy(() => import('./pages/LogInPage/LogInPage.jsx'));
 const NotFoundPage = lazy(() =>
   import('./pages/NotFoundPage/NotFoundPage.jsx')
+);
+const ViewPlayersPage = lazy(() =>
+  import('./pages/ViewPlayersPage/ViewPlayersPage.jsx')
 );
 
 function App() {
@@ -45,6 +59,20 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="/register-user" element={<RegistrationPage />} />
             <Route path="/login" element={<LogInPage />} />
+            <Route path="/create-card" element={<CreateCardPage />} />
+            <Route path="/cards" element={<CardsPage />} />
+            <Route path="/cards/:id/register" element={<CardFormPage />} />
+            <Route
+              path="/cards/:id/participants"
+              element={<ViewPlayersPage />}
+            />
+            <Route
+              path="/favorites"
+              element={
+                <PrivateRoute redirectTo="/" component={<FavoriteCardPage />} />
+              }
+            />
+
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

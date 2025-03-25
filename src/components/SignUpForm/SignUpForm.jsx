@@ -74,11 +74,11 @@ const SignUpForm = () => {
   return (
     <div className={css.container}>
       <h2 className={css.title} id="sign-up-title">
-        Registration in the application Event board
+        Registration Quizlt App
       </h2>
       <p className={css.text} id="sign-up-description">
-        Thank you for your interest in our platform! In order to register, we
-        need some information. Please provide us with the following information
+        Thank you for your interest in our platform! Please provide us with the
+        following information
       </p>
 
       <form
