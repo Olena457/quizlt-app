@@ -41,7 +41,6 @@ export default function CardGameItem({ card }) {
 
   const handleDelete = async () => {
     if (card.creatorId !== userId) {
-      // Перевірка на права власності
       toast.error('You can only delete your own cards!', {
         position: 'top-center',
       });
@@ -103,9 +102,21 @@ export default function CardGameItem({ card }) {
         aria-label="button like"
       >
         {isLiked ? (
-          <img src={fullHeart} alt="full heart" className={css.heartIconFull} />
+          <img
+            src={fullHeart}
+            width="16"
+            height="16"
+            alt="full heart"
+            className={css.heartIconFull}
+          />
         ) : (
-          <img src={emptyHeart} alt="empty heart" className={css.heartIcon} />
+          <img
+            src={emptyHeart}
+            width="16"
+            height="16"
+            alt="empty heart"
+            className={css.heartIcon}
+          />
         )}
       </button>
       <div className={css.cardInfoTitle}>
