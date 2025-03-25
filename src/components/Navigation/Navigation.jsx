@@ -16,6 +16,9 @@ const Navigation = () => {
       <NavLink to="/cards" className={activeLink} aria-label="cards">
         Quiz
       </NavLink>
+      <NavLink to="/filter" className={activeLink} aria-label="cards">
+        Filter
+      </NavLink>
       {!isLoggedIn && (
         <>
           <NavLink to="/login" className={activeLink} aria-label="Login">

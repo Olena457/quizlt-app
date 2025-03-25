@@ -1,0 +1,16 @@
+.filterPage {
+  padding: 20px;
+}
+
+.filterPage h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.filterPage .loader {
+  text-align: center;
+}
+
+.filterPage .cardList {
+  margin-top: 20px;
+}

@@ -34,5 +34,17 @@
 
 .participantEmail {
   font-size: 19px;
-  color: var(--black-color);
+  color: black;
+}
+.participantQuestions {
+  font-size: 19px;
+  color: black;
+}
+.participantCategory {
+  font-size: 19px;
+  color: black;
+}
+.participantScore {
+  font-size: 19px;
+  color: black;
 }

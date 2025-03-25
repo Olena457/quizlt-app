@@ -13,10 +13,17 @@ const PlayerList = ({ players }) => {
             className={css.participantAvatar}
           />
           <div className={css.participantInfo}>
-            <p className={css.participantName}>{player.fullname}</p>
-            <p className={css.participantEmail}>{player.email}</p>
-            <p className={css.participantScore}>{player.category}</p>
-            <p className={css.participantScore}>{player.score}</p>
+            <p className={css.participantName}>Name: {player.fullname}</p>
+            <p className={css.participantEmail}>Email: {player.email}</p>
+            <p className={css.participantCategory}>
+              Category: {player.category}
+            </p>
+            <p className={css.participantScore}>Score: {player.score}</p>
+            {player.amount && (
+              <p className={css.participantQuestions}>
+                Total Questions Answered: {player.amount}
+              </p>
+            )}
           </div>
         </div>
       ))}

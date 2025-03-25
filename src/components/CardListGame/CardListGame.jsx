@@ -9,7 +9,7 @@ import {
 import CardGameItem from '../../components/CardGameItem/CardGameItem.jsx';
 import Loader from '../Loader/Loader.jsx';
 
-const CardsListGame = ({ cards }) => {
+const CardListGame = ({ cards }) => {
   const loading = useSelector(selectCreateCardLoading);
   const error = useSelector(selectCreateCardError);
 
@@ -24,7 +24,7 @@ const CardsListGame = ({ cards }) => {
   }
 
   if (error) {
-    return <p className={css.message}>Error loading cards: {error}</p>;
+    return <div className={css.message}>Error loading cards: {error}</div>;
   }
 
   return (
@@ -38,11 +38,11 @@ const CardsListGame = ({ cards }) => {
           ))}
         </ul>
         {!loading && cards?.length === 0 && (
-          <p className={css.message}>No quiz cards found.</p>
+          <div className={css.message}>No quiz cards found.</div>
         )}
       </div>
     </>
   );
 };
 
-export default CardsListGame;
+export default CardListGame;

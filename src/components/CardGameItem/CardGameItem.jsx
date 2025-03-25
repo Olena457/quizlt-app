@@ -9,22 +9,22 @@ import { toggleFavorite } from '../../redux/favorites/operationsFavorites.js';
 import {
   deleteCard,
   editCard,
-} from '../../redux/createCard/operationsCreateCard.js';
+} from '../../redux/createCard/operationsCreteCard.js';
 import { toast } from 'react-toastify';
 import { useState, useCallback } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { full } from '../../assets/icons/full.svg';
-import { empty } from '../../assets/icons/empty.svg';
+import fullHeart from '../../assets/icons/fullHeart.svg';
+import emptyHeart from '../../assets/icons/emptyHeart.svg';
 
 export default function CardGameItem({ card }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const userId = useSelector(selectUserId); // Отримуємо ID користувача
+  const userId = useSelector(selectUserId);
   const favoriteIndexes = useSelector(selectFavoritesIds);
   const [isLiked, setLiked] = useState(favoriteIndexes.includes(card.id));
-  const [isEditing, setEditing] = useState(false); // Стан для редагування
-  const [updatedCard, setUpdatedCard] = useState(card); // Для збереження змін
+  const [isEditing, setEditing] = useState(false);
+  const [updatedCard, setUpdatedCard] = useState(card);
 
   const { title, questionText, category } = card;
 
@@ -103,9 +103,9 @@ export default function CardGameItem({ card }) {
         aria-label="button like"
       >
         {isLiked ? (
-          <img src={full} alt="full heart" className={css.heartIconFull} />
+          <img src={fullHeart} alt="full heart" className={css.heartIconFull} />
         ) : (
-          <img src={empty} alt="empty heart" className={css.heartIcon} />
+          <img src={emptyHeart} alt="empty heart" className={css.heartIcon} />
         )}
       </button>
       <div className={css.cardInfoTitle}>
