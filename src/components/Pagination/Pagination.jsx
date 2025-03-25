@@ -4,7 +4,7 @@ import css from './Pagination.module.css';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const handlePageClick = data => {
-    onPageChange(data.selected + 1); // Синхронізація з номером сторінки
+    onPageChange(data.selected + 1);
   };
 
   return (

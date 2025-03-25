@@ -61,7 +61,6 @@ export default function CardGameItem({ card }) {
 
   const handleEdit = async () => {
     if (card.creatorId !== userId) {
-      // checked id creator
       toast.error('You can only edit your own cards!', {
         position: 'top-center',
       });
@@ -95,6 +94,9 @@ export default function CardGameItem({ card }) {
 
   return (
     <div className={css.cardContainer}>
+      <div className={css.imageContainer}>
+        <img src="../../assets/images/question.jpg" className={css.cardImage} />
+      </div>
       <button
         type="button"
         className={css.likeBtn}
@@ -158,34 +160,29 @@ export default function CardGameItem({ card }) {
           <p className={css.cardNameOrg}>{category}</p>
         )}
       </div>
-
       <div className={css.btnContainer}>
-        <button onClick={handleRegisterClick} className={css.btn}>
+        <button onClick={handleRegisterClick} className={css.btnGame}>
           Play Game
         </button>
-        <Link to={`/cards/${card.id}/players`} className={css.btn}>
-          "Run Players"
+        <Link to={`/cards/${card.id}/players`} className={css.btnGame}>
+          Run Players
         </Link>
-        {isLoggedIn &&
-          card.creatorId === userId && ( // display button
-            <>
-              {isEditing ? (
-                <button onClick={handleEdit} className={css.saveBtn}>
-                  Save
-                </button>
-              ) : (
-                <button
-                  onClick={() => setEditing(true)}
-                  className={css.editBtn}
-                >
-                  Edit
-                </button>
-              )}
-              <button onClick={handleDelete} className={css.deleteBtn}>
-                Delete
+        {isLoggedIn && card.creatorId === userId && (
+          <>
+            {isEditing ? (
+              <button onClick={handleEdit} className={css.saveBtn}>
+                Save
               </button>
-            </>
-          )}
+            ) : (
+              <button onClick={() => setEditing(true)} className={css.editBtn}>
+                Edit
+              </button>
+            )}
+            <button onClick={handleDelete} className={css.deleteBtn}>
+              Delete
+            </button>
+          </>
+        )}
       </div>
     </div>
   );

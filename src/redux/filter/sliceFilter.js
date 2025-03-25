@@ -3,19 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 const sliceFilter = createSlice({
   name: 'filter',
   initialState: {
-    filter: 'All',
+    selectedCategory: 'All',
     error: null,
   },
   reducers: {
-    setFilter: (state, action) => {
-      state.filter = action.payload;
-    },
-    setError: (state, action) => {
-      state.error = action.payload;
+    setCategoryFilter: (state, action) => {
+      state.selectedCategory = action.payload;
     },
   },
 });
 
-export const { setFilter, setError } = sliceFilter.actions;
-
+export const { setCategoryFilter } = sliceFilter.actions;
 export default sliceFilter.reducer;

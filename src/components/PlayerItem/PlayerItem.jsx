@@ -21,6 +21,9 @@ const PlayerItem = ({ cards }) => {
             <div className={css.partInfo}>
               <p className={css.partName}>{player.score}</p>
             </div>
+            <div className={css.partInfo}>
+              <p className={css.partName}>{player.amount}</p>
+            </div>
           </div>
         ))}
     </div>

@@ -1,5 +1,3 @@
-import css from './CardListGame.module.css';
-
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import {
@@ -8,6 +6,7 @@ import {
 } from '../../redux/createCard/selectorsCreateCard.js';
 import CardGameItem from '../../components/CardGameItem/CardGameItem.jsx';
 import Loader from '../Loader/Loader.jsx';
+import css from './CardListGame.module.css';
 
 const CardListGame = ({ cards }) => {
   const loading = useSelector(selectCreateCardLoading);
@@ -29,14 +28,12 @@ const CardListGame = ({ cards }) => {
 
   return (
     <>
-      <div className={css.containerList}>
-        <ul className={css.gallery}>
-          {visibleCards.map(card => (
-            <li key={card.id} className={css.galleryCard}>
-              <CardGameItem card={card} />
-            </li>
-          ))}
-        </ul>
+      <div className={css.list}>
+        {visibleCards.map(card => (
+          <div key={card.id} className={css.card}>
+            <CardGameItem card={card} />
+          </div>
+        ))}
         {!loading && cards?.length === 0 && (
           <div className={css.message}>No quiz cards found.</div>
         )}

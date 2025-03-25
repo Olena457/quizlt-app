@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from '../../redux/filter/sliceFilter.js';
+import { setCategoryFilter } from '../../redux/filter/sliceFilter.js';
 import { selectFilter } from '../../redux/filter/selectorsFilter.js';
 import css from './CategoryFilter.module.css';
 
@@ -8,7 +8,7 @@ const CategoryFilter = () => {
   const filter = useSelector(selectFilter);
 
   const handleFilterChange = event => {
-    dispatch(setFilter(event.target.value));
+    dispatch(setCategoryFilter(event.target.value));
   };
 
   return (

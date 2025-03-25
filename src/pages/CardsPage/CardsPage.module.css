@@ -20,3 +20,21 @@
   margin: 0 auto;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+.wrapperCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  min-width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding: 20px 0;
+  width: 100%;
+}

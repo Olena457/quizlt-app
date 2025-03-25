@@ -18,7 +18,7 @@ const CreateCardForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const userId = useSelector(selectUserId); // ID
+  const userId = useSelector(selectUserId);
   const cardToEdit = useSelector(state => selectCardById(state, id));
 
   const [category, setCategory] = useState('');
@@ -30,17 +30,17 @@ const CreateCardForm = () => {
   const [option4, setOption4] = useState('');
   const [correctAnswer, setCorrectAnswer] = useState('');
 
-  // checked login
+  // Перевірка авторизації
   useEffect(() => {
     if (!isLoggedIn) {
       toast.info('You must log in to access this feature!', {
         position: 'top-center',
       });
-      navigate('/login'); // redirect login
+      navigate('/login');
     }
   }, [isLoggedIn, navigate]);
 
-  // editing
+  // Логіка редагування
   useEffect(() => {
     if (id && cardToEdit) {
       setCategory(cardToEdit.category);
@@ -57,7 +57,7 @@ const CreateCardForm = () => {
   const handleSubmit = async e => {
     e.preventDefault();
 
-    // validation all fields
+    // Валідація
     if (
       !category ||
       !title ||
@@ -76,22 +76,22 @@ const CreateCardForm = () => {
       category,
       title,
       questionText,
-      options: [option1, option2, option3, option4],
-      correctAnswer,
+      options: [option1, option2, option3, option4].map(opt => opt.toString()),
+      correctAnswer: correctAnswer.toString(),
       creatorId: userId,
     };
 
     try {
       if (id) {
-        // edit card
+        // Логіка редагування
         await dispatch(editCard({ id, updatedCard: cardData })).unwrap();
         toast.success('Card updated successfully!', { position: 'top-center' });
       } else {
-        //create new
+        // Логіка створення
         await dispatch(addCard(cardData)).unwrap();
         toast.success('Card created successfully!', { position: 'top-center' });
       }
-      navigate('/'); // redirect home
+      navigate('/');
     } catch {
       toast.error('An error occurred. Please try again later.', {
         position: 'top-center',
@@ -101,7 +101,9 @@ const CreateCardForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={css.formContainer}>
-      <h2 className={css.title}>{id ? 'Edit Card' : 'Create Card'}</h2>
+      <h2 className={css.title}>
+        {id ? 'Edit Card Form' : 'Create Card Form'}
+      </h2>
 
       <label className={css.label}>
         Category:
