@@ -12,6 +12,10 @@
   min-height: 750px;
   align-items: stretch;
 }
+.text {
+  font-size: 24px;
+  color: black;
+}
 .message {
   font-size: 56px;
   color: black;
