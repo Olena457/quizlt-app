@@ -14,22 +14,22 @@
     <img src="./src/assets/images/go.jpg" alt="go" width="100%" height="auto" />
   </div>
   <div style="width: calc(50% - 8px); margin-bottom: 16px;">
-    <img src="./src/assets/images/card.jpg" alt="card" width="100%" height="auto" />
+    <img src="./src/assets/images/card.jpg" alt="card"  width="420" height="280" />
   </div>
   <div style="width: calc(50% - 8px); margin-bottom: 16px;">
-    <img src="./src/assets/images/favorite.jpg" alt="favorite" width="100%" height="auto" />
+    <img src="./src/assets/images/favorite.jpg" alt="favorite"  width="420" height="280" />
   </div>
   <div style="width: calc(50% - 8px); margin-bottom: 16px;">
-    <img src="./src/assets/images/players.jpg" alt="players" width="100%" height="auto" />
+    <img src="./src/assets/images/players.jpg" alt="players"  width="420" height="280" />
   </div>
   <div style="width: calc(50% - 8px); margin-bottom: 16px;">
-    <img src="./src/assets/images/que-2.jpg" alt="que-2" width="100%" height="auto" />
+    <img src="./src/assets/images/que-2.jpg" alt="que-2"  width="420" height="280" />
   </div>
   <div style="width: calc(50% - 8px); margin-bottom: 16px;">
-    <img src="./src/assets/images/form.jpg" alt="form" width="100%" height="auto" />
+    <img src="./src/assets/images/form.jpg" alt="form"  width="420" height="280"/>
   </div>
   <div style="width: calc(50% - 8px); margin-bottom: 16px;">
-    <img src="./src/assets/images/question.jpg" alt="question" width="100%" height="auto" />
+    <img src="./src/assets/images/question.jpg" alt="question" width="420" height="280" />
   </div>
 </div>
 
