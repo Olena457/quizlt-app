@@ -95,7 +95,7 @@ export default function CardGameItem({ card }) {
   return (
     <div className={css.cardContainer}>
       <div className={css.imageContainer}>
-        <img src="../../assets/images/question.jpg" className={css.cardImage} />
+        <div className={css.cardImage}></div>
       </div>
       <button
         type="button"

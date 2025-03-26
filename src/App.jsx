@@ -28,7 +28,7 @@ const RegistrationPage = lazy(() =>
   import('./pages/RegistrationPage/RegistrationPage.jsx')
 );
 const LogInPage = lazy(() => import('./pages/LogInPage/LogInPage.jsx'));
-const FilterPage = lazy(() => import('./pages/FilterPage/FilterPage.jsx'));
+// const FilterPage = lazy(() => import('./pages/FilterPage/FilterPage.jsx'));
 const NotFoundPage = lazy(() =>
   import('./pages/NotFoundPage/NotFoundPage.jsx')
 );
@@ -63,7 +63,7 @@ function App() {
             <Route path="/create-card" element={<CreateCardPage />} />
             <Route path="/cards" element={<CardsPage />} />
             <Route path="/cards/:id/register" element={<CardFormPage />} />
-            <Route path="/filter" element={<FilterPage />} />
+            {/* <Route path="/filter" element={<FilterPage />} /> */}
             <Route path="/cards/:id/players" element={<ViewPlayersPage />} />
             <Route
               path="/favorites"
