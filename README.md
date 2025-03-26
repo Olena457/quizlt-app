@@ -4,16 +4,16 @@
 
 ## Quizlt is an interactive and educational game where you can participate in quizzes and even create your own quiz cards! Explore, learn, and share your knowledge in a fun and engaging way.
 
-## Screenshot
+## Screenshot live site
 
 <div style="display: flex; flex-wrap: wrap; gap: 16px;">
-  <img src="./src/assets/images/.jpg" alt="Quiz" width="420" height="280" style="margin-bottom: 16px; " />
-  <img src="./src/assets/images/screenshot2.jpg" alt="Quiz 2" width="420" height="280" style="margin-bottom: 16px; " />
-  <img src="./src/assets/images/screenshot3.jpg" alt="Quizlt 3" width="420" height="280" style="margin-bottom: 16px; " />
-  <img src="./src/assets/images/screenshot4.jpg" alt="Quizlt 4" width="420" height="280" style="margin-bottom: 16px; " />
-  <img src="./src/assets/images/screenshot5.jpg" alt="Quizlt 5" width="420" height="280" style="margin-bottom: 16px; " />
-  <img src="./src/assets/images/screenshot6.jpg" alt="Quizlt 6" width="420" height="280" style="margin-bottom: 16px; " />
-  <img src="./src/assets/images/screenshot7.jpg" alt="Quizlt7" width="420" height="280" style="margin-bottom: 16px; " />
+  <img src="./src/assets/images/main.jpg" alt="main" width="420" height="280" style="margin-bottom: 16px; " />
+  <img src="./src/assets/images/go.jpg" alt="go" width="420" height="280" style="margin-bottom: 16px; " />
+  <img src="./src/assets/images/card.jpg" alt="card" width="420" height="280" style="margin-bottom: 16px; " />
+  <img src="./src/assets/images/favorite.jpg" alt="favorite" width="420" height="280" style="margin-bottom: 16px; " />
+  <img src="./src/assets/images/players.jpg" alt="players" width="420" height="280" style="margin-bottom: 16px; " />
+  <img src="./src/assets/images/que-2.jpg" alt="que-2" width="420" height="280" style="margin-bottom: 16px; " />
+  <img src="./src/assets/images/form.jpg" alt="form" width="420" height="280" style="margin-bottom: 16px; " />
 </div>
 
 ## Features
@@ -33,5 +33,5 @@
 
 ---
 
-_Sorry, I couldn't fix all the bugs due to limited time. Thank you for this
-opportunity!_
+_Sorry, I couldn't fix created card the bugs due to limited time. Thank you for
+this opportunity!_
