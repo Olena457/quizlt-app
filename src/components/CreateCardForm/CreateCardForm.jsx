@@ -35,6 +35,7 @@ const CreateCardForm = () => {
     if (!isLoggedIn) {
       toast.info('You must log in to access this feature!', {
         position: 'top-center',
+        toastId: 'login-toast', // Використовуємо унікальний id, щоб повідомлення не дублювалось
       });
       navigate('/login');
     }

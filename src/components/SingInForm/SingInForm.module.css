@@ -57,6 +57,22 @@
   height: 54px;
   width: 100%;
 }
+.text {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
 
 .buttonSign {
   border-radius: 12px;

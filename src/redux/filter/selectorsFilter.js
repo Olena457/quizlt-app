@@ -1,28 +1,3 @@
-// import { createSelector } from '@reduxjs/toolkit';
-
-// export const selectCards = state => state.cards.cards;
-// export const selectFilterCategory = state => state.filter.selectedCategory;
-// export const selectError = state => state.filter.error;
-// export const selectAvailableCategories = state =>
-//   state.filter.availableCategories;
-
-// export const selectFilteredCards = createSelector(
-//   [selectCards, selectFilterCategory],
-//   (cards, selectedCategory) => {
-//     if (!cards || cards.length === 0) {
-//       return [];
-//     }
-//     if (!selectedCategory || selectedCategory === 'All') {
-//       return cards;
-//     }
-//     return cards.filter(
-//       card =>
-//         card.category &&
-//         Array.isArray(card.category) &&
-//         card.category.includes(selectedCategory)
-//     );
-//   }
-// );
 import { createSelector } from '@reduxjs/toolkit';
 
 export const selectCards = state => state.cards.data;

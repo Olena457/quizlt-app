@@ -71,8 +71,15 @@ const SignInForm = () => {
     <div className={css.container}>
       <h2 className={css.title}>Log In</h2>
       <p className={css.text}>
-        Welcome back! Please enter your credentials to access your account and
-        continue your search for quiz.
+        <span>
+          You already{' '}
+          <span className={css.link} onClick={() => navigate('/register-user')}>
+            Registered
+          </span>
+          ?
+        </span>{' '}
+        <br />
+        Please enter your credentials.
       </p>
 
       <form

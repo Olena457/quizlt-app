@@ -56,7 +56,7 @@ const CategoryFilter = () => {
 
   return (
     <div className={css.filterContainer}>
-      <label htmlFor="categoryFilter" className={css.label}>
+      <label htmlFor="categoryFilter" className={css.labelFilter}>
         Filter by Category:
       </label>
       <select
