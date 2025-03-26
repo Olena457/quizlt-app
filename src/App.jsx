@@ -62,7 +62,7 @@ function App() {
             <Route path="/login" element={<LogInPage />} />
             <Route path="/create-card" element={<CreateCardPage />} />
             <Route path="/cards" element={<CardsPage />} />
-            <Route path="/cards/:id/register" element={<CardFormPage />} />
+            <Route path="/cards/:id" element={<CardFormPage />} />
             <Route path="/filter" element={<FilterPage />} />
             <Route path="/cards/:id/players" element={<ViewPlayersPage />} />
             <Route

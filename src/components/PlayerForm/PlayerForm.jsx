@@ -20,7 +20,7 @@ const PlayerForm = ({ card, category }) => {
     formState: { errors },
   } = useForm();
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [totalQuestions, setTotalQuestions] = useState(0); // Track total answered questions
+  const [totalQuestions, setTotalQuestions] = useState(0);
   const [userData, setUserData] = useState({ fullname: '', email: '' });
 
   useEffect(() => {

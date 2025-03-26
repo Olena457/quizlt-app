@@ -30,12 +30,11 @@ const CreateCardForm = () => {
   const [option4, setOption4] = useState('');
   const [correctAnswer, setCorrectAnswer] = useState('');
 
-  // Перевірка авторизації
   useEffect(() => {
     if (!isLoggedIn) {
       toast.info('You must log in to access this feature!', {
         position: 'top-center',
-        toastId: 'login-toast', // Використовуємо унікальний id, щоб повідомлення не дублювалось
+        toastId: 'login-toast',
       });
       navigate('/login');
     }
@@ -58,7 +57,6 @@ const CreateCardForm = () => {
   const handleSubmit = async e => {
     e.preventDefault();
 
-    // Валідація
     if (
       !category ||
       !title ||
@@ -84,11 +82,11 @@ const CreateCardForm = () => {
 
     try {
       if (id) {
-        // Логіка редагування
+        // editing
         await dispatch(editCard({ id, updatedCard: cardData })).unwrap();
         toast.success('Card updated successfully!', { position: 'top-center' });
       } else {
-        // Логіка створення
+        // creating
         await dispatch(addCard(cardData)).unwrap();
         toast.success('Card created successfully!', { position: 'top-center' });
       }
