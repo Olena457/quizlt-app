@@ -2,26 +2,30 @@ import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth.js';
+import { selectCardsLoading } from '../../redux/cards/selectorsCards.js';
 import css from './Navigation.module.css';
 
 const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const activeLink = ({ isActive }) => clsx(css.link, isActive && css.active);
-
+  const cardsLoading = useSelector(selectCardsLoading);
   return (
     <div className={css.container}>
-      <NavLink to="/" className={activeLink} aria-label="Home">
+      <NavLink to="/" className={activeLink}>
         Home
       </NavLink>
-      <NavLink to="/cards" className={activeLink} aria-label="cards">
+      <NavLink to="/cards" className={activeLink}>
         Quiz
       </NavLink>
-      <NavLink to="/filter" className={activeLink} aria-label="cards">
-        Filter
-      </NavLink>
+      {!cardsLoading && (
+        <NavLink to="/filter" className={activeLink}>
+          Filter
+        </NavLink>
+      )}
+
       {!isLoggedIn && (
         <>
-          <NavLink to="/login" className={activeLink} aria-label="Login">
+          <NavLink to="/login" className={activeLink}>
             Login
           </NavLink>
           <NavLink

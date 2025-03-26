@@ -72,7 +72,6 @@ import {
   selectCardsError,
 } from '../../redux/cards/selectorsCards.js';
 import { selectFilterCategory } from '../../redux/filter/selectorsFilter.js';
-import CategoryFilter from '../../components/CategoryFilter/CategoryFilter.jsx';
 import Loader from '../../components/Loader/Loader.jsx';
 import CardListGame from '../../components/CardListGame/CardListGame.jsx';
 import Pagination from '../../components/Pagination/Pagination.jsx';
@@ -111,7 +110,6 @@ const CardsPage = () => {
         </div>
       ) : (
         <div className={css.wrapperCard}>
-          <CategoryFilter />
           {currentCards.length > 0 ? (
             <>
               <CardListGame cards={currentCards} />

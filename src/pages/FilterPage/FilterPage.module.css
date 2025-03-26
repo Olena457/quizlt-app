@@ -1,4 +1,4 @@
-/* .filterPage {
+.filterPage {
   padding: 20px;
 }
 
@@ -13,4 +13,12 @@
 
 .filterPage .cardList {
   margin-top: 20px;
-} */
+}
+.error {
+  font-size: 24px;
+  color: rgb(0, 255, 247);
+}
+.noData {
+  font-size: 24px;
+  color: rgb(0, 221, 255);
+}

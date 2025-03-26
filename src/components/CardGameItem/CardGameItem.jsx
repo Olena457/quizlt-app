@@ -51,8 +51,7 @@ export default function CardGameItem({ card }) {
       toast.success('Card deleted successfully!', {
         position: 'top-center',
       });
-    } catch (error) {
-      console.error('Error while deleting card:', error);
+    } catch {
       toast.error('Error deleting card. Please try again later.', {
         position: 'top-center',
       });
