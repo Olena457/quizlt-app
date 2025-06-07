@@ -1,15 +1,17 @@
 # React + Vite
 
-# Quizlt
+# 💡Quizlet
 
-## Quizlt is an interactive and educational game where you can participate in quizzes and even create your own quiz cards! Explore, learn, and share your knowledge in a fun and engaging way.
+## 🚀 _Quizlet is an interactive and educational game!_
 
-## Screenshot live site
+### _Here you can participate in quizzes and even create your own quiz cards!_
+
+### _Explore, learn, and share your knowledge in a fun and engaging way._
+
+### Gallerry📷
 
 <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between;">
-  <div style="width: calc(50% - 8px); margin-bottom: 16px;">
-    <img src="./src/assets/images/main.jpg" alt="main" width="100%" height="auto" />
-  </div>
+ 
   <div style="width: calc(50% - 8px); margin-bottom: 16px;">
     <img src="./src/assets/images/go.jpg" alt="go" width="100%" height="auto" />
   </div>
@@ -47,6 +49,3 @@
   can be added or removed as needed.
 
 ---
-
-_Sorry, I couldn't fix created card the bugs due to limited time. Thank you for
-this opportunity!_
