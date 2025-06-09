@@ -11,10 +11,10 @@ const HomePage = () => {
               to="/cards"
               className={`${css.buttonHome} ${css.buttonMargin}`}
             >
-              Go Categories Quize
+              Play Quiz
             </NavLink>
             <NavLink to="/create-card" className={css.buttonHome}>
-              Go Create your Quize
+              Greate Quiz
             </NavLink>
           </div>
         </div>

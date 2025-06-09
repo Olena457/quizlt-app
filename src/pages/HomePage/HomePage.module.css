@@ -8,6 +8,7 @@
 } */
 .containerHome {
   display: flex;
+  height: 100vh;
   padding: 30px 10px;
   flex-direction: column;
   border: 1px solid #00eeff;
@@ -50,28 +51,36 @@
 
 .buttonWrapper {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   bottom: 85px;
   left: 42%;
   transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
 }
-
+@media screen and (min-width: 768px) {
+  .buttonWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+  }
+}
 .buttonHome {
-  width: 173px;
-  height: 56px;
+  width: 120px;
+  height: 46px;
   display: flex;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   justify-content: center;
   align-items: center;
-  padding: 15px 60px;
+  padding: 10px 30px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  border-radius: 12px;
-  font-size: 16px;
+  border-radius: 20px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1;
   white-space: nowrap;
   background: #1f949b;
   color: var(--white-color);
@@ -86,4 +95,38 @@
   background: var(--hover-color);
   border: 1px solid var(--white-color);
   box-shadow: 0 0 15px 5px rgba(93, 25, 106, 0.75);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .buttonHome {
+    width: 150px;
+    height: 46px;
+    display: flex;
+    margin-left: 46px;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .buttonHome {
+    width: 173px;
+    height: 56px;
+    display: flex;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 60px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    border-radius: 12px;
+  }
+  .buttonMargin {
+    margin-left: 50px;
+  }
 }

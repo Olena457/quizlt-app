@@ -65,16 +65,7 @@ function App() {
             <Route path="/cards/:id" element={<CardFormPage />} />
             <Route path="/filter" element={<FilterPage />} />
             <Route path="/cards/:id/players" element={<ViewPlayersPage />} />
-            <Route path="/category" element={<CategoryPage />} />
-            <Route path="/category/general" element={<GeneralPage />} />
-            <Route path="/category/geography" element={<GeographyPage />} />
-            <Route path="/category/science" element={<SciencePage />} />
-            <Route path="/category/movie" element={<MoviePage />} />
-            <Route
-              path="/category/technologies"
-              element={<TechnologiesPage />}
-            />
-            <Route path="/category/programming" element={<ProgrammingPage />} />
+
             <Route
               path="/favorites"
               element={

@@ -1,0 +1,16 @@
+.mobileMenu {
+  display: block; /* Меню спочатку доступне */
+}
+
+.burgerButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Ховаємо меню для ширини понад 768px */
+@media (min-width: 768px) {
+  .mobileMenu {
+    display: none;
+  }
+}
