@@ -11,9 +11,6 @@ const Navigation = () => {
   const cardsLoading = useSelector(selectCardsLoading);
   return (
     <div className={css.container}>
-      <NavLink to="/" className={activeLink}>
-        Home
-      </NavLink>
       <NavLink to="/cards" className={activeLink}>
         Quiz
       </NavLink>
