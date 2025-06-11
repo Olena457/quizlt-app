@@ -62,7 +62,7 @@ const MobileMenu = () => {
                 </>
               )}
 
-              <NavLink
+              {/* <NavLink
                 to="/cards"
                 className={css.link}
                 onClick={() => setIsOpen(false)}
@@ -75,6 +75,13 @@ const MobileMenu = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Filter
+              </NavLink> */}
+              <NavLink
+                to="/categories"
+                className={css.link}
+                onClick={() => setIsOpen(false)}
+              >
+                Categories Quiz
               </NavLink>
 
               {isLoggedIn && (

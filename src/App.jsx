@@ -12,7 +12,7 @@ import Layout from './components/Layout/Layout.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/PrivateRoute.jsx';
 import './App.css';
-
+import CategoryPage from './pages/CategoryPage/CategoryPage.jsx';
 const CardFormPage = lazy(() =>
   import('./pages/CardFormPage/CardFormPage.jsx')
 );
@@ -20,15 +20,16 @@ const CardsPage = lazy(() => import('./pages/CardsPage/CardsPage.jsx'));
 const CreateCardPage = lazy(() =>
   import('./pages/CreateCardPage/CreateCardPage.jsx')
 );
-const FavoriteCardPage = lazy(() =>
-  import('./pages/FavoriteCardPage/FavoriteCardPage.jsx')
-);
+// const FavoriteCardPage = lazy(() =>
+//   import('./pages/FavoriteCardPage/FavoriteCardPage.jsx')
+// );
+import GamePage from './pages/GamePage/GamePage.jsx';
 const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
 const RegistrationPage = lazy(() =>
   import('./pages/RegistrationPage/RegistrationPage.jsx')
 );
 const LogInPage = lazy(() => import('./pages/LogInPage/LogInPage.jsx'));
-const FilterPage = lazy(() => import('./pages/FilterPage/FilterPage.jsx'));
+// const FilterPage = lazy(() => import('./pages/FilterPage/FilterPage.jsx'));
 const NotFoundPage = lazy(() =>
   import('./pages/NotFoundPage/NotFoundPage.jsx')
 );
@@ -60,16 +61,26 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="/register-user" element={<RegistrationPage />} />
             <Route path="/login" element={<LogInPage />} />
+            <Route path="/category" element={<CategoryPage />} />
+            <Route path="/game" element={<GamePage />} />
+
             <Route path="/create-card" element={<CreateCardPage />} />
-            <Route path="/cards" element={<CardsPage />} />
+            {/* <Route path="/cards" element={<CardsPage />} /> */}
             <Route path="/cards/:id" element={<CardFormPage />} />
-            <Route path="/filter" element={<FilterPage />} />
+            {/* <Route path="/filter" element={<FilterPage />} /> */}
             <Route path="/cards/:id/players" element={<ViewPlayersPage />} />
 
-            <Route
+            {/* <Route
               path="/favorites"
               element={
                 <PrivateRoute redirectTo="/" component={<FavoriteCardPage />} />
+              }
+            /> */}
+
+            <Route
+              path="/create-card"
+              element={
+                <PrivateRoute redirectTo="/" component={<CreateCardPage />} />
               }
             />
 

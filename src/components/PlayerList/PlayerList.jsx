@@ -1,11 +1,12 @@
-import css from './PlayerList.module.css';
+import { memo } from 'react';
 import avatarUser from '../../assets/icons/avatarUser.svg';
+import css from './PlayerList.module.css';
 
 const PlayerList = ({ players }) => {
   return (
     <div className={css.participantList}>
       {players.map(player => (
-        <div key={player.email} className={css.participantCard}>
+        <div key={player.id || player.email} className={css.participantCard}>
           <img
             src={avatarUser}
             aria-label="user avatar"
@@ -13,7 +14,9 @@ const PlayerList = ({ players }) => {
             className={css.participantAvatar}
           />
           <div className={css.participantInfo}>
-            <p className={css.participantName}>Name: {player.fullname}</p>
+            <p className={css.participantName}>
+              Name: {player.fullname || player.name || 'Unown'}
+            </p>
             <p className={css.participantEmail}>Email: {player.email}</p>
             <p className={css.participantCategory}>
               Category: {player.category}
@@ -31,4 +34,4 @@ const PlayerList = ({ players }) => {
   );
 };
 
-export default PlayerList;
+export default memo(PlayerList);

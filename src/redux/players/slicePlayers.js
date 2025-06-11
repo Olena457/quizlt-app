@@ -1,13 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchPlayers } from './operationsPlayers.js';
 
+const initialState = {
+  data: {},
+  loading: false,
+  error: null,
+};
+
 const slicePlayers = createSlice({
   name: 'players',
-  initialState: {
-    data: {},
-    loading: false,
-    error: null,
-  },
+  initialState,
   reducers: {},
   extraReducers: builder => {
     builder
@@ -16,8 +18,14 @@ const slicePlayers = createSlice({
         state.error = null;
       })
       .addCase(fetchPlayers.fulfilled, (state, action) => {
+        const existingPlayers = state.data[action.payload.cardId] || [];
+        if (
+          JSON.stringify(existingPlayers) !==
+          JSON.stringify(action.payload.players)
+        ) {
+          state.data[action.payload.cardId] = action.payload.players;
+        }
         state.loading = false;
-        state.data[action.payload.cardId] = action.payload.players;
       })
       .addCase(fetchPlayers.rejected, (state, action) => {
         state.loading = false;

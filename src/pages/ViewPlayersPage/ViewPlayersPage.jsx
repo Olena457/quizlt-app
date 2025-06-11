@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchPlayers } from '../../redux/players/operationsPlayers.js';
 import {
-  selectPlayers,
+  selectPlayersById,
   selectPlayersLoading,
   selectPlayersError,
 } from '../../redux/players/selectotsPlayers.js';
@@ -14,13 +14,17 @@ import PlayersList from '../../components/PlayerList/PlayerList.jsx';
 const ViewPlayersPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const players = useSelector(state => selectPlayers(state)[id] || []);
+  const players = useSelector(state => selectPlayersById(state, id));
+
+  // const players = useSelector(state => selectPlayers(state)[id] || []);
   const loading = useSelector(selectPlayersLoading);
   const error = useSelector(selectPlayersError);
 
   useEffect(() => {
-    dispatch(fetchPlayers(id));
-  }, [dispatch, id]);
+    if (!players || players.length === 0) {
+      dispatch(fetchPlayers(id));
+    }
+  }, [players, dispatch, id]);
 
   return (
     <div className={css.participPage}>

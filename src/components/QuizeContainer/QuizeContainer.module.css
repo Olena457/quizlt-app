@@ -1,0 +1,13 @@
+.quizeContainer {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  min-width: 320px;
+  min-height: 500px;
+  padding: 20px 10px;
+  background-color: blue;
+}

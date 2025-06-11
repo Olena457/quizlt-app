@@ -8,7 +8,7 @@ const HomePage = () => {
         <div className={css.containerWelcome}>
           <div className={css.buttonWrapper}>
             <NavLink
-              to="/cards"
+              to="/category"
               className={`${css.buttonHome} ${css.buttonMargin}`}
             >
               Play Quiz
