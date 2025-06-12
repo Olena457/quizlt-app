@@ -17,8 +17,8 @@ import css from './GamePage.module.css';
 const GamePage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const selectedCategory = useSelector(selectFilterCategory); // Виправлено
-  const filteredQuestions = useSelector(selectFilteredCards); // Використовуємо готовий селектор
+  const selectedCategory = useSelector(selectFilterCategory);
+  const filteredQuestions = useSelector(selectFilteredCards);
   const loading = useSelector(selectCardsLoading);
   const error = useSelector(selectCardsError);
   const currentUser = useSelector(selectUser);
