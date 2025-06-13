@@ -170,7 +170,7 @@ const CategoryPage = () => {
   return (
     <div className={css.containerCategories}>
       <QuizeContainer>
-        <div className={css.title}>Choose a Category</div>
+        <div className={css.title}>Select Category</div>
         <div className={css.categoryButtons}>
           {categories.map((category, index) => (
             <CategoryItem

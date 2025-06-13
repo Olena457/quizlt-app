@@ -12,6 +12,7 @@ import {
 import { fetchCards } from '../../redux/cards/operationsCards';
 import { registerGameParticipant } from '../../redux/players/operationsPlayers';
 import { selectUser } from '../../redux/auth/selectorsAuth';
+import QuizeContainer from '../../components/QuizeContainer/QuizeContainer.jsx';
 import css from './GamePage.module.css';
 
 const GamePage = () => {
@@ -81,35 +82,38 @@ const GamePage = () => {
 
   return (
     <div className={css.gamePage}>
-      {loading && <p>Loading questions...</p>}
-      {error && <p className={css.errorMessage}>Error: {error}</p>}
-      {!loading && !error && filteredQuestions.length === 0 && (
-        <p>No questions available for this category.</p>
-      )}
-      {!loading && !error && currentQuestion && (
-        <>
-          <h2>Category: {selectedCategory}</h2>
-          <p>
-            Question {currentQuestionIndex + 1} / {filteredQuestions.length}
-          </p>
-          <p>
-            Correct Answers: {correctAnswersCount} / {filteredQuestions.length}
-          </p>
-          <p>{currentQuestion.question}</p>
-          <div className={css.answerButtons}>
-            {currentQuestion.options.map(option => (
-              <button key={option} onClick={() => handleAnswer(option)}>
-                {option}
-              </button>
-            ))}
-          </div>
-          <button onClick={handleNextQuestion}>
-            {currentQuestionIndex === filteredQuestions.length - 1
-              ? 'Submit'
-              : 'Next'}
-          </button>
-        </>
-      )}
+      <QuizeContainer>
+        {loading && <p>Loading questions...</p>}
+        {error && <p className={css.errorMessage}>Error: {error}</p>}
+        {!loading && !error && filteredQuestions.length === 0 && (
+          <p>No questions available for this category.</p>
+        )}
+        {!loading && !error && currentQuestion && (
+          <>
+            <h2>Category: {selectedCategory}</h2>
+            <p>
+              Question {currentQuestionIndex + 1} / {filteredQuestions.length}
+            </p>
+            <p>
+              Correct Answers: {correctAnswersCount} /{' '}
+              {filteredQuestions.length}
+            </p>
+            <p>{currentQuestion.question}</p>
+            <div className={css.answerButtons}>
+              {currentQuestion.options.map(option => (
+                <button key={option} onClick={() => handleAnswer(option)}>
+                  {option}
+                </button>
+              ))}
+            </div>
+            <button onClick={handleNextQuestion}>
+              {currentQuestionIndex === filteredQuestions.length - 1
+                ? 'Submit'
+                : 'Next'}
+            </button>
+          </>
+        )}
+      </QuizeContainer>
     </div>
   );
 };

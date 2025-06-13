@@ -1,0 +1,41 @@
+.containerQuize {
+  display: flex;
+  min-width: 90%;
+  flex-direction: column;
+  gap: 10px;
+}
+.textQuestion {
+  font-size: 22px;
+  font-weight: 500;
+}
+.containerButton {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.buttonQuestion {
+  display: block;
+  color: #000;
+  border-radius: 200px;
+  background-color: aqua;
+  min-width: 250px;
+}
+.containerBtnNext {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+.selected {
+  background-color: white;
+}
+
+.buttonNext {
+  background-color: red;
+  border-radius: 200px;
+  width: 80px;
+}
+
+.submitButton {
+  background-color: green;
+}
