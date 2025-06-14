@@ -63,6 +63,7 @@ function App() {
             <Route path="/login" element={<LogInPage />} />
             <Route path="/category" element={<CategoryPage />} />
             <Route path="/game" element={<GamePage />} />
+            <Route path="/result" element={<ResultPage />} />
 
             <Route path="/create-card" element={<CreateCardPage />} />
             {/* <Route path="/cards" element={<CardsPage />} /> */}

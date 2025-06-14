@@ -134,7 +134,7 @@ import { fetchCards } from '../../redux/cards/operationsCards';
 import { registerGameParticipant } from '../../redux/players/operationsPlayers';
 import { selectUser } from '../../redux/auth/selectorsAuth';
 import QuizeContainer from '../../components/QuizeContainer/QuizeContainer.jsx';
-import CategoryCard from '../../components/CategoryCard/CategoryCard.jsx'; // Імпортуємо CategoryCard
+import CategoryCard from '../../components/CategoryCard/CategoryCard.jsx';
 import css from './GamePage.module.css';
 
 const GamePage = () => {
