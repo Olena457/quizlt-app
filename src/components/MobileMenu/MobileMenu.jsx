@@ -77,7 +77,7 @@ const MobileMenu = () => {
                 Filter
               </NavLink> */}
               <NavLink
-                to="/categories"
+                to="/category"
                 className={css.link}
                 onClick={() => setIsOpen(false)}
               >
@@ -86,13 +86,13 @@ const MobileMenu = () => {
 
               {isLoggedIn && (
                 <>
-                  <NavLink
+                  {/* <NavLink
                     to="/favorites"
                     className={css.link}
                     onClick={() => setIsOpen(false)}
                   >
                     Favorites
-                  </NavLink>
+                  </NavLink> */}
                   <NavLink
                     to="/create-card"
                     className={css.link}

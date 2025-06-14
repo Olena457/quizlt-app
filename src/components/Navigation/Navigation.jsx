@@ -24,9 +24,9 @@ const Navigation = () => {
           Categories Quiz
         </NavLink>
       )} */}
-      {/* <NavLink to="/category" className={activeLink}>
+      <NavLink to="/category" className={activeLink}>
         Categories Quiz
-      </NavLink> */}
+      </NavLink>
 
       {!isLoggedIn && (
         <>
@@ -44,13 +44,13 @@ const Navigation = () => {
       )}
       {isLoggedIn && (
         <>
-          <NavLink
+          {/* <NavLink
             to="/favorites"
             className={activeLink}
             aria-label="Favorites"
           >
             Favorites
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/create-card"
             className={activeLink}

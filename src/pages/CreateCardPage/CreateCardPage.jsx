@@ -4,7 +4,7 @@ import css from './CreateCardPage.module.css';
 const CreateCardPage = () => {
   return (
     <div className={css.createPage}>
-      <div className={css.createContainer}>
+      <div className={css.createForm}>
         <CreateCardForm />
       </div>
     </div>

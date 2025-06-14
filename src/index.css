@@ -2,6 +2,7 @@
   --accent--color: #1f949b;
   --secondary-color: #1aabae;
   --hover-color: #0beff4;
+  --gold-color: #ffc841;
   --gray-color: #808080;
   --red-color: #ff0000;
   --black-color: #121417;
@@ -13,12 +14,14 @@
 }
 
 body {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   font-family: 'Roboto', sans-serif;
+  /* height: 100vh; */
   font-weight: 400;
   font-style: normal;
   transition: background-color var(--transition), color var(--transition);
-  background-color: var(--accent--color);
+  /* background-color: var(--accent--color); */
+  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
 }
 
 h1,

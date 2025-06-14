@@ -13,6 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/PrivateRoute.jsx';
 import './App.css';
 import CategoryPage from './pages/CategoryPage/CategoryPage.jsx';
+import ResultPage from './pages/ResultPage/ResultPage.jsx';
 const CardFormPage = lazy(() =>
   import('./pages/CardFormPage/CardFormPage.jsx')
 );

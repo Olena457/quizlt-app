@@ -133,9 +133,9 @@ import {
 import { fetchCards } from '../../redux/cards/operationsCards';
 import { registerGameParticipant } from '../../redux/players/operationsPlayers';
 import { selectUser } from '../../redux/auth/selectorsAuth';
-import QuizeContainer from '../../components/QuizeContainer/QuizeContainer.jsx';
 import CategoryCard from '../../components/CategoryCard/CategoryCard.jsx';
 import css from './GamePage.module.css';
+import QuizeContainer from '../../components/QuizeContainer/QuizeContainer.jsx';
 
 const GamePage = () => {
   const dispatch = useDispatch();
@@ -203,12 +203,14 @@ const GamePage = () => {
   };
 
   return (
-    <div className={css.gamePage}>
+    <div className={css.containerGame}>
       <QuizeContainer>
         {loading && <p>Loading questions...</p>}
         {error && <p className={css.errorMessage}>Error: {error}</p>}
         {!loading && !error && filteredQuestions.length === 0 && (
-          <p>No questions available for this category.</p>
+          <p className={css.titleError}>
+            No questions available for this category.
+          </p>
         )}
         {!loading && !error && currentQuestion && (
           <>

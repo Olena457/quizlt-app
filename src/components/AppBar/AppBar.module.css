@@ -16,7 +16,9 @@
   padding: 0 10px;
   justify-content: center;
   align-items: baseline;
-  border-bottom: 1px solid var(--hover-color);
+  border-radius: 10px;
+  box-shadow: 0 10px 10px -5px #0beff4;
+  /* box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5); */
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .header {
@@ -46,9 +48,10 @@
   font-family: cursive;
   color: #32dedf;
   text-shadow: 1px 1px 0 #121417, 2px 2px 0#32dedf, 3px 3px 0 #115e95,
-    4px 4px 0 #121417, 5px 5px 0 #115e95, 6px 6px 0 #808080, 7px 7px 0 #ffc841,
+    4px 4px 0 #121417, 5px 5px 0 #115e95, 6px 6px 0 #9f9a9a, 7px 7px 0 #ffc841,
     8px 8px 7px #4f4a4a;
 }
+
 @media screen and (min-width: 768px) {
   .title {
     font-size: 24px;

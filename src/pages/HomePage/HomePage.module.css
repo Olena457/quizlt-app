@@ -11,7 +11,6 @@
   height: 100vh;
   padding: 30px 10px;
   flex-direction: column;
-  border: 1px solid #00eeff;
   gap: 120px;
   justify-content: space-between;
   align-items: start;
@@ -27,7 +26,6 @@
   .containerHome {
     display: flex;
     flex-direction: column;
-    border: 1px solid #00eeff;
     padding: 50px 40px 20px 30px;
     background-image: url('../../assets/images/home.jpg');
     background-size: cover;
@@ -38,7 +36,6 @@
 @media screen and (min-width: 1025px) {
   .containerHome {
     padding: 80px 50px 22px 22px;
-    border: 1px solid #00eeff;
     gap: 100px;
     justify-content: space-between;
     align-items: start;
@@ -70,7 +67,6 @@
   width: 120px;
   height: 46px;
   display: flex;
-  /* margin-left: 50px; */
   justify-content: center;
   align-items: center;
   padding: 10px 30px;
@@ -82,19 +78,19 @@
   font-weight: 500;
   line-height: 1;
   white-space: nowrap;
-  background: #1f949b;
-  color: var(--white-color);
-  border: 1px solid #1f9596;
+  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
+  /* background: #1f949b; */
+  color: var(--hover-color);
+  border: 2px solid var(--hover-color);
   transition: background-color var(--transition), color var(--transition);
-  box-shadow: 0 0 15px 5px rgba(242, 238, 243, 0.799);
 }
 
 .buttonHome:hover,
 .buttonHome:focus {
-  color: var(--black-color);
-  background: var(--hover-color);
-  border: 1px solid var(--white-color);
-  box-shadow: 0 0 15px 5px rgba(93, 25, 106, 0.75);
+  box-shadow: -15px 0 20px -5px rgba(76, 241, 241, 0.7),
+    15px 0 20px -5px rgba(76, 241, 241, 0.7),
+    0 15px 20px -5px rgba(76, 241, 241, 0.7);
+  color: var(--gold-color);
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .buttonHome {
@@ -124,7 +120,6 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    border-radius: 12px;
   }
   .buttonMargin {
     margin-left: 50px;

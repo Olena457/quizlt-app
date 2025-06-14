@@ -1,13 +1,14 @@
 .formContainer {
   width: 100%;
   max-width: 500px;
-  margin: 20px auto;
+  max-height: 490px;
+  overflow-y: auto;
+  margin: 0px auto;
   padding: 20px;
   background-color: var(--white-color);
   border: 1px solid var(--hover-color);
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
 }
 
 .title {
@@ -15,7 +16,7 @@
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-  color: var(--accent-color);
+  color: var(--accent--color);
 }
 
 .label {
@@ -48,24 +49,6 @@
   resize: none;
 }
 
-.submitBtn {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--white-color);
-  background-color: var(--accent-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.submitBtn:hover {
-  background-color: var(--hover-color);
-  color: var(--black-color);
-}
-
 .message {
   font-size: 1rem;
   color: var(--accent-color);
@@ -78,15 +61,15 @@
   padding: 10px;
   font-size: 1rem;
   font-weight: bold;
-  color: white;
+  color: var(--hover-color);
   background: #1f949b;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
+  border: 1px solid var(--hover-color);
   transition: background-color 0.3s ease;
 }
 .submitBtn:hover {
-  background: #0beff4;
-  color: black;
-  border: 1px solid gray;
+  color: var(--gold-color);
+  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
 }

@@ -37,6 +37,7 @@ const ResultPage = () => {
   const passed = accuracy >= 50;
 
   return (
+    // <div className={css.resultPage}>
     <div className={css.containerResult}>
       <QuizContainer>
         <div className={css.title}>Quiz Results for {userName}</div>
@@ -61,6 +62,7 @@ const ResultPage = () => {
         </button>
       </QuizContainer>
     </div>
+    // </div>
   );
 };
 
