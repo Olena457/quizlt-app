@@ -81,7 +81,7 @@
   background: #1f949b;
   border-radius: 20px;
   cursor: pointer;
-  border: 1px solid var(--hover-color);
+  border: 1px solid var(--gold-color);
   background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
   box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s ease;
@@ -89,6 +89,7 @@
 .submitBtn:hover {
   color: var(--gold-color);
   background: #1f949b;
+  border: 1px solid var(--hover-color);
 }
 
 .submitBtn .emailWrapper {
