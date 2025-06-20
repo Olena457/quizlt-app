@@ -7,10 +7,12 @@
   margin: 0 auto;
   margin-top: 20px;
   padding: 30px 50px;
+  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   /* padding: 50px 60px; */
   border: 1px solid rgba(255, 255, 255, 0.3);
   /* background-color: rgba(255, 255, 255, 0.1); */
-  background-color: #32dedf;
+  background-color: var(--accent--light);
   border-radius: 20px;
   box-shadow: 0px 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -20,7 +22,7 @@
 }
 
 .container::-webkit-scrollbar-thumb {
-  background: #1f949b;
+  background: var(--accent--color);
   border-radius: 10px;
 }
 
@@ -30,15 +32,16 @@
 
 .title {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 28px;
+  /* font-size: 40px; */
   line-height: 1.2;
   letter-spacing: -0.02em;
-  margin-bottom: 30px;
-  color: var(--accent--color);
+  margin-bottom: 15px;
+  /* margin-bottom: 30px; */
+  color: var(--black-color);
 }
 
 .text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.375;
   color: var(--black-color);
@@ -56,32 +59,32 @@
 }
 
 .input {
-  font-weight: 400;
+  height: 54px;
+  width: 100%;
   font-size: 16px;
   line-height: 1.375;
   color: var(--black-color);
-  border: 1px solid rgba(18, 20, 23, 0.1);
+  border: 1px solid #3e3b3b;
   border-radius: 12px;
   padding: 16px 18px;
   margin-bottom: 40px;
   /* width: 268px; */
-  height: 54px;
-  width: 100%;
 }
 .text {
   font-size: 16px;
-  color: #333;
+  color: #3e3b3b;
+  /* color: #333; */
   margin-bottom: 10px;
 }
 
 .link {
-  color: #007bff;
+  color: var(--gold-color);
   cursor: pointer;
   text-decoration: underline;
 }
 
 .link:hover {
-  color: #0056b3;
+  color: var(--red-color);
   text-decoration: none;
 }
 .buttonSign {
@@ -90,17 +93,19 @@
   padding: 10px;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--hover-color);
-  background: #1f949b;
+  color: var(--black-color);
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  border: 1px solid var(--hover-color);
+  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--gold-color);
   transition: background-color 0.3s ease;
 }
 .buttonSign:hover {
   color: var(--gold-color);
-  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
+  background: var(--accent--color);
+  border: 1px solid var(--hover-color);
 }
 
 .emailWrapper {
@@ -115,8 +120,8 @@
 }
 
 .errorText {
-  position: absolute;
+  /* position: absolute;
   left: 0;
-  bottom: -18px;
+  bottom: -18px; */
   color: var(--red-color);
 }
