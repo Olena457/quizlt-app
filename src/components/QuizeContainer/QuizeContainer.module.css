@@ -10,8 +10,10 @@
   min-width: 320px;
   min-height: 600px;
   padding: 20px 10px;
-  border: 1px solid var(--hover-color);
+  border: 2px solid var(--hover-color);
   background-color: var(--accent--color);
+  /* background: linear-gradient(180deg, var(--accent--color), var(--hover-color)); */
+  /* box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.5); */
 }
 @media (min-width: 375px) and (max-width: 768px) {
   .gameContainerQuiz {

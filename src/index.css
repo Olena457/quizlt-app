@@ -1,7 +1,7 @@
 :root {
   --accent--color: #1f949b;
   --secondary-color: #1aabae;
-  --accent-light: #32dedf;
+  --accent-light-color: #32dedf;
   --hover-color: #0beff4;
   --gold-color: #dcc14f;
   --gray-color: #808080;
@@ -10,19 +10,24 @@
   --white-color: #fbf9fa;
   --transition: 0.5s ease-in-out;
   --box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5),
-    10px 0 10px -10px rgba(0, 0, 0, 0.5), 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    10px 0 10px -10px rgba(215, 99, 99, 0.5),
+    0 10px 10px -10px rgba(0, 0, 0, 0.5);
   --background-color-transition: var(--background-color);
 }
 
 body {
-  /* margin: 0 auto; */
   font-family: 'Roboto', sans-serif;
   /* height: 100vh; */
   font-weight: 400;
   font-style: normal;
-  transition: background-color var(--transition), color var(--transition);
-  /* background-color: var(--accent--color); */
-  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
+  background-color: #1f949b;
+  /* background-image: url('../../assets/images/start.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  /* transition: background-color var(--transition), color var(--transition); */
+
+  /* background: linear-gradient(180deg, var(--accent--color), var(--hover-color)); */
 }
 
 h1,
