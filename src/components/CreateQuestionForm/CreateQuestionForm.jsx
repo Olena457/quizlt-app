@@ -13,7 +13,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import css from './CreateCardForm.module.css';
 
-const CreateCardForm = () => {
+const CreateQuestionForm = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -39,8 +39,7 @@ const CreateCardForm = () => {
       navigate('/login');
     }
   }, [isLoggedIn, navigate]);
-
-  // Логіка редагування
+  // edit logic
   useEffect(() => {
     if (id && cardToEdit) {
       setCategory(cardToEdit.category);
@@ -190,4 +189,4 @@ const CreateCardForm = () => {
   );
 };
 
-export default CreateCardForm;
+export default CreateQuestionForm;

@@ -14,29 +14,23 @@ import PrivateRoute from './components/PrivateRoute.jsx';
 import './App.css';
 import CategoryPage from './pages/CategoryPage/CategoryPage.jsx';
 import ResultPage from './pages/ResultPage/ResultPage.jsx';
-const CardFormPage = lazy(() =>
-  import('./pages/CardFormPage/CardFormPage.jsx')
+
+const CreateQuestionPage = lazy(() =>
+  import('./pages/CreateQuestionPage/CreateQuestionPage.jsx')
 );
-const CardsPage = lazy(() => import('./pages/CardsPage/CardsPage.jsx'));
-const CreateCardPage = lazy(() =>
-  import('./pages/CreateCardPage/CreateCardPage.jsx')
-);
-// const FavoriteCardPage = lazy(() =>
-//   import('./pages/FavoriteCardPage/FavoriteCardPage.jsx')
-// );
-import GamePage from './pages/GamePage/GamePage.jsx';
 const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
+const StartPage = lazy(() => import('./pages/StartPage/StartPage.jsx'));
+const GamePage = lazy(() => import('./pages/GamePage/GamePage.jsx'));
 const RegistrationPage = lazy(() =>
   import('./pages/RegistrationPage/RegistrationPage.jsx')
 );
 const LogInPage = lazy(() => import('./pages/LogInPage/LogInPage.jsx'));
-// const FilterPage = lazy(() => import('./pages/FilterPage/FilterPage.jsx'));
 const NotFoundPage = lazy(() =>
   import('./pages/NotFoundPage/NotFoundPage.jsx')
 );
-const ViewPlayersPage = lazy(() =>
-  import('./pages/ViewPlayersPage/ViewPlayersPage.jsx')
-);
+// const ViewPlayersPage = lazy(() =>
+//   import('./pages/ViewPlayersPage/ViewPlayersPage.jsx')
+// );
 
 function App() {
   const dispatch = useDispatch();
@@ -60,29 +54,28 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route path="/register-user" element={<RegistrationPage />} />
+            <Route path="/register" element={<RegistrationPage />} />
             <Route path="/login" element={<LogInPage />} />
+            <Route path="/start" element={<StartPage />} />
             <Route path="/category" element={<CategoryPage />} />
             <Route path="/game" element={<GamePage />} />
             <Route path="/result" element={<ResultPage />} />
-
-            <Route path="/create-card" element={<CreateCardPage />} />
-            {/* <Route path="/cards" element={<CardsPage />} /> */}
-            <Route path="/cards/:id" element={<CardFormPage />} />
-            {/* <Route path="/filter" element={<FilterPage />} /> */}
-            <Route path="/cards/:id/players" element={<ViewPlayersPage />} />
+            {/* <Route path="/category/:id/players" element={<ViewPlayersPage />} /> */}
 
             {/* <Route
-              path="/favorites"
+              path="/view-players"
               element={
-                <PrivateRoute redirectTo="/" component={<FavoriteCardPage />} />
+                <PrivateRoute redirectTo="/" component={<ViewPlayersPage />} />
               }
             /> */}
 
             <Route
-              path="/create-card"
+              path="/create-question"
               element={
-                <PrivateRoute redirectTo="/" component={<CreateCardPage />} />
+                <PrivateRoute
+                  redirectTo="/"
+                  component={<CreateQuestionPage />}
+                />
               }
             />
 

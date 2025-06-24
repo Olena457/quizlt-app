@@ -1,4 +1,4 @@
-.container {
+/* .container {
   width: 90%;
   max-width: 400px;
   background-color: var(--white-color);
@@ -44,7 +44,6 @@
   margin-bottom: 10px;
   color: var(--gray-color);
 }
-/* radio __________ */
 .radioWrapper {
   display: flex;
   align-items: center;
@@ -103,4 +102,4 @@
 .stats p {
   margin: 0;
   font-weight: bold;
-}
+} */

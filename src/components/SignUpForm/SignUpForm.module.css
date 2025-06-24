@@ -8,9 +8,8 @@
   margin-top: 20px;
   padding: 30px 50px;
   border-radius: 20px;
-  border: 1px solid var(--gold-color);
-  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
-  box-shadow: 0px 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--gold-color);
+  background: linear-gradient(180deg, #fefefe, #eaf9f9);
 }
 /* .container::-webkit-scrollbar {
   width: 8px;
@@ -32,13 +31,13 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin-bottom: 15px;
-  color: var(--black-color);
+  color: var(--button-bgr-color);
 }
 
 .text {
   font-size: 16px;
   line-height: 1.375;
-  color: #3e3b3b;
+  color: var(--black-color);
   margin-bottom: 40px;
 }
 
@@ -65,6 +64,14 @@
   border-radius: 12px;
   padding: 16px 18px;
 }
+label {
+  color: #c8b26d;
+}
+/* input::placeholder,
+textarea::placeholder {
+  color: #c8b26d;
+  opacity: 1;
+} */
 .submitBtn {
   display: block;
   width: 100%;
@@ -74,15 +81,16 @@
   color: var(--black-color);
   border-radius: 20px;
   cursor: pointer;
-  border: 1px solid var(--gold-color);
-  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
-  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--gold-color);
+  background-color: var(--button-bgr-color);
+
   transition: background-color 0.3s ease;
 }
 .submitBtn:hover {
+  background-color: var(--button-hover-color);
   color: var(--gold-color);
-  background: var(--accent--color);
   border: 1px solid var(--hover-color);
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.5);
 }
 
 .submitBtn .emailWrapper {

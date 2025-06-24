@@ -11,19 +11,12 @@ const Navigation = () => {
   // const cardsLoading = useSelector(selectCardsLoading);
   return (
     <div className={css.container}>
-      {/* <NavLink to="/cards" className={activeLink}>
-        Quiz
+      <NavLink to="/" className={activeLink} aria-label="Home">
+        Home
       </NavLink>
-      {!cardsLoading && (
-        <NavLink to="/filter" className={activeLink}>
-          Filter
-        </NavLink>
-      )} */}
-      {/* {!cardsLoading && (
-        <NavLink to="/category" className={activeLink}>
-          Categories Quiz
-        </NavLink>
-      )} */}
+      <NavLink to="/start" className={activeLink}>
+        Start Quiz
+      </NavLink>
       <NavLink to="/category" className={activeLink}>
         Categories Quiz
       </NavLink>
@@ -33,30 +26,19 @@ const Navigation = () => {
           <NavLink to="/login" className={activeLink}>
             Login
           </NavLink>
-          <NavLink
-            to="/register-user"
-            className={activeLink}
-            aria-label="Register"
-          >
+          <NavLink to="/register" className={activeLink} aria-label="Register">
             Register
           </NavLink>
         </>
       )}
       {isLoggedIn && (
         <>
-          {/* <NavLink
-            to="/favorites"
-            className={activeLink}
-            aria-label="Favorites"
-          >
-            Favorites
-          </NavLink> */}
           <NavLink
-            to="/create-card"
+            to="/create-question"
             className={activeLink}
             aria-label="Create card"
           >
-            Create Card
+            Create Question
           </NavLink>
         </>
       )}

@@ -10,10 +10,10 @@
   margin-right: auto;
   align-items: center;
   display: flex;
-  background: var(--accent-color);
+  background: linear-gradient(135deg, #181a1d, #2e8894);
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 20px 10px;
   justify-content: center;
   align-items: baseline;
   border-radius: 10px;
@@ -28,72 +28,11 @@
 }
 @media screen and (min-width: 1025px) {
   .header {
+    padding: 10px 50px;
     justify-content: space-between;
   }
 }
-.brand {
-  display: flex;
-  gap: 15px;
-  justify-content: space-between;
-  align-items: center;
-}
-@media screen and (min-width: 1025px) {
-  .brand {
-    gap: 15px;
-  }
-}
-.title {
-  font-size: 14px;
-  font-weight: bold;
-  font-family: cursive;
-  color: #32dedf;
-  text-shadow: 1px 1px 0 #121417, 2px 2px 0#32dedf, 3px 3px 0 #115e95,
-    4px 4px 0 #121417, 5px 5px 0 #115e95, 6px 6px 0 #9f9a9a, 7px 7px 0 #ffc841,
-    8px 8px 7px #4f4a4a;
-}
 
-@media screen and (min-width: 768px) {
-  .title {
-    font-size: 24px;
-    white-space: nowrap;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .title {
-    white-space: nowrap;
-    font-size: 28px;
-  }
-}
-
-.logoContainer {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-@media screen and (min-width: 768px) {
-  .logoContainer {
-    gap: 10px;
-  }
-}
-
-.logo {
-  display: block;
-  width: 30px;
-  height: 30px;
-  transition: var(--transition);
-  border-radius: 50%;
-}
-
-.logo:hover,
-.logo:focus {
-  transform: scale(1.2);
-}
-@media screen and (min-width: 768px) {
-  .logo {
-    width: 50px;
-    height: 50px;
-  }
-}
 .sigWrapper {
   display: flex;
   align-items: center;

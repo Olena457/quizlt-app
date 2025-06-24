@@ -15,6 +15,7 @@
   --button-hover-color: #328fa0;
   --gradient-color: linear-gradient(to right, #c8b26d, #84d8db);
   --form-color: rgba(247, 246, 248, 0.85);
+  --linear-gradient-color: linear-gradient(135deg, #181a1d, #2e8894);
   /* --white-color: #fbf9fa; */
   /* --gray-color: #808080; */
   /* --accent--color: #1f949b; */
@@ -35,7 +36,7 @@ body {
   font-weight: 400;
   font-style: normal;
   /* background: radial-gradient(circle at 40% 30%, #328fa0 0%, #181a1d 100%); */
-  background: linear-gradient(135deg, #181a1d, #2e8894);
+  background: var(--linear-gradient-color);
   /* background-image: url('../../assets/images/start.jpg');
   background-size: cover;
   background-position: center;

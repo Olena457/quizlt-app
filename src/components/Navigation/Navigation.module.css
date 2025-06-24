@@ -8,7 +8,7 @@
 .link {
   display: inline-block;
   padding: 30px 20px 30px 20px;
-  color: var(--hover-color);
+  color: var(--accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   cursor: pointer;
@@ -16,7 +16,7 @@
 }
 .link.active {
   position: relative;
-  color: #ffc841;
+  color: var(--gold-color);
 }
 .link:after {
   content: '';
@@ -26,7 +26,7 @@
   bottom: -3px;
   width: 0;
   height: 2px;
-  background-color: var(--red-color);
+  background-color: var(--secondary-color);
   transition: width 0.5s;
 }
 
@@ -38,7 +38,7 @@
   left: 0;
   bottom: -3px;
   height: 2px;
-  background-color: var(--red-color);
+  background-color: var(--gold-color);
   transition: width 0.5s;
 }
 .hiddenLink {
