@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import css from './CategoryCard.module.css';
+
 import { useState } from 'react';
 
 const CategoryCard = ({
@@ -8,6 +9,7 @@ const CategoryCard = ({
   isLastQuestion,
   onAnswer,
   onNext,
+  // card,
 }) => {
   const [selectedAnswer, setSelectedAnswer] = useState('');
 
@@ -42,6 +44,7 @@ const CategoryCard = ({
           {isLastQuestion ? 'Submit' : 'Next'}
         </button>
       </div>
+      {/* <CardActions card={card} /> */}
     </div>
   );
 };

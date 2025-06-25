@@ -60,10 +60,10 @@ function App() {
             <Route path="/category" element={<CategoryPage />} />
             <Route path="/game" element={<GamePage />} />
             <Route path="/result" element={<ResultPage />} />
-            {/* <Route path="/category/:id/players" element={<ViewPlayersPage />} /> */}
 
             {/* <Route
               path="/view-players"
+              path="players/:id"
               element={
                 <PrivateRoute redirectTo="/" component={<ViewPlayersPage />} />
               }
@@ -71,6 +71,15 @@ function App() {
 
             <Route
               path="/create-question"
+              element={
+                <PrivateRoute
+                  redirectTo="/"
+                  component={<CreateQuestionPage />}
+                />
+              }
+            />
+            <Route
+              path="/edit-question/:category/:id"
               element={
                 <PrivateRoute
                   redirectTo="/"

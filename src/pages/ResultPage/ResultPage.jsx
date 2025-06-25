@@ -60,6 +60,13 @@ const ResultPage = () => {
         <button type="submit" onClick={() => navigate('/category')}>
           Try Again
         </button>
+        <button
+          type="button"
+          onClick={() => navigate(`/players/${category}`)}
+          className={css.viewPlayersButton}
+        >
+          View All Players from "{category}"
+        </button>
       </QuizContainer>
     </div>
     // </div>

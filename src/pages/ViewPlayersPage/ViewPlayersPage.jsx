@@ -1,4 +1,5 @@
 // import { useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { useParams } from 'react-router-dom';
 // import { fetchPlayers } from '../../redux/players/operationsPlayers.js';
@@ -12,6 +13,7 @@
 // import PlayersList from '../../components/PlayerList/PlayerList.jsx';
 
 // const ViewPlayersPage = () => {
+// const navigate = useNavigate();
 //   const { id } = useParams();
 //   const dispatch = useDispatch();
 //   const players = useSelector(state => selectPlayersById(state, id));
@@ -27,12 +29,19 @@
 //   }, [players, dispatch, id]);
 
 //   return (
-//     <div className={css.participPage}>
-//       <h2 className={css.title}>Players</h2>
-//       {loading && <Loader />}
-//       {error && <p className={css.error}>{error}</p>}
-//       {!loading && !error && <PlayersList players={players} />}
-//     </div>
+{
+  /* <>
+  <div className={css.participPage}>
+     <h2 className={css.title}>Players</h2>
+     {loading && <Loader />}
+     {error && <p className={css.error}>{error}</p>}
+    {!loading && !error && <PlayersList players={players} />}
+  </div>
+  <button onClick={() => navigate(-1)} className={css.backButton}>
+    ← Back to My Result
+  </button>
+</> */
+}
 //   );
 // };
 

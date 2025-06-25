@@ -24,38 +24,6 @@ export const fetchPlayers = createAsyncThunk(
   }
 );
 
-// export const registerGameParticipant = createAsyncThunk(
-//   'players/registerGameParticipant',
-//   async ({ cardId, userId }, thunkAPI) => {
-//     try {
-//       const state = thunkAPI.getState();
-//       const currentUser = selectUser(state);
-
-//       if (!currentUser?.uid) {
-//         return thunkAPI.rejectWithValue('User not authenticated');
-//       }
-
-//       const playersRef = ref(database, `players/${cardId}/${userId}`);
-//       const snapshot = await get(playersRef);
-
-//       if (snapshot.exists()) {
-//         return { playerId: userId, cardId, playerData: snapshot.val() };
-//       } else {
-//         const playerData = {
-//           fullname: currentUser?.displayName || '',
-//           email: currentUser?.email || '',
-//           score: 0,
-//           amount: 0,
-//           userId: currentUser.uid,
-//         };
-//         await set(playersRef, playerData);
-//         return { playerId: userId, cardId, playerData };
-//       }
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
 export const registerGameParticipant = createAsyncThunk(
   'players/registerGameParticipant',
   async (
@@ -79,10 +47,10 @@ export const registerGameParticipant = createAsyncThunk(
         const playerData = {
           fullname: currentUser?.displayName || '',
           email: currentUser?.email || '',
-          score: correctAnswersCount, // Кількість правильних відповідей
-          amount: 0, // Загальна кількість ігор
-          category, // Вибрана категорія
-          timeTaken, // Час проходження тесту
+          score: correctAnswersCount,
+          amount: 0,
+          category,
+          timeTaken,
           userId: currentUser.uid,
         };
         await set(playersRef, playerData);

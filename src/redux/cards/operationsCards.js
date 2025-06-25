@@ -36,6 +36,59 @@ export const fetchCards = createAsyncThunk(
     }
   }
 );
+// ___________________fetch card by category
+export const fetchCardByCategory = createAsyncThunk(
+  'cards/fetchCardByCategory',
+  async (category, thunkAPI) => {
+    try {
+      // upload database cards/{category}
+      const cardRef = ref(database, `cards/${category}`);
+      const snapshot = await get(cardRef);
+      const officialCards = snapshot.exists()
+        ? Object.entries(snapshot.val()).map(([id, data]) => ({ id, ...data }))
+        : [];
+
+      // uploadet users questions  if there are any
+      const customRef = ref(database, `customCards/${category}`);
+      const customSnap = await get(customRef);
+
+      // no user questions
+      // if (!customSnap.exists()) {
+      const customCards = customSnap.exists()
+        ? Object.entries(customSnap.val()).map(([id, data]) => ({
+            id,
+            ...data,
+          }))
+        : [];
+
+      // combine official and custom questions
+      // if (officialCards.length === 0 && customCards.length === 0) {
+      const combined = [...officialCards, ...customCards];
+
+      return { category, data: combined };
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+// export const fetchCardByCategory = createAsyncThunk(
+//   'cards/fetchCardByCategory',
+//   async (category, thunkAPI) => {
+//     try {
+//       const cardRef = ref(database, `cards/${category}`);
+//       const snapshot = await get(cardRef);
+
+//       if (snapshot.exists()) {
+//         return { category, data: snapshot.val() };
+//       } else {
+//         return thunkAPI.rejectWithValue('No data for this category');
+//       }
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );
 
 // __________________register participant
 

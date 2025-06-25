@@ -12,14 +12,36 @@ import {
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import css from './CreateCardForm.module.css';
+// ________________________________________
+// import { useState, useEffect } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import {
+//   addCustomCard,
+//   editCustomCard,
+// } from '../../redux/customCards/operationsCustomCards.js';
+// import { selectCustomCardById } from '../../redux/customCards/selectorsCustomCards.js';
+// import {
+//   selectIsLoggedIn,
+//   selectUserId,
+// } from '../../redux/auth/selectorsAuth.js';
+// import { useNavigate, useParams } from 'react-router-dom';
+// import { toast } from 'react-toastify';
+// import css from './CreateCardForm.module.css';
 
+// ________________________________________
 const CreateQuestionForm = () => {
+  // const { category, id } = useParams();
+  // const isEdit = Boolean(id); // true if edit
+
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const userId = useSelector(selectUserId);
   const cardToEdit = useSelector(state => selectCardById(state, id));
+  // const cardToEdit = useSelector(state =>
+  //   selectCustomCardById(state, category, id)
+  // );
 
   const [category, setCategory] = useState('');
   const [title, setTitle] = useState('');
@@ -41,6 +63,7 @@ const CreateQuestionForm = () => {
   }, [isLoggedIn, navigate]);
   // edit logic
   useEffect(() => {
+    // if (isEdit && cardToEdit) {
     if (id && cardToEdit) {
       setCategory(cardToEdit.category);
       setTitle(cardToEdit.title);
@@ -52,6 +75,7 @@ const CreateQuestionForm = () => {
       setCorrectAnswer(cardToEdit.correctAnswer);
     }
   }, [id, cardToEdit]);
+  // }, [isEdit, cardToEdit]);
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -96,12 +120,34 @@ const CreateQuestionForm = () => {
       });
     }
   };
+  // try {
+  //   if (isEdit) {
+  //     await dispatch(
+  //       editCustomCard({
+  //         category,
+  //         id,
+  //         updatedCard: cardData,
+  //       })
+  //     ).unwrap();
+  //     toast.success('Card updated successfully!', { position: 'top-center' });
+  //   } else {
+  //     await dispatch(addCustomCard(cardData)).unwrap();
+  //     toast.success('Card created successfully!', { position: 'top-center' });
+  //   }
+  //   navigate('/');
+  // } catch {
+  //   toast.error('An error occurred. Please try again later.', {
+  //     position: 'top-center',
+  //   });
+  // }
 
+  // ______________________________________
   return (
     <form onSubmit={handleSubmit} className={css.formContainer}>
       <h2 className={css.title}>
         {id ? 'Edit Card Form' : 'Create Card Form'}
       </h2>
+      {/* <h2>{isEdit ? 'Edit Card Form' : 'Create Card Form'}</h2> */}
 
       <label className={css.label}>
         Category:

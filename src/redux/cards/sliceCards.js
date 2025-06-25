@@ -1,9 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCards, fetchCardsPaginated } from './operationsCards.js';
+import {
+  fetchCards,
+  fetchCardsPaginated,
+  fetchCardByCategory,
+} from './operationsCards.js';
 
 const initialState = {
   data: [],
   lastKey: null,
+  // addedfor selecting a card
+  selectedCard: null,
   loading: false,
   error: null,
 };
@@ -40,6 +46,21 @@ const sliceCards = createSlice({
         state.loading = false;
       })
       .addCase(fetchCardsPaginated.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+      .addCase(fetchCardByCategory.pending, state => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchCardByCategory.fulfilled, (state, action) => {
+        state.loading = false;
+        state.selectedCard = {
+          id: action.payload.category,
+          ...action.payload.data,
+        };
+      })
+      .addCase(fetchCardByCategory.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });
