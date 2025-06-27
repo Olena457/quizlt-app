@@ -38,7 +38,15 @@
   }
 }
 .title {
-  color: gold;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gold-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .title {
+    font-weight: 600;
+    font-size: 24px;
+  }
 }
 .gameContainerQuiz {
   width: 80%;
@@ -97,6 +105,47 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* .buttonWrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  bottom: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (min-width: 768px) {
+  .buttonWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+  }
+} */
+.buttonWrapper {
+  /* position: absolute; */
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .buttonWrapper {
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .buttonWrapper {
+    justify-content: center;
+    gap: 40px;
+  }
+}
 .buttonStart {
   width: 120px;
   height: 46px;
@@ -112,27 +161,26 @@
   font-weight: 500;
   line-height: 1;
   white-space: nowrap;
-  background: #1f949b;
-  /* background: linear-gradient(180deg, var(--accent--color), var(--hover-color)); */
-
-  color: var(--hover-color);
-  border: 2px solid var(--hover-color);
+  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
+  color: var(--accent-color);
+  border: 2px solid var(--gold-color);
   transition: background-color var(--transition), color var(--transition);
 }
 
 .buttonStart:hover,
-.buttonStart:focus,
-.categoryButton:active {
-  color: var(--gold-color);
+.buttonStart:focus {
+  border: 2px solid var(--hover-color);
   box-shadow: -15px 0 20px -5px rgba(76, 241, 241, 0.7),
     15px 0 20px -5px rgba(76, 241, 241, 0.7),
     0 15px 20px -5px rgba(76, 241, 241, 0.7);
+  color: var(--gold-color);
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .buttonStart {
     width: 150px;
     height: 46px;
     display: flex;
+    margin-left: 46px;
     justify-content: center;
     align-items: center;
     padding: 12px 40px;
@@ -147,9 +195,16 @@
   .buttonStart {
     width: 173px;
     height: 56px;
+    display: flex;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
     padding: 15px 60px;
     flex: none;
     order: 1;
     flex-grow: 0;
   }
+  /* .buttonMargin {
+    margin-left: 45%;
+  } */
 }

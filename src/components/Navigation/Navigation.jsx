@@ -15,10 +15,10 @@ const Navigation = () => {
         Home
       </NavLink>
       <NavLink to="/start" className={activeLink}>
-        Start Quiz
+        Start
       </NavLink>
       <NavLink to="/category" className={activeLink}>
-        Categories Quiz
+        Categories
       </NavLink>
 
       {!isLoggedIn && (

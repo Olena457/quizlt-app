@@ -56,10 +56,7 @@
 //               />
 //             ))}
 //           </div>
-//           <button className={css.buttonStart} onClick={handleStartQuiz}>
-//             Play Game
-//           </button>
-//         </div>
+//
 //       </div>
 //     </div>
 //   );
@@ -92,27 +89,24 @@ import techIcon from '../../assets/icons/techIcon.svg';
 
 const categoryIcons = {
   general: brainIcon,
-  maths: worldIcon,
-  history: geoIcon,
-  art: scienIcon,
-  animals: techIcon,
+  geography: worldIcon,
+  movies: geoIcon,
   coding: progIcon,
+  science: scienIcon,
+  technologies: techIcon,
 };
 
 const CategoryPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Отримуємо категорії, стан завантаження та помилки з Redux
   const categoriesFromRedux = useSelector(selectAllCategories);
   const loading = useSelector(selectCardsLoading);
   const error = useSelector(selectCardsError);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  // useEffect для завантаження категорій при першому рендері компонента
   useEffect(() => {
-    // Завантажуємо категорії, тільки якщо вони ще не завантажені або є помилка
     if (categoriesFromRedux.length === 0 && !loading && !error) {
       dispatch(fetchAllCategoriesData());
     }
@@ -127,7 +121,7 @@ const CategoryPage = () => {
     if (selectedCategory) {
       navigate('/game');
     } else {
-      toast.error('Будь ласка, виберіть категорію!');
+      toast.error('Please choose a category!');
     }
   };
 
@@ -135,32 +129,40 @@ const CategoryPage = () => {
     <div className={css.pageGame}>
       <div className={css.containerCategories}>
         <div className={css.gameContainerQuiz}>
-          <div className={css.title}>Виберіть Категорію</div>
+          <div className={css.title}>Select Category</div>
           {loading && <p>Loading categories...</p>}
-          {error && <p className={css.errorMessage}>Помилка: {error}</p>}
+          {error && <p className={css.errorMessage}>Error: {error}</p>}
           {!loading && !error && categoriesFromRedux.length === 0 && (
             <p className={css.titleError}>
-              Категорії не знайдено. Перевірте Firebase.
+              No categories found. Please try again later.
             </p>
           )}
           {!loading && !error && categoriesFromRedux.length > 0 && (
             <div className={css.categoryButtons}>
               {categoriesFromRedux.map(category => (
                 <CategoryItem
-                  key={category.name} // Використовуємо category.name як key, бо він унікальний
-                  title={category.name} // Назва категорії для обробки
-                  displayTitle={category.title} // Відображуване ім'я з Firebase (наприклад, "Загальні знання")
-                  description={category.description} // Опис з Firebase
+                  key={category.name}
+                  title={category.name}
+                  displayTitle={category.title}
+                  description={category.description}
                   onSelect={handleCategorySelect}
-                  icon={categoryIcons[category.name]} // Отримуємо іконку з мапи
-                  isSelected={selectedCategory === category.name} // Додаємо пропс для підсвічування обраної категорії
+                  icon={categoryIcons[category.name]}
+                  isSelected={selectedCategory === category.name}
                 />
               ))}
             </div>
           )}
-          <button className={css.buttonStart} onClick={handleStartQuiz}>
-            Грати
-          </button>
+          <div className={css.buttonWrapper}>
+            <button className={css.buttonStart} onClick={handleStartQuiz}>
+              Play Game
+            </button>
+            <button
+              onClick={() => navigate('/create-question')}
+              className={css.buttonStart}
+            >
+              Create Quiz
+            </button>
+          </div>
         </div>
       </div>
     </div>

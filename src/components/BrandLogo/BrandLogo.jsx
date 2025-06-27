@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-
 import css from './BrandLogo.module.css';
 import logoBubl from '../../assets/icons/logoBubl.svg';
 
