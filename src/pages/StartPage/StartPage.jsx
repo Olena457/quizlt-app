@@ -20,13 +20,13 @@ const StartPage = () => {
             <h3 className={css.subtitle}>
               Dive into the quiz and see how much you know!
             </h3>
-            <p>Log in — create or use your profile.</p>
+            <p>Log in — register and create your profile.</p>
             <p>Pick a category — pick what interests you.</p>
-            <p>Play the quiz — answer the questions.</p>
+            <p>Play the quiz — answer the questions correctly.</p>
             <p>See your stats — check your score and speed.</p>
             <p>View leaderboards — compare with others players.</p>
             <p>Add your own questions — create, edit, or delete.</p>
-            <p>Play. Learn. Compete. Grow. 🏆</p>
+            <p>Play. Discover. Learn. Compete. Grow. 🏆</p>
           </div>
           <button onClick={handlePlayClick} className={css.playButton}>
             Play Now
