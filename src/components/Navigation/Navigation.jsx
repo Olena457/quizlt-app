@@ -40,6 +40,13 @@ const Navigation = () => {
           >
             Create Question
           </NavLink>
+          {/* <NavLink
+            to="/create-question"
+            className={activeLink}
+            aria-label="Create card"
+          >
+            Create Question
+          </NavLink> */}
         </>
       )}
     </div>

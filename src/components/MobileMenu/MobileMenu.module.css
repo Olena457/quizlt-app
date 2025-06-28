@@ -10,14 +10,13 @@
   width: 100%;
   z-index: 1000;
   min-height: 80px;
-  background-color: var(--accent--color);
+  background: var(--linear-gradient-color);
   font-size: 16px;
   font-weight: 500;
   overflow: hidden;
   border-radius: 10px;
   transition: max-height 0.3s ease-out;
   box-shadow: 0 10px 10px -5px #0beff4;
-  /* box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5); */
 }
 
 .mobileMenu.open {

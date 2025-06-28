@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { authReducer } from './auth/sliceAuth.js';
 import { cardsReducer } from './cards/sliceCards.js';
 import { playersReducer } from './players/slicePlayers.js';
-import { customCardsReducer } from './castom/sliceCustomCards.js';
+import { customCardsReducer } from './custom/sliceCustomCards.js';
 import filterReducer from './filter/sliceFilter.js';
 
 const store = configureStore({

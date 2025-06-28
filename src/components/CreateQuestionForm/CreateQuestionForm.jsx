@@ -236,50 +236,45 @@
 // };
 
 // export default CreateQuestionForm;
+
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-// <--- ОНОВЛЕНІ ІМПОРТИ для роботи з customCards ---
 import {
   addCustomCard,
   editCustomCard,
-  fetchCustomCardById, // Для завантаження картки для редагування
-} from '../../redux/customCards/operationsCustomCards.js';
+  fetchCustomCardById,
+} from '../../redux/custom/operationsCustomCards.js';
 import {
-  selectSelectedCustomCard, // Селектор для отримання завантаженої картки
-  selectCustomCardsLoading, // Для індикації завантаження/збереження
-  selectCustomCardsError, // Для обробки помилок
-  clearSelectedCustomCard, // Для очищення стану після редагування/створення
-} from '../../redux/customCards/selectorsCustomCards.js';
-// --------------------------------------------------
+  selectSelectedCustomCard,
+  selectCustomCardsLoading,
+  selectCustomCardsError,
+  clearSelectedCustomCard,
+} from '../../redux/custom/selectorsCustomCards.js';
 
 import {
-  selectIsLoggedIn,
+  // selectIsLoggedIn,
   selectUserId,
 } from '../../redux/auth/selectorsAuth.js';
 
 import css from './CreateCardForm.module.css';
-// import { update } from 'firebase/database';
 
 const CreateQuestionForm = () => {
-  // Отримуємо category та id з URL. category потрібна для шляху до Firebase.
   const { category: urlCategory, id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isLoggedIn = useSelector(selectIsLoggedIn);
+  // const isLoggedIn = useSelector(selectIsLoggedIn);
   const userId = useSelector(selectUserId);
 
-  // Отримуємо картку для редагування з Redux-стану customCards
+  //get card to edit from store
   const cardToEdit = useSelector(selectSelectedCustomCard);
   const loading = useSelector(selectCustomCardsLoading);
   const error = useSelector(selectCustomCardsError);
 
-  // Стан форми
-  const [category, setCategory] = useState(urlCategory || ''); // Встановлюємо початкове значення з URL
-  // Поле 'title' видалено, оскільки питання не мають окремого title у Firebase
-  const [questionText, setQuestionText] = useState(''); // Відповідає полю 'question' у Firebase
+  const [category, setCategory] = useState(urlCategory || '');
+  const [questionText, setQuestionText] = useState('');
   const [option1, setOption1] = useState('');
   const [option2, setOption2] = useState('');
   const [option3, setOption3] = useState('');
@@ -287,34 +282,32 @@ const CreateQuestionForm = () => {
   const [correctAnswer, setCorrectAnswer] = useState('');
 
   // Ефект для перевірки авторизації та перенаправлення
-  useEffect(() => {
-    if (!isLoggedIn) {
-      toast.info('Ви повинні увійти, щоб отримати доступ до цієї функції!', {
-        position: 'top-center',
-        toastId: 'login-toast',
-      });
-      navigate('/login');
-    }
-  }, [isLoggedIn, navigate]);
+  // useEffect(() => {
+  //   if (!isLoggedIn) {
+  //     toast.info('Ви повинні увійти, щоб отримати доступ до цієї функції!', {
+  //       position: 'top-center',
+  //       toastId: 'login-toast',
+  //     });
+  //     navigate('/login');
+  //   }
+  // }, [isLoggedIn, navigate]);
 
-  // Ефект для завантаження даних картки при редагуванні
+  // dovnload card by ID
   useEffect(() => {
     if (id && urlCategory) {
-      // Якщо є ID та категорія в URL, завантажуємо картку
       dispatch(fetchCustomCardById({ category: urlCategory, id }));
     }
-    // Очищаємо вибрану картку при розмонтуванні компонента
+    // return function cleanup
     return () => {
       dispatch(clearSelectedCustomCard());
     };
   }, [dispatch, id, urlCategory]);
 
-  // Ефект для заповнення форми даними завантаженої картки (для редагування)
   useEffect(() => {
-    // Перевіряємо, що картка завантажена і її ID відповідає ID з URL
+    //check if we are in edit mode
     if (id && cardToEdit && cardToEdit.id === id) {
-      setCategory(urlCategory); // Категорія береться з URL
-      setQuestionText(cardToEdit.question || ''); // Поле 'question'
+      setCategory(urlCategory);
+      setQuestionText(cardToEdit.question || '');
       setOption1(cardToEdit.options?.[0] || '');
       setOption2(cardToEdit.options?.[1] || '');
       setOption3(cardToEdit.options?.[2] || '');
@@ -326,9 +319,8 @@ const CreateQuestionForm = () => {
   const handleSubmit = async e => {
     e.preventDefault();
 
-    // Перевірка на заповненість усіх полів
     if (
-      !category.trim() || // Додано .trim() для видалення пробілів
+      !category.trim() || // added .trim()
       !questionText.trim() ||
       !correctAnswer.trim() ||
       !option1.trim() ||
@@ -336,39 +328,42 @@ const CreateQuestionForm = () => {
       !option3.trim() ||
       !option4.trim()
     ) {
-      toast.error('Усі поля обов`язкові!', { position: 'top-center' });
+      toast.error('All fields required!', { position: 'top-center' });
       return;
     }
 
-    // Створюємо об'єкт даних питання, який відповідає структурі Firebase
+    //create object for question
     const cardData = {
-      question: questionText.trim(), // 'question' замість 'questionText'
-      options: [option1.trim(), option2.trim(), option3.trim(), option4.trim()], // Масив рядків
+      question: questionText.trim(),
+      options: [option1.trim(), option2.trim(), option3.trim(), option4.trim()],
       correctAnswer: correctAnswer.trim(),
-      createdBy: userId, // 'createdBy' замість 'creatorId'
+      createdBy: userId,
     };
 
     try {
       if (id) {
-        // Редагування існуючого питання
+        // edit logic
         await dispatch(
           editCustomCard({
-            category: category.trim(), // Передаємо категорію
-            id: id,
-            updatedCard: cardData, // Передаємо оновлені дані
+            category: category.trim(),
+            updatedCard: cardData, //udated data
           })
         ).unwrap();
-        toast.success('Питання оновлено успішно!', { position: 'top-center' });
+        toast.success('Question updated successfully!', {
+          position: 'top-center',
+        });
       } else {
-        // Створення нового питання
+        // creted new question
         await dispatch(
           addCustomCard({ ...cardData, category: category.trim() })
-        ).unwrap(); // Передаємо category окремо
-        toast.success('Питання створено успішно!', { position: 'top-center' });
+        ).unwrap(); // pass category
+        toast.success('Question created successfully!!', {
+          position: 'top-center',
+        });
       }
-      navigate('/'); // Перенаправляємо на головну сторінку або сторінку категорій
+      navigate('/categories');
     } catch (err) {
-      toast.error(`Виникла помилка: ${err.message || 'Спробуйте ще раз.'}`, {
+      toast.error(`An error occured: ${err.message || 'Please try again.'}`, {
         position: 'top-center',
       });
     }
@@ -376,36 +371,21 @@ const CreateQuestionForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={css.formContainer}>
-      <h2 className={css.title}>
-        {id ? 'Редагувати Питання' : 'Створити Питання'}
-      </h2>
+      <h2 className={css.title}>{id ? 'Edit question' : 'Create question'}</h2>
 
-      {/* Поле Category */}
       <label className={css.label}>
-        Категорія:
+        Category:
         <input
           type="text"
           value={category}
           onChange={e => setCategory(e.target.value)}
           className={css.input}
-          // Якщо категорію не можна змінювати при редагуванні, додай readOnly={Boolean(id)}
-          readOnly={Boolean(id)} // Робимо поле readOnly при редагуванні
+          readOnly={Boolean(id)} // Category readOnly (editing)
         />
       </label>
 
-      {/* Поле Title видалено, оскільки питання не мають окремого title у Firebase */}
-      {/* <label className={css.label}>
-        Title:
-        <input
-          type="text"
-          value={title}
-          onChange={e => setTitle(e.target.value)}
-          className={css.input}
-        />
-      </label> */}
-
       <label className={css.label}>
-        Питання:
+        Question:
         <textarea
           value={questionText}
           onChange={e => setQuestionText(e.target.value)}
@@ -414,7 +394,7 @@ const CreateQuestionForm = () => {
       </label>
 
       <label className={css.label}>
-        Варіант 1:
+        Option 1:
         <input
           type="text"
           value={option1}
@@ -424,7 +404,7 @@ const CreateQuestionForm = () => {
       </label>
 
       <label className={css.label}>
-        Варіант 2:
+        Option 2:
         <input
           type="text"
           value={option2}
@@ -434,7 +414,7 @@ const CreateQuestionForm = () => {
       </label>
 
       <label className={css.label}>
-        Варіант 3:
+        Option 3:
         <input
           type="text"
           value={option3}
@@ -444,7 +424,7 @@ const CreateQuestionForm = () => {
       </label>
 
       <label className={css.label}>
-        Варіант 4:
+        Option 4:
         <input
           type="text"
           value={option4}
@@ -454,7 +434,7 @@ const CreateQuestionForm = () => {
       </label>
 
       <label className={css.label}>
-        Правильна відповідь:
+        Correct answer:
         <input
           type="text"
           value={correctAnswer}
@@ -472,8 +452,8 @@ const CreateQuestionForm = () => {
           ? 'update question'
           : 'create question'}
       </button>
-      {loading && <p>Завантаження/Збереження...</p>}
-      {error && <p className={css.errorMessage}>Помилка: {error}</p>}
+      {loading && <p>Loadin/Saving...</p>}
+      {error && <p className={css.errorMessage}>Error: {error}</p>}
     </form>
   );
 };

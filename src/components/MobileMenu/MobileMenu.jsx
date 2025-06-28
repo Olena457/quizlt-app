@@ -45,24 +45,42 @@ const MobileMenu = () => {
               className={css.link}
               onClick={() => setIsOpen(false)}
             >
-              Categories Quiz
+              Start
             </NavLink>
             <NavLink
               to="/category"
               className={css.link}
               onClick={() => setIsOpen(false)}
             >
-              Create Card
+              Categories
             </NavLink>
 
             {isLoggedIn && (
-              <NavLink
-                to="/create-question"
+              <>
+                <NavLink
+                  to="/create-question"
+                  className={css.link}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Create Quize
+                </NavLink>
+
+                <NavLink
+                  to="/edit-question/:category/:id"
+                  className={css.link}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Edit Quize
+                </NavLink>
+
+                {/* <NavLink
+                path="players/:id"
                 className={css.link}
                 onClick={() => setIsOpen(false)}
-              >
-                Create Card
-              </NavLink>
+                 >
+                 View Players
+                 </NavLink> */}
+              </>
             )}
           </nav>
         </div>

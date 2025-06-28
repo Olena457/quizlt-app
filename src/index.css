@@ -1,7 +1,6 @@
 :root {
   /* --accent-color: #2e8894; */
   --accent-color: #84d8db;
-  /* --secondary-color: #328fa0; */
   --secondary-color: #1aabae;
   --accent-light-color: #84d8db;
   --hover-color: #56e1e4;
@@ -13,11 +12,8 @@
   --black-color: #181a1d;
   --button-bgr-color: #2e8894;
   --button-hover-color: #328fa0;
-  --gradient-color: linear-gradient(to right, #c8b26d, #84d8db);
   --form-color: rgba(247, 246, 248, 0.85);
   --linear-gradient-color: linear-gradient(135deg, #181a1d, #2e8894);
-  /* --white-color: #fbf9fa; */
-  /* --gray-color: #808080; */
   /* --accent--color: #1f949b; */
   /* --secondary-color: #1aabae; */
   /* --accent-light-color: #32dedf; */
@@ -41,9 +37,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; */
-  /* transition: background-color var(--transition), color var(--transition); */
-
-  /* background: linear-gradient(180deg, var(--accent--color), var(--hover-color)); */
 }
 
 h1,

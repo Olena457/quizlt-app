@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import css from './BrandLogo.module.css';
-import logoBubl from '../../assets/icons/logoBubl.svg';
+import quizletGame from '../../assets/images/quizlet.png';
 
 const BrandLogo = () => {
   return (
@@ -10,8 +10,8 @@ const BrandLogo = () => {
       </NavLink>
       <div className={css.logoContainer}>
         <img
-          src={logoBubl}
-          alt="logo"
+          src={quizletGame}
+          alt="quizlet"
           width="20"
           height="20"
           className={css.logo}

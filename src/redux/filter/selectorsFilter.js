@@ -43,7 +43,7 @@ export const selectFilteredCards = createSelector(
       return [];
     }
     if (!selectedCategory) {
-      return cards.filter(card => card.category.includes('general')); // Загальна категорія
+      return cards.filter(card => card.category.includes('general'));
     }
     return cards.filter(card => card.category.includes(selectedCategory));
   }

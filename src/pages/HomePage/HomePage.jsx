@@ -8,13 +8,13 @@ const HomePage = () => {
         <div className={css.containerWelcome}>
           <div className={css.buttonWrapper}>
             <NavLink
-              to="/category"
+              to="/login"
               className={`${css.buttonHome} ${css.buttonMargin}`}
             >
-              Play Quiz
+              Login
             </NavLink>
-            <NavLink to="/create-card" className={css.buttonHome}>
-              Greate Quiz
+            <NavLink to="/register" className={css.buttonHome}>
+              Register
             </NavLink>
           </div>
         </div>

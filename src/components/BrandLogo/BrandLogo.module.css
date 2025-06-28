@@ -1,12 +1,12 @@
 .brand {
   display: flex;
-  gap: 15px;
+  gap: 5px;
   justify-content: space-between;
   align-items: center;
 }
 @media screen and (min-width: 1025px) {
   .brand {
-    gap: 15px;
+    gap: 10px;
   }
 }
 
@@ -54,6 +54,7 @@
   height: 30px;
   transition: var(--transition);
   border-radius: 50%;
+  filter: brightness(1.3) contrast(1.2);
 }
 
 .logo:hover,

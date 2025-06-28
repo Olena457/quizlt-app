@@ -1,0 +1,89 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(20, 20, 20, 0.9));
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.modal {
+  background: #1e1f22;
+  border: 1px solid var(--gold-color);
+  border-radius: 14px;
+  padding: 30px 20px;
+  max-width: 420px;
+  width: 90%;
+  color: var(--gold-color);
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+  animation: popUp 0.4s ease forwards;
+}
+
+.message {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.confirm,
+.cancel {
+  font-size: 16px;
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+}
+
+.confirm {
+  background-color: var(--gold-color);
+  color: #1e1f22;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+}
+
+.cancel {
+  background-color: transparent;
+  border: 1px solid var(--gold-color);
+  color: var(--gold-color);
+}
+
+.confirm:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.6);
+}
+
+.cancel:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 215, 0, 0.05);
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

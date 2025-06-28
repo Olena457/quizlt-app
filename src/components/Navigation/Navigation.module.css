@@ -1,8 +1,12 @@
 .container {
   display: flex;
   align-items: center;
-  gap: 30px;
   text-decoration: none;
+}
+@media (min-width: 1024px) {
+  .container {
+    gap: 30px;
+  }
 }
 
 .link {

@@ -71,11 +71,10 @@ import { createSlice } from '@reduxjs/toolkit';
 import {
   fetchAllCategoriesData,
   fetchCardByCategory,
-  // registerParticipant, // <--- ВИДАЛЕНО: Цей імпорт тепер не потрібен тут
 } from './operationsCards.js';
 
 const initialState = {
-  allCategories: [], // Для зберігання списку всіх категорій з їхніми метаданими (title, description)
+  allCategories: [], // (title, description)
   selectedCategoryData: null, // Для метаданих (title, description) обраної для гри категорії
   selectedCategoryQuestions: [], // Для питань конкретної категорії, обраної для гри
   loading: false,
@@ -88,7 +87,7 @@ const sliceCards = createSlice({
   reducers: {
     clearSelectedCategoryQuestions(state) {
       state.selectedCategoryQuestions = [];
-      state.selectedCategoryData = null; // Очищуємо також метадані
+      state.selectedCategoryData = null;
     },
   },
   extraReducers: builder => {
@@ -111,8 +110,8 @@ const sliceCards = createSlice({
       .addCase(fetchCardByCategory.pending, state => {
         state.loading = true;
         state.error = null;
-        state.selectedCategoryQuestions = []; // Очищуємо питання при новому завантаженні
-        state.selectedCategoryData = null; // Очищуємо метадані
+        state.selectedCategoryQuestions = [];
+        state.selectedCategoryData = null;
       })
       .addCase(fetchCardByCategory.fulfilled, (state, action) => {
         state.loading = false;
