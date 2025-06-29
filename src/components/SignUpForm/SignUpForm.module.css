@@ -9,7 +9,7 @@
   padding: 30px 50px;
   border-radius: 20px;
   border: 2px solid var(--gold-color);
-  background: linear-gradient(180deg, #b8e4e4, #eaf9f9);
+  background: var(--form-gradient-color);
 }
 @media screen and (min-width: 768px) {
   .continer {

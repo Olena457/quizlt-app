@@ -7,7 +7,7 @@
   margin: 0 auto;
   padding: 30px 50px;
   border: 2px solid var(--gold-color);
-  background: linear-gradient(180deg, #b8e4e4, #eaf9f9);
+  background: var(--form-gradient-color);
   border-radius: 20px;
 }
 .container::-webkit-scrollbar {
@@ -96,7 +96,8 @@ label {
   border: 2px solid var(--gold-color);
   transition: background-color 0.3s ease;
 }
-.buttonSign:hover {
+.buttonSign:hover,
+.buttonSign:focus {
   background-color: var(--button-hover-color);
   color: var(--accent-color);
   border: 1px solid var(--hover-color);

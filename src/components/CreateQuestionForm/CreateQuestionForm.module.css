@@ -5,10 +5,10 @@
   overflow-y: auto;
   margin: 0px auto;
   padding: 20px;
-  background-color: var(--white-color);
-  border: 1px solid var(--hover-color);
+  background: var(--form-gradient-color);
+  border: 1px solid var(--gold-color);
   border-radius: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .title {
@@ -16,7 +16,7 @@
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-  color: var(--accent--color);
+  color: var(--button-bgr-color);
 }
 
 .label {
@@ -24,7 +24,7 @@
   font-size: 1rem;
   font-weight: bold;
   margin-bottom: 5px;
-  color: var(--gray-color);
+  color: var(--gold-color);
 }
 
 .input,
@@ -32,7 +32,7 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gold-color);
   border-radius: 4px;
   font-size: 1rem;
   outline: none;
@@ -40,8 +40,8 @@
 
 .input:focus,
 .textarea:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0px 0px 4px rgba(0, 123, 255, 0.5);
+  border-color: var(--gold-color);
+  /* box-shadow: 0px 0px 4px rgba(0, 123, 255, 0.5); */
 }
 
 .textarea {
@@ -61,15 +61,20 @@
   padding: 10px;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--hover-color);
-  background: #1f949b;
+  color: var(--gold-color);
+  background: var(--button-bgr-color);
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  border: 1px solid var(--hover-color);
+  border: 1px solid var(--gold-color);
   transition: background-color 0.3s ease;
 }
-.submitBtn:hover {
-  color: var(--gold-color);
-  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
+.submitBtn:hover,
+.submitBtn:focus {
+  background-color: var(--button-hover-color);
+  color: var(--accent-color);
+  border: 1px solid var(--hover-color);
+  box-shadow: -15px 0 20px -5px rgba(122, 122, 122, 0.25),
+    15px 0 20px -5px rgba(122, 122, 122, 0.25),
+    0 15px 20px -5px rgba(122, 122, 122, 0.25);
 }

@@ -13,11 +13,11 @@
   --button-bgr-color: #2e8894;
   --button-hover-color: #328fa0;
   --form-color: rgba(247, 246, 248, 0.85);
+  --form-gradient-color: linear-gradient(180deg, #b8e4e4, #eaf9f9);
   --linear-gradient-color: linear-gradient(135deg, #181a1d, #2e8894);
   /* --accent--color: #1f949b; */
   /* --secondary-color: #1aabae; */
   /* --accent-light-color: #32dedf; */
-  /* --hover-color: #0beff4; */
   --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   --transition: 0.5s ease-in-out;
   /* --box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5),
