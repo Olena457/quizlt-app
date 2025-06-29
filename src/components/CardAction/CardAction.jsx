@@ -25,18 +25,6 @@
 //     }
 //   };
 
-//   return (
-//     <div className={css.actions}>
-//       <button onClick={handleEdit} className={css.edit}>
-//         ✏️ edit
-//       </button>
-//       <button onClick={handleDelete} className={css.delete}>
-//         🗑 delit
-//       </button>
-//     </div>
-//   );
-// };
-
 // export default CardActions;
 import css from './CardActions.module.css';
 

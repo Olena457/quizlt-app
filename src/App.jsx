@@ -18,6 +18,7 @@ import ResultPage from './pages/ResultPage/ResultPage.jsx';
 const CreateQuestionPage = lazy(() =>
   import('./pages/CreateQuestionPage/CreateQuestionPage.jsx')
 );
+const EditPage = lazy(() => import('./pages/EditPage/EditPage.jsx'));
 const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
 const StartPage = lazy(() => import('./pages/StartPage/StartPage.jsx'));
 const GamePage = lazy(() => import('./pages/GamePage/GamePage.jsx'));
@@ -80,12 +81,7 @@ function App() {
             />
             <Route
               path="/edit-question/:category/:id"
-              element={
-                <PrivateRoute
-                  redirectTo="/"
-                  component={<CreateQuestionPage />}
-                />
-              }
+              element={<PrivateRoute redirectTo="/" component={<EditPage />} />}
             />
 
             <Route path="*" element={<NotFoundPage />} />

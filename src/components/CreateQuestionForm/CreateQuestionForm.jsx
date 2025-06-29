@@ -254,10 +254,7 @@ import {
   clearSelectedCustomCard,
 } from '../../redux/custom/selectorsCustomCards.js';
 
-import {
-  // selectIsLoggedIn,
-  selectUserId,
-} from '../../redux/auth/selectorsAuth.js';
+import { selectUserId } from '../../redux/auth/selectorsAuth.js';
 
 import css from './CreateCardForm.module.css';
 
@@ -265,7 +262,6 @@ const CreateQuestionForm = () => {
   const { category: urlCategory, id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const isLoggedIn = useSelector(selectIsLoggedIn);
   const userId = useSelector(selectUserId);
 
   //get card to edit from store
@@ -281,18 +277,6 @@ const CreateQuestionForm = () => {
   const [option4, setOption4] = useState('');
   const [correctAnswer, setCorrectAnswer] = useState('');
 
-  // Ефект для перевірки авторизації та перенаправлення
-  // useEffect(() => {
-  //   if (!isLoggedIn) {
-  //     toast.info('Ви повинні увійти, щоб отримати доступ до цієї функції!', {
-  //       position: 'top-center',
-  //       toastId: 'login-toast',
-  //     });
-  //     navigate('/login');
-  //   }
-  // }, [isLoggedIn, navigate]);
-
-  // dovnload card by ID
   useEffect(() => {
     if (id && urlCategory) {
       dispatch(fetchCustomCardById({ category: urlCategory, id }));
