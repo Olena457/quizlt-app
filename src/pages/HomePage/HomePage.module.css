@@ -27,10 +27,6 @@
     display: flex;
     flex-direction: column;
     padding: 50px 40px 20px 30px;
-    /* background-image: url('../../assets/images/start.jpg'); */
-    background-size: cover;
-    /* background-position: 65% 30%; */
-    background-repeat: no-repeat;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -39,11 +35,6 @@
     gap: 100px;
     justify-content: space-between;
     align-items: start;
-    /* background-image: url('../../assets/images/start.jpg'); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* background-position: 50% 30%; */
   }
 }
 
@@ -80,7 +71,6 @@
   line-height: 1;
   white-space: nowrap;
   background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
-  /* background: #1f949b; */
   color: var(--black-color);
   border: 2px solid var(--gold-color);
   transition: background-color var(--transition), color var(--transition);

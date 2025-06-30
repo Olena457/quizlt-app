@@ -7,7 +7,7 @@ import MobileMenu from '../MobileMenu/MobileMenu.jsx';
 import Brandlogo from '../BrandLogo/BrandLogo.jsx';
 import css from './AppBar.module.css';
 
-const AppBar = () => {
+const AppBar = ({ id, player, category }) => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
@@ -23,7 +23,11 @@ const AppBar = () => {
     <div className={css.container}>
       <div className={css.header}>
         <Brandlogo />
-        {isMobile ? <MobileMenu /> : <Navigation />}
+        {isMobile ? (
+          <MobileMenu id={id} category={category} player={player} />
+        ) : (
+          <Navigation />
+        )}
 
         {isLoggedIn && (
           <div className={css.sigWrapper}>

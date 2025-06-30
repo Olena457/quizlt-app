@@ -2,18 +2,17 @@ import 'modern-normalize';
 import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import { auth } from './firebase/firebaseConfig.js';
 import { refreshUser } from './redux/auth/operationsAuth.js';
 import { selectIsRefreshing } from './redux/auth/selectorsAuth.js';
 
-import { ToastContainer } from 'react-toastify';
 import Loader from './components/Loader/Loader.jsx';
 import Layout from './components/Layout/Layout.jsx';
-import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/PrivateRoute.jsx';
-import './App.css';
 import CategoryPage from './pages/CategoryPage/CategoryPage.jsx';
-import ResultPage from './pages/ResultPage/ResultPage.jsx';
+import './App.css';
 
 const CreateQuestionPage = lazy(() =>
   import('./pages/CreateQuestionPage/CreateQuestionPage.jsx')
@@ -22,6 +21,7 @@ const EditPage = lazy(() => import('./pages/EditPage/EditPage.jsx'));
 const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
 const StartPage = lazy(() => import('./pages/StartPage/StartPage.jsx'));
 const GamePage = lazy(() => import('./pages/GamePage/GamePage.jsx'));
+const ResultPage = lazy(() => import('./pages/ResultPage/ResultPage.jsx'));
 const RegistrationPage = lazy(() =>
   import('./pages/RegistrationPage/RegistrationPage.jsx')
 );
@@ -29,9 +29,9 @@ const LogInPage = lazy(() => import('./pages/LogInPage/LogInPage.jsx'));
 const NotFoundPage = lazy(() =>
   import('./pages/NotFoundPage/NotFoundPage.jsx')
 );
-// const ViewPlayersPage = lazy(() =>
-//   import('./pages/ViewPlayersPage/ViewPlayersPage.jsx')
-// );
+const ViewPlayersPage = lazy(() =>
+  import('./pages/ViewPlayersPage/ViewPlayersPage.jsx')
+);
 
 function App() {
   const dispatch = useDispatch();
@@ -62,13 +62,12 @@ function App() {
             <Route path="/game" element={<GamePage />} />
             <Route path="/result" element={<ResultPage />} />
 
-            {/* <Route
-              path="/view-players"
+            <Route
               path="players/:id"
               element={
                 <PrivateRoute redirectTo="/" component={<ViewPlayersPage />} />
               }
-            /> */}
+            />
 
             <Route
               path="/create-question"

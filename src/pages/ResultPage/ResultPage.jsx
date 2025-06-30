@@ -24,10 +24,10 @@ const ResultPage = () => {
       <QuizContainer>
         <p className={css.errorMessage}>Error: No game results found.</p>
         <button
-          onClick={() => navigate('/catogory')}
+          onClick={() => navigate('/category')}
           className={css.goBackButton}
         >
-          Go to Home
+          Try Again
         </button>
       </QuizContainer>
     );
@@ -65,7 +65,7 @@ const ResultPage = () => {
           onClick={() => navigate(`/players/${category}`)}
           className={css.viewPlayersButton}
         >
-          View All Players from "{category}"
+          Result All Players from "{category}"
         </button>
       </QuizContainer>
     </div>

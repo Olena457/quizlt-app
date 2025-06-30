@@ -1,31 +1,3 @@
-// import { useNavigate } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { deleteCustomCard } from '../../redux/custom/operationsCustomCards.js';
-// import css from './CardActions.module.css';
-// import { selectUserId } from '../../redux/auth/selectorsAuth.js';
-
-// const CardActions = ({ card }) => {
-//   const navigate = useNavigate();
-//   const dispatch = useDispatch();
-//   const currentUserId = useSelector(selectUserId);
-
-//   if (!card || !card.creatorId || card.creatorId !== currentUserId) {
-//     return null;
-//   }
-//   const handleEdit = () => {
-//     navigate(`/edit-question/${card.category}/${card.id}`);
-//   };
-
-//   const handleDelete = () => {
-//     const confirmed = window.confirm(
-//       'Are you sure you want to delete the question?'
-//     );
-//     if (confirmed) {
-//       dispatch(deleteCustomCard({ category: card.category, id: card.id }));
-//     }
-//   };
-
-// export default CardActions;
 import css from './CardActions.module.css';
 
 const CardActions = ({ card, onDelete, onEdit }) => {

@@ -1,9 +1,8 @@
-// src/redux/players/slicePlayers.js
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchPlayers, registerGameParticipant } from './operationsPlayers.js'; // Імпортуємо registerGameParticipant
 
 const initialState = {
-  data: {}, // Об'єкт для зберігання гравців за категоріями: { 'categoryName': [player1, player2], ... }
+  data: {}, // { 'categoryName': [player1, player2], ... }
   loading: false,
   error: null,
 };
@@ -11,19 +10,17 @@ const initialState = {
 const slicePlayers = createSlice({
   name: 'players',
   initialState,
-  reducers: {
-    // Якщо потрібен якийсь редюсер для очищення стану гравців або подібного
-  },
+  reducers: {},
   extraReducers: builder => {
     builder
-      // Обробка fetchPlayers
+      //  fetchPlayers
       .addCase(fetchPlayers.pending, state => {
         state.loading = true;
         state.error = null;
       })
       .addCase(fetchPlayers.fulfilled, (state, action) => {
         state.loading = false;
-        // Зберігаємо масив гравців для певної категорії
+        // save players by category
         state.data[action.payload.category] = action.payload.players;
       })
       .addCase(fetchPlayers.rejected, (state, action) => {
@@ -31,19 +28,19 @@ const slicePlayers = createSlice({
         state.error = action.payload || 'Failed to load players';
       })
 
-      // Обробка registerGameParticipant
+      //  registerGameParticipant
       .addCase(registerGameParticipant.pending, state => {
-        state.loading = true; // Можливо, варто показати, що йде збереження
+        state.loading = true;
         state.error = null;
       })
       .addCase(registerGameParticipant.fulfilled, (state, action) => {
         state.loading = false;
         const { category, playerData } = action.payload;
-        // Оновлюємо список гравців для цієї категорії
+        // update the state with the new player data
         if (!state.data[category]) {
           state.data[category] = [];
         }
-        // Знаходимо і оновлюємо існуючий результат або додаємо новий
+        // update existing player data if it exists
         const existingIndex = state.data[category].findIndex(
           p => p.userId === playerData.userId
         );

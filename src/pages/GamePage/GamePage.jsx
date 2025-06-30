@@ -1,143 +1,16 @@
-// import { useEffect, useState } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { useNavigate } from 'react-router-dom';
-
-// import {
-//   selectFilterCategory,
-//   selectFilteredCards,
-// } from '../../redux/filter/selectorsFilter.js';
-// import {
-//   selectCardsError,
-//   selectCardsLoading,
-// } from '../../redux/cards/selectorsCards.js';
-// import { fetchCards } from '../../redux/cards/operationsCards';
-// import { registerGameParticipant } from '../../redux/players/operationsPlayers';
-// import { selectUser } from '../../redux/auth/selectorsAuth';
-// import CategoryCard from '../../components/CategoryCard/CategoryCard.jsx';
-// import css from './GamePage.module.css';
-// import QuizeContainer from '../../components/QuizeContainer/QuizeContainer.jsx';
-
-// const GamePage = () => {
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-//   const selectedCategory = useSelector(selectFilterCategory);
-//   const filteredQuestions = useSelector(selectFilteredCards);
-//   const loading = useSelector(selectCardsLoading);
-//   const error = useSelector(selectCardsError);
-//   const currentUser = useSelector(selectUser);
-//   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-//   const [userAnswers, setUserAnswers] = useState([]);
-//   const [startTime, setStartTime] = useState(null);
-
-//   useEffect(() => {
-//     if (selectedCategory && filteredQuestions.length === 0) {
-//       dispatch(fetchCards());
-//     }
-//   }, [dispatch, selectedCategory, filteredQuestions.length]);
-
-//   useEffect(() => {
-//     setStartTime(Date.now());
-//   }, []);
-
-//   const currentQuestion = filteredQuestions[currentQuestionIndex];
-
-//   const handleAnswer = answer => {
-//     if (!currentQuestion) return;
-
-//     const updatedAnswers = [...userAnswers];
-//     updatedAnswers[currentQuestionIndex] = {
-//       question: currentQuestion.question,
-//       answer,
-//       isCorrect: answer === currentQuestion.correctAnswer,
-//     };
-
-//     setUserAnswers(updatedAnswers);
-//   };
-
-//   const correctAnswersCount = userAnswers.filter(ans => ans?.isCorrect).length;
-
-//   const handleNextQuestion = () => {
-//     if (currentQuestionIndex < filteredQuestions.length - 1) {
-//       setCurrentQuestionIndex(prev => prev + 1);
-//     } else {
-//       const timeTaken = Math.round((Date.now() - startTime) / 1000);
-
-//       if (currentUser?.uid) {
-//         dispatch(
-//           registerGameParticipant({
-//             cardId: selectedCategory,
-//             userId: currentUser.uid,
-//             category: selectedCategory,
-//             timeTaken,
-//             correctAnswersCount,
-//           })
-//         );
-//       } else {
-//         console.error('User not authenticated');
-//       }
-
-//       navigate('/result', {
-//         state: {
-//           correctAnswersCount,
-//           category: selectedCategory,
-//           timeTaken,
-//           totalQuestions: filteredQuestions.length,
-//         },
-//       });
-//     }
-//   };
-
-//   return (
-//     <div className={css.containerGame}>
-//       <QuizeContainer>
-//         {loading && <p>Loading questions...</p>}
-//         {error && <p className={css.errorMessage}>Error: {error}</p>}
-//         {!loading && !error && filteredQuestions.length === 0 && (
-//           <p className={css.titleError}>
-//             No questions available for this category.
-//           </p>
-//         )}
-//         {!loading && !error && currentQuestion && (
-//           <>
-//             <h2>Category: {selectedCategory}</h2>
-//             <p>
-//               Question {currentQuestionIndex + 1} / {filteredQuestions.length}
-//             </p>
-//             <p>
-//               Correct Answers: {correctAnswersCount} /{' '}
-//               {filteredQuestions.length}
-//             </p>
-
-//             <CategoryCard
-//               question={currentQuestion.question}
-//               options={currentQuestion.options}
-//               isLastQuestion={
-//                 currentQuestionIndex === filteredQuestions.length - 1
-//               }
-//               onAnswer={handleAnswer}
-//               onNext={handleNextQuestion}
-//               card={currentQuestion}
-//             />
-//           </>
-//         )}
-//       </QuizeContainer>
-//     </div>
-//   );
-// };
-
-// export default GamePage;
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import {
-  selectCardsError,
-  selectCardsLoading,
+  selectCategoriesError,
+  selectCategoriesLoading,
   selectSelectedCategoryQuestions,
-  selectSelectedCategoryData,
-} from '../../redux/cards/selectorsCards.js';
-import { fetchCardByCategory } from '../../redux/cards/operationsCards.js';
+} from '../../redux/categories/selectorsCategories.js';
+
+import { fetchQuizzesByCategory } from '../../redux/categories/operationsCategories.js';
+
 import { registerGameParticipant } from '../../redux/players/operationsPlayers.js';
 import { selectUser } from '../../redux/auth/selectorsAuth.js';
 import { deleteCustomCard } from '../../redux/customCards/operationsCustomCards.js';
@@ -145,17 +18,18 @@ import { deleteCustomCard } from '../../redux/customCards/operationsCustomCards.
 import CategoryCard from '../../components/CategoryCard/CategoryCard.jsx';
 import QuizeContainer from '../../components/QuizeContainer/QuizeContainer.jsx';
 import ConfirmModal from '../../components/ConfirmModal/ConfirmModal.jsx';
-
 import css from './GamePage.module.css';
 
 const GamePage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const selectedCategory = useSelector(selectSelectedCategoryData)?.name;
+  const selectedCategory = location.state?.categoryName;
+
   const filteredQuestions = useSelector(selectSelectedCategoryQuestions);
-  const loading = useSelector(selectCardsLoading);
-  const error = useSelector(selectCardsError);
+  const loading = useSelector(selectCategoriesLoading);
+  const error = useSelector(selectCategoriesError);
   const currentUser = useSelector(selectUser);
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -163,11 +37,11 @@ const GamePage = () => {
   const [startTime, setStartTime] = useState(null);
 
   const [showModal, setShowModal] = useState(false);
-  const [cardToDelete, setCardToDelete] = useState(null);
+  const [questionToDelete, setQuestionToDelete] = useState(null);
 
   useEffect(() => {
     if (selectedCategory && filteredQuestions.length === 0) {
-      dispatch(fetchCardByCategory(selectedCategory));
+      dispatch(fetchQuizzesByCategory(selectedCategory));
     }
   }, [dispatch, selectedCategory, filteredQuestions.length]);
 
@@ -193,6 +67,12 @@ const GamePage = () => {
   const correctAnswersCount = userAnswers.filter(ans => ans?.isCorrect).length;
 
   const handleNextQuestion = () => {
+    if (!currentUser) {
+      toast.error('User not found. Please log in again.');
+      navigate('/login');
+      return;
+    }
+
     if (currentQuestionIndex < filteredQuestions.length - 1) {
       setCurrentQuestionIndex(prev => prev + 1);
     } else {
@@ -201,18 +81,19 @@ const GamePage = () => {
       dispatch(
         registerGameParticipant({
           userId: currentUser.uid,
-          category: selectedCategory,
+          category: selectedCategory, // <--- Using `selectedCategory` from `location.state`
           timeTaken,
           correctAnswersCount,
           totalQuestions: filteredQuestions.length,
         })
       );
+
       toast.success('Your results have been saved!');
 
       navigate('/result', {
         state: {
           correctAnswersCount,
-          category: selectedCategory,
+          category: selectedCategory, // <--- Using `selectedCategory` from `location.state`
           timeTaken,
           totalQuestions: filteredQuestions.length,
         },
@@ -220,35 +101,34 @@ const GamePage = () => {
     }
   };
 
-  const openDeleteModal = card => {
-    setCardToDelete(card);
+  // opening the delete modal
+  const openDeleteModal = question => {
+    setQuestionToDelete(question);
     setShowModal(true);
   };
 
+  //  confirming question deletion
   const confirmDelete = async () => {
-    if (cardToDelete) {
+    if (questionToDelete) {
       try {
         await dispatch(
           deleteCustomCard({
-            category: cardToDelete.category,
-            id: cardToDelete.id,
+            category: questionToDelete.category,
+            id: questionToDelete.id,
           })
         ).unwrap();
 
         toast.info('The question was deleted.');
 
-        // ⚠️ Якщо було видалено останнє питання в категорії
         const newLength = filteredQuestions.length - 1;
 
         if (newLength === 0) {
-          navigate('/'); // або показати "питань немає", як захочеш
+          navigate('/categories');
           return;
         }
 
-        // ⚙️ Оновлюємо список після видалення
-        dispatch(fetchCardByCategory(cardToDelete.category));
+        dispatch(fetchQuizzesByCategory(questionToDelete.category));
 
-        // Зменшуємо currentQuestionIndex, якщо потрібно
         setCurrentQuestionIndex(prev =>
           prev >= newLength ? newLength - 1 : prev
         );
@@ -259,35 +139,37 @@ const GamePage = () => {
     }
 
     setShowModal(false);
-    setCardToDelete(null);
+    setQuestionToDelete(null);
   };
 
+  // Handler for canceling deletion
   const cancelDelete = () => {
     setShowModal(false);
-    setCardToDelete(null);
+    setQuestionToDelete(null);
   };
 
   return (
     <div className={css.containerGame}>
       <QuizeContainer>
-        {loading && <p>loading questions...</p>}
+        {loading && <p>Loading questions...</p>}
         {error && <p className={css.errorMessage}>Error: {error}</p>}
+
         {!loading && !error && filteredQuestions.length === 0 && (
           <p className={css.titleError}>
             No questions available for this category.
           </p>
         )}
+
         {!loading && !error && currentQuestion && (
           <>
-            <h2>Category: {selectedCategory}</h2>
+            <h2>Category: {selectedCategory}</h2>{' '}
+            {/* <--- Using `selectedCategory` from `location.state` */}
             <p>
               Question {currentQuestionIndex + 1} / {filteredQuestions.length}
             </p>
             <p>
-              Correct answers: {correctAnswersCount} /{' '}
-              {filteredQuestions.length}
+              Correct Answers: {correctAnswersCount} /{filteredQuestions.length}
             </p>
-
             <CategoryCard
               question={currentQuestion.question}
               options={currentQuestion.options}
@@ -296,14 +178,15 @@ const GamePage = () => {
               }
               onAnswer={handleAnswer}
               onNext={handleNextQuestion}
-              card={currentQuestion}
+              questionData={currentQuestion}
               onDelete={openDeleteModal}
-              onEdit={card =>
-                navigate(`/edit-question/${card.category}/${card.id}`)
+              onEdit={question =>
+                navigate(`/edit-question/${question.category}/${question.id}`)
               }
             />
           </>
         )}
+
         <ConfirmModal
           isOpen={showModal}
           message="Are you sure you want to delete this question?"
