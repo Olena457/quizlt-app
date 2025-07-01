@@ -54,11 +54,18 @@ const GamePage = () => {
   const handleAnswer = answer => {
     if (!currentQuestion) return;
 
+    const correct = (currentQuestion.correctAnswers || []).slice().sort();
+    const selected = answer.slice().sort();
+
+    const isCorrect =
+      correct.length === selected.length &&
+      correct.every((val, idx) => val === selected[idx]);
+
     const updatedAnswers = [...userAnswers];
     updatedAnswers[currentQuestionIndex] = {
       question: currentQuestion.question,
-      answer,
-      isCorrect: answer === currentQuestion.correctAnswer,
+      answer: selected,
+      isCorrect,
     };
 
     setUserAnswers(updatedAnswers);
@@ -199,3 +206,16 @@ const GamePage = () => {
 };
 
 export default GamePage;
+
+// const handleAnswer = answer => {
+//   if (!currentQuestion) return;
+
+//   const updatedAnswers = [...userAnswers];
+//   updatedAnswers[currentQuestionIndex] = {
+//     question: currentQuestion.question,
+//     answer,
+//     isCorrect: answer === currentQuestion.correctAnswer,
+//   };
+
+//   setUserAnswers(updatedAnswers);
+// };

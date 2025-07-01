@@ -9,44 +9,59 @@ const CategoryCard = ({
   isLastQuestion,
   onAnswer,
   onNext,
-  card,
+  questionData, // <-- замість card
   onEdit,
   onDelete,
 }) => {
-  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [selectedAnswers, setSelectedAnswers] = useState([]);
+
+  const toggleAnswer = option => {
+    setSelectedAnswers(prev =>
+      prev.includes(option)
+        ? prev.filter(ans => ans !== option)
+        : [...prev, option]
+    );
+  };
+
+  const handleNextClick = () => {
+    onAnswer(selectedAnswers);
+    onNext();
+    setSelectedAnswers([]);
+  };
 
   return (
     <div className={css.containerQuize}>
       <div className={css.textQuestion}>{question}</div>
+
       <div className={css.containerButton}>
         {options.map((option, index) => (
           <button
             className={clsx(css.buttonQuestion, {
-              [css.selected]: selectedAnswer === option,
+              [css.selected]: selectedAnswers.includes(option),
             })}
             type="button"
-            onClick={() => {
-              setSelectedAnswer(option);
-              onAnswer(option);
-            }}
+            onClick={() => toggleAnswer(option)}
             key={index}
           >
             {option}
           </button>
         ))}
       </div>
+
       <div className={css.containerBtnNext}>
         <button
           className={clsx(css.buttonNext, {
             [css.submitButton]: isLastQuestion,
           })}
-          type="submit"
-          onClick={onNext}
+          type="button"
+          onClick={handleNextClick}
+          disabled={selectedAnswers.length === 0}
         >
-          {isLastQuestion ? 'Submit' : 'Next'}
+          {isLastQuestion ? 'Result' : 'Next'}
         </button>
       </div>
-      <CardActions card={card} onEdit={onEdit} onDelete={onDelete} />
+
+      <CardActions card={questionData} onEdit={onEdit} onDelete={onDelete} />
     </div>
   );
 };

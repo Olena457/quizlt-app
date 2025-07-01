@@ -5,7 +5,7 @@ import { selectUserId } from '../auth/selectorsAuth';
 
 export const addCustomCard = createAsyncThunk(
   'customCards/add',
-  async ({ category, question, options, correctAnswer }, thunkAPI) => {
+  async ({ category, question, options, correctAnswers }, thunkAPI) => {
     try {
       const userId = selectUserId(thunkAPI.getState());
       if (!userId) {
@@ -19,7 +19,7 @@ export const addCustomCard = createAsyncThunk(
       const dataToSave = {
         question,
         options,
-        correctAnswer,
+        correctAnswers,
         createdBy: userId,
         // createdAt: new Date().toISOString(), //  ISO fomat date
       };

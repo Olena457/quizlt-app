@@ -25,7 +25,6 @@ const CreateQuestionForm = () => {
   const navigate = useNavigate();
   const userId = useSelector(selectUserId);
 
-  //get card to edit from store
   const cardToEdit = useSelector(selectSelectedCustomCard);
   const loading = useSelector(selectCustomCardsLoading);
   const error = useSelector(selectCustomCardsError);
@@ -36,20 +35,18 @@ const CreateQuestionForm = () => {
   const [option2, setOption2] = useState('');
   const [option3, setOption3] = useState('');
   const [option4, setOption4] = useState('');
-  const [correctAnswer, setCorrectAnswer] = useState('');
+  const [correctAnswers, setCorrectAnswers] = useState([]);
 
   useEffect(() => {
     if (id && urlCategory) {
       dispatch(fetchCustomCardById({ category: urlCategory, id }));
     }
-    // return function cleanup
     return () => {
       dispatch(clearSelectedCustomCard());
     };
   }, [dispatch, id, urlCategory]);
 
   useEffect(() => {
-    //check if we are in edit mode
     if (id && cardToEdit && cardToEdit.id === id) {
       setCategory(urlCategory);
       setQuestionText(cardToEdit.question || '');
@@ -57,58 +54,69 @@ const CreateQuestionForm = () => {
       setOption2(cardToEdit.options?.[1] || '');
       setOption3(cardToEdit.options?.[2] || '');
       setOption4(cardToEdit.options?.[3] || '');
-      setCorrectAnswer(cardToEdit.correctAnswer || '');
+      setCorrectAnswers(cardToEdit.correctAnswers || []);
     }
   }, [id, cardToEdit, urlCategory]);
+
+  const handleCheckboxChange = value => {
+    setCorrectAnswers(prev =>
+      prev.includes(value)
+        ? prev.filter(ans => ans !== value)
+        : [...prev, value]
+    );
+  };
 
   const handleSubmit = async e => {
     e.preventDefault();
 
-    if (
-      !category.trim() || // added .trim()
-      !questionText.trim() ||
-      !correctAnswer.trim() ||
-      !option1.trim() ||
-      !option2.trim() ||
-      !option3.trim() ||
-      !option4.trim()
-    ) {
-      toast.error('All fields required!', { position: 'top-center' });
+    const allOptions = [option1, option2, option3, option4].map(opt =>
+      opt.trim()
+    );
+    const isValid =
+      category.trim() &&
+      questionText.trim() &&
+      allOptions.every(opt => opt.length > 0) &&
+      correctAnswers.length > 0;
+
+    if (!isValid) {
+      toast.error(
+        'All fields are required, including at least one correct answer!',
+        {
+          position: 'top-center',
+        }
+      );
       return;
     }
 
-    //create object for question
     const cardData = {
       question: questionText.trim(),
-      options: [option1.trim(), option2.trim(), option3.trim(), option4.trim()],
-      correctAnswer: correctAnswer.trim(),
+      options: allOptions,
+      correctAnswers,
       createdBy: userId,
     };
 
     try {
       if (id) {
-        // edit logic
         await dispatch(
           editCustomCard({
             category: category.trim(),
-            updatedCard: cardData, //udated data
+            updatedCard: cardData,
           })
         ).unwrap();
         toast.success('Question updated successfully!', {
           position: 'top-center',
         });
       } else {
-        // creted new question
         await dispatch(
           addCustomCard({ ...cardData, category: category.trim() })
-        ).unwrap(); // pass category
-        toast.success('Question created successfully!!', {
+        ).unwrap();
+        toast.success('Question created successfully!', {
           position: 'top-center',
         });
       }
       navigate('/categories');
     } catch (err) {
-      toast.error(`An error occured: ${err.message || 'Please try again.'}`, {
+      toast.error(`An error occurred: ${err.message || 'Please try again.'}`, {
         position: 'top-center',
       });
     }
@@ -116,7 +124,7 @@ const CreateQuestionForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={css.formContainer}>
-      <h2 className={css.title}>{id ? 'Edit question' : 'Create question'}</h2>
+      <h2 className={css.title}>{id ? 'Edit Question' : 'Create Question'}</h2>
 
       <label className={css.label}>
         Category:
@@ -125,7 +133,7 @@ const CreateQuestionForm = () => {
           value={category}
           onChange={e => setCategory(e.target.value)}
           className={css.input}
-          readOnly={Boolean(id)} // Category readOnly (editing)
+          readOnly={Boolean(id)}
         />
       </label>
 
@@ -138,66 +146,50 @@ const CreateQuestionForm = () => {
         />
       </label>
 
-      <label className={css.label}>
-        Option 1:
-        <input
-          type="text"
-          value={option1}
-          onChange={e => setOption1(e.target.value)}
-          className={css.input}
-        />
-      </label>
+      {[option1, option2, option3, option4].map((option, idx) => {
+        const optionSetter = [setOption1, setOption2, setOption3, setOption4][
+          idx
+        ];
+        return (
+          <label key={idx} className={css.label}>
+            Option {idx + 1}:
+            <input
+              type="text"
+              value={option}
+              onChange={e => optionSetter(e.target.value)}
+              className={css.input}
+            />
+          </label>
+        );
+      })}
 
-      <label className={css.label}>
-        Option 2:
-        <input
-          type="text"
-          value={option2}
-          onChange={e => setOption2(e.target.value)}
-          className={css.input}
-        />
-      </label>
-
-      <label className={css.label}>
-        Option 3:
-        <input
-          type="text"
-          value={option3}
-          onChange={e => setOption3(e.target.value)}
-          className={css.input}
-        />
-      </label>
-
-      <label className={css.label}>
-        Option 4:
-        <input
-          type="text"
-          value={option4}
-          onChange={e => setOption4(e.target.value)}
-          className={css.input}
-        />
-      </label>
-
-      <label className={css.label}>
-        Correct answer:
-        <input
-          type="text"
-          value={correctAnswer}
-          onChange={e => setCorrectAnswer(e.target.value)}
-          className={css.input}
-        />
-      </label>
+      <fieldset className={css.correctAnswerBox}>
+        <legend>Choose correct answer(s):</legend>
+        {[option1, option2, option3, option4].map((option, idx) => (
+          <label key={idx} className={css.checkboxLabel}>
+            <input
+              type="checkbox"
+              value={option}
+              checked={correctAnswers.includes(option)}
+              onChange={() => handleCheckboxChange(option)}
+              disabled={!option.trim()}
+            />
+            {option || `Option ${idx + 1}`}
+          </label>
+        ))}
+      </fieldset>
 
       <button type="submit" className={css.submitBtn} disabled={loading}>
         {loading
           ? id
-            ? 'edit ...'
-            : 'create...'
+            ? 'Updating...'
+            : 'Creating...'
           : id
-          ? 'update question'
-          : 'create question'}
+          ? 'Update Question'
+          : 'Create Question'}
       </button>
-      {loading && <p>Loadin/Saving...</p>}
+
+      {loading && <p>Loading/Saving...</p>}
       {error && <p className={css.errorMessage}>Error: {error}</p>}
     </form>
   );

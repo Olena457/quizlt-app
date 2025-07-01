@@ -47,8 +47,14 @@ const ResultPage = () => {
 
         <div className={css.box}>
           <div className={css.description}>✅ You scored {accuracy}%!</div>
+
           <div className={css.description}>
-            ✅ You answered {correctAnswersCount} out of {totalQuestions}{' '}
+            {correctAnswersCount === totalQuestions
+              ? '🎉 Perfect score! You nailed every question!'
+              : '✨ Not bad! Review your answers and try again to improve your score.'}
+          </div>
+          <div className={css.description}>
+            ✅ You answered {correctAnswersCount} out of {totalQuestions}
             questions correctly.
           </div>
           <div className={css.description}>
