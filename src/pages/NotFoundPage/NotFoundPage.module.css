@@ -11,35 +11,61 @@
 }
 
 .btnGo {
-  position: absolute;
-  bottom: 120px;
-  right: 280px;
-  width: 173px;
-  height: 56px;
+  width: 120px;
+  height: 46px;
   display: flex;
-  margin-left: 50px;
   justify-content: center;
   align-items: center;
-  padding: 15px 60px;
+  padding: 10px 30px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  border-radius: 12px;
-  font-size: 16px;
+  border-radius: 200px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1;
   white-space: nowrap;
-  background: #1f949b;
-  color: var(--white-color);
-  border: 1px solid var(--hover-color);
+  color: var(--gold-color);
+  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
+  border: 2px solid var(--gold-color);
   transition: background-color var(--transition), color var(--transition);
-  box-shadow: 0 0 10 px 5px rgba(242, 238, 243, 0.799);
 }
 
 .btnGo:hover,
 .btnGo:focus {
-  color: var(--black-color);
-  background: var(--hover-color);
-  border: 1px solid var(--white-color);
-  box-shadow: 0 0 15px 5px rgba(93, 25, 106, 0.75);
+  border: 2px solid var(--hover-color);
+  box-shadow: -15px 0 20px -5px rgba(76, 241, 241, 0.7),
+    15px 0 20px -5px rgba(76, 241, 241, 0.7),
+    0 15px 20px -5px rgba(76, 241, 241, 0.7);
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .btnGo {
+    width: 150px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .btnGo {
+    width: 173px;
+    height: 56px;
+    display: flex;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 15px 60px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
 }
