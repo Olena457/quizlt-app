@@ -1,5 +1,5 @@
-import css from './LogInPage.module.css';
 import SignIn from '../../components/SingInForm/SingInForm.jsx';
+import css from './LogInPage.module.css';
 
 const LogInPage = () => {
   return (

@@ -26,20 +26,12 @@ const MobileMenu = ({ category, id, player }) => {
 
           <nav className={css.menuList}>
             <NavLink
-              to="/register"
+              to="/"
               className={css.link}
               onClick={() => setIsOpen(false)}
             >
-              Register
+              Home
             </NavLink>
-            <NavLink
-              to="/login"
-              className={css.link}
-              onClick={() => setIsOpen(false)}
-            >
-              Login
-            </NavLink>
-
             <NavLink
               to="/start"
               className={css.link}
@@ -54,6 +46,25 @@ const MobileMenu = ({ category, id, player }) => {
             >
               Categories
             </NavLink>
+
+            {!isLoggedIn && (
+              <>
+                <NavLink
+                  to="/register"
+                  className={css.link}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Register
+                </NavLink>
+                <NavLink
+                  to="/login"
+                  className={css.link}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Login
+                </NavLink>
+              </>
+            )}
 
             {isLoggedIn && (
               <>

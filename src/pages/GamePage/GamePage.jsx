@@ -10,7 +10,6 @@ import {
 } from '../../redux/categories/selectorsCategories.js';
 
 import { fetchQuizzesByCategory } from '../../redux/categories/operationsCategories.js';
-
 import { registerGameParticipant } from '../../redux/players/operationsPlayers.js';
 import { selectUser } from '../../redux/auth/selectorsAuth.js';
 import { deleteCustomCard } from '../../redux/customCards/operationsCustomCards.js';

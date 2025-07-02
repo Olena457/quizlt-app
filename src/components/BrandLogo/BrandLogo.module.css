@@ -35,7 +35,6 @@
 .title:hover {
   position: relative;
   color: var(--accent-color);
-  text-shadow: 1px 1px 2px black, 0 0 1em #115e95, 0 0 0.2em #1f9596;
 }
 .logoContainer {
   display: flex;

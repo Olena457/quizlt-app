@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  /* padding: 0 16px; */
 }
 
 .header {
@@ -8,11 +9,10 @@
   /* max-width: 1400px; */
   margin-left: auto;
   margin-right: auto;
-  align-items: center;
+  /* align-items: center; */
   display: flex;
   background: linear-gradient(135deg, #181a1d, #2e8894);
   justify-content: space-between;
-  align-items: center;
   padding: 20px 10px;
   justify-content: center;
   align-items: baseline;
@@ -36,6 +36,7 @@
 .sigWrapper {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .buttonLogout {

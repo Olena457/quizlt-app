@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth.js';
 import { logoutUser } from '../../redux/auth/operationsAuth.js';
 import Navigation from '../Navigation/Navigation.jsx';
@@ -9,6 +10,7 @@ import css from './AppBar.module.css';
 
 const AppBar = ({ id, player, category }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -18,6 +20,11 @@ const AppBar = ({ id, player, category }) => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const handleLogout = () => {
+    dispatch(logoutUser());
+    navigate('/');
+  };
 
   return (
     <div className={css.container}>
@@ -33,7 +40,7 @@ const AppBar = ({ id, player, category }) => {
           <div className={css.sigWrapper}>
             <button
               type="button"
-              onClick={() => dispatch(logoutUser())}
+              onClick={handleLogout}
               className={css.buttonLogout}
               aria-label="log out"
             >

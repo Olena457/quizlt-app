@@ -1,7 +1,7 @@
-import clsx from 'clsx';
-import css from './CategoryCard.module.css';
-import CardActions from '../CardAction/CardAction.jsx';
 import { useState } from 'react';
+import clsx from 'clsx';
+import CardActions from '../CardAction/CardAction.jsx';
+import css from './CategoryCard.module.css';
 
 const CategoryCard = ({
   question,
@@ -9,7 +9,7 @@ const CategoryCard = ({
   isLastQuestion,
   onAnswer,
   onNext,
-  questionData, // <-- замість card
+  questionData, // This is the data for the question, used for actions
   onEdit,
   onDelete,
 }) => {

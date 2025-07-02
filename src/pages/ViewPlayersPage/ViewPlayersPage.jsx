@@ -26,16 +26,20 @@ const ViewPlayersPage = () => {
     }
   }, [players, dispatch, id]);
 
+  const sortedPlayers = players
+    ? [...players].sort((a, b) => b.correctAnswer - a.correctAnswer)
+    : [];
+
   return (
     <>
       <div className={css.participPage}>
         <h2 className={css.title}>Players</h2>
         {loading && <Loader />}
         {error && <p className={css.error}>{error}</p>}
-        {!loading && !error && players?.length > 0 && (
-          <PlayersList players={players} />
+        {!loading && !error && sortedPlayers.length > 0 && (
+          <PlayersList players={sortedPlayers} />
         )}
-        {!loading && !error && players?.length === 0 && (
+        {!loading && !error && sortedPlayers.length === 0 && (
           <p className={css.noPlayers}>No players in this category yet.</p>
         )}
       </div>

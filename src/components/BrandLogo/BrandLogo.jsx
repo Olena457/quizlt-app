@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import css from './BrandLogo.module.css';
 import quizletGame from '../../assets/images/quizlet.png';
+import css from './BrandLogo.module.css';
 
 const BrandLogo = () => {
   return (

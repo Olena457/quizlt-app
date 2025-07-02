@@ -16,7 +16,6 @@ import {
 } from '../../redux/custom/selectorsCustomCards.js';
 
 import { selectUserId } from '../../redux/auth/selectorsAuth.js';
-
 import css from './CreateCardForm.module.css';
 
 const CreateQuestionForm = () => {

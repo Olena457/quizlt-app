@@ -8,34 +8,35 @@
 .delete {
   padding: 6px 12px;
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .edit {
-  background-color: #4f46e5;
-  color: white;
+  background-color: var(--gold-color);
+  color: var(--dark-color);
 }
 
 .edit:hover {
-  background-color: #3730a3;
+  background-color: #e7cd7d;
 }
 
 .delete {
-  background-color: #e11d48;
-  color: white;
+  background-color: var(--red-color);
+  color: var(--white-color);
 }
 
 .delete:hover {
-  background-color: #991b1b;
+  background-color: #df3737;
 }
 .actionsContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px;
-  background-color: #f3f4f6;
-  border-radius: 8px;
+  background-color: transparent;
+  border-radius: 12px;
+  bottom: 1px solid var(--gold-color);
 }
