@@ -68,6 +68,8 @@
   max-height: 600px;
   padding: 20px 10px;
   border: 1px solid var(--gold-color);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6),
+    -8px -8px 16px rgba(255, 255, 255, 0.08);
   background: linear-gradient(185deg, #181a1d, #2e8894);
 }
 @media (min-width: 375px) and (max-width: 768px) {

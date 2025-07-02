@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { authReducer } from './auth/sliceAuth.js';
-import { categoriesReducer } from './categories/categoriesSlice.js';
+import { categoriesReducer } from './categories/sliceCategories.js';
 import { playersReducer } from './players/slicePlayers.js';
 import { customCardsReducer } from './custom/sliceCustomCards.js';
 
