@@ -7,7 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import clsx from 'clsx';
 import * as yup from 'yup';
 import eye from '../../assets/icons/eye.svg';
-import openEye from '../../assets/icons/eye.svg';
+import openEye from '../../assets/icons/openEye.svg';
 import { toast } from 'react-toastify';
 import { registerUser } from '../../redux/auth/operationsAuth.js';
 import { useNavigate } from 'react-router-dom';

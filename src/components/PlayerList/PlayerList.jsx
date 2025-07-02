@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import avatarUser from '../../assets/icons/avatarUser.svg';
 import css from './PlayerList.module.css';
+
 const PlayerList = ({ players }) => {
   return (
     <div className={css.participantList}>

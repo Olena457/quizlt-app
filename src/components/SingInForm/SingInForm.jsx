@@ -1,11 +1,11 @@
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
 import { useId, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import clsx from 'clsx';
-import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { toast } from 'react-toastify';
+import * as yup from 'yup';
+import clsx from 'clsx';
 import { loginUser } from '../../redux/auth/operationsAuth.js';
 const emailRegExp = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
 import eye from '../../assets/icons/eye.svg';
@@ -55,7 +55,7 @@ const SignInForm = () => {
         toast.success('User logged in successfully!', {
           position: 'top-center',
         });
-        navigate('/cards');
+        navigate('/categories');
       })
       .catch(errMessage => {
         toast.error(errMessage, {
@@ -72,12 +72,12 @@ const SignInForm = () => {
       <h2 className={css.title}>Log In</h2>
       <p className={css.text}>
         <span>
-          You already{' '}
-          <span className={css.link} onClick={() => navigate('/register-user')}>
+          You already have an account?
+          <span className={css.link} onClick={() => navigate('/register')}>
             Registered
           </span>
           ?
-        </span>{' '}
+        </span>
         <br />
         Please enter your credentials.
       </p>
