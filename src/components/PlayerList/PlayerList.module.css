@@ -8,12 +8,13 @@
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  background: var(--hover-color);
   align-items: center;
   padding: 10px 25px;
-  border: 1px solid var(--hover-color);
-  border-radius: 8px;
-  box-shadow: var(--box-shadow);
+  border-radius: 12px;
+  border: 1px solid var(--gold-color);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6),
+    -8px -8px 16px rgba(255, 255, 255, 0.08);
+  background: linear-gradient(185deg, #181a1d, #2e8894);
 }
 
 .participantAvatar {
@@ -32,19 +33,15 @@
   font-weight: bold;
 }
 
-.participantEmail {
-  font-size: 19px;
-  color: black;
-}
 .participantQuestions {
   font-size: 19px;
-  color: black;
+  color: var(--black-color);
 }
 .participantCategory {
   font-size: 19px;
-  color: black;
+  color: var(--black-color);
 }
 .participantScore {
   font-size: 19px;
-  color: black;
+  color: var(--black-color);
 }

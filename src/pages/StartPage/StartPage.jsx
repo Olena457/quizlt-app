@@ -14,12 +14,9 @@ const StartPage = () => {
   return (
     <div className={css.pageStart}>
       <div className={css.startContainer}>
-        <h1 className={css.title}>Welcome to the Start Page</h1>
         <div className={css.startQuiz}>
           <div className={css.description}>
-            <h3 className={css.subtitle}>
-              Dive into the quiz and see how much you know!
-            </h3>
+            <h1 className={css.title}>Welcome to the Start Page</h1>
             <p>Log in — register and create your profile.</p>
             <p>Pick a category — pick what interests you.</p>
             <p>Play the quiz — answer the questions correctly.</p>

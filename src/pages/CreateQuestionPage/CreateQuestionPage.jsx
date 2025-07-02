@@ -1,5 +1,5 @@
 import CreateQuestionForm from '../../components/CreateQuestionForm/CreateQuestionForm.jsx';
-import css from './CreateCardPage.module.css';
+import css from './CreateQuestionPage.module.css';
 
 const CreateQuestionPage = () => {
   return (

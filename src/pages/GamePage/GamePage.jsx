@@ -12,7 +12,7 @@ import {
 import { fetchQuizzesByCategory } from '../../redux/categories/operationsCategories.js';
 import { registerGameParticipant } from '../../redux/players/operationsPlayers.js';
 import { selectUser } from '../../redux/auth/selectorsAuth.js';
-import { deleteCustomCard } from '../../redux/customCards/operationsCustomCards.js';
+import { deleteCustomCard } from '../../redux/custom/operationsCustomCards.js';
 
 import CategoryCard from '../../components/CategoryCard/CategoryCard.jsx';
 import QuizeContainer from '../../components/QuizeContainer/QuizeContainer.jsx';

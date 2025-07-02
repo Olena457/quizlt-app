@@ -1,6 +1,6 @@
-import css from './CardActions.module.css';
+import css from './CardAction.module.css';
 
-const CardActions = ({ card, onDelete, onEdit }) => {
+const CardAction = ({ card, onDelete, onEdit }) => {
   if (!card || !card.creatorId) return null;
 
   return (
@@ -15,4 +15,4 @@ const CardActions = ({ card, onDelete, onEdit }) => {
   );
 };
 
-export default CardActions;
+export default CardAction;

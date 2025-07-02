@@ -6,7 +6,7 @@ import css from './MobileMenu.module.css';
 import burgerIcon from '../../assets/icons/burgerIcon.svg';
 import crossIcon from '../../assets/icons/crossIcon.svg';
 
-const MobileMenu = ({ category, id, player }) => {
+const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
@@ -76,7 +76,7 @@ const MobileMenu = ({ category, id, player }) => {
                   Create Quize
                 </NavLink>
 
-                <NavLink
+                {/* <NavLink
                   to={`/edit-question/${category}/${id}`}
                   className={css.link}
                   onClick={() => setIsOpen(false)}
@@ -90,7 +90,7 @@ const MobileMenu = ({ category, id, player }) => {
                   onClick={() => setIsOpen(false)}
                 >
                   View Players
-                </NavLink>
+                </NavLink> */}
               </>
             )}
           </nav>

@@ -52,6 +52,10 @@
   margin-bottom: 20px;
 }
 
+label {
+  color: var(--gold-color);
+}
+
 .input {
   height: 54px;
   width: 100%;
@@ -64,9 +68,10 @@
   padding: 16px 18px;
   margin-bottom: 40px;
 }
-
-label {
-  color: var(--gold-color);
+.input:focus {
+  outline: none;
+  border: 2px solid var(--gold-color);
+  box-shadow: 0 0 4px var(--gold-color);
 }
 
 .text {

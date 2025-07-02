@@ -12,11 +12,12 @@ import {
   selectSelectedCustomCard,
   selectCustomCardsLoading,
   selectCustomCardsError,
-  clearSelectedCustomCard,
 } from '../../redux/custom/selectorsCustomCards.js';
 
+import { clearSelectedCustomCard } from '../../redux/custom/sliceCustomCards.js';
+
 import { selectUserId } from '../../redux/auth/selectorsAuth.js';
-import css from './CreateCardForm.module.css';
+import css from './CreateQuestionForm.module.css';
 
 const CreateQuestionForm = () => {
   const { category: urlCategory, id } = useParams();

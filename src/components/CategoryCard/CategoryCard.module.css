@@ -15,9 +15,9 @@
 }
 .buttonQuestion {
   display: block;
-  color: #000;
+  color: var(--black-color);
   border-radius: 200px;
-  background-color: aqua;
+  background-color: var(--white-color);
   min-width: 250px;
 }
 .containerBtnNext {
@@ -27,15 +27,17 @@
   margin-top: 10px;
 }
 .selected {
-  background-color: white;
+  background-color: var(--form-color);
 }
 
 .buttonNext {
-  background-color: red;
+  background-color: var(--gold-color);
+  color: var(--black-color);
   border-radius: 200px;
   width: 200px;
 }
 
 .submitButton {
-  background-color: green;
+  color: var(--white-color);
+  background-color: var(--button-bgr-color);
 }

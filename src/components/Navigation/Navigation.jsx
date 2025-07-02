@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth.js';
 import css from './Navigation.module.css';
 
-const Navigation = ({ category, id, player }) => {
+const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const activeLink = ({ isActive }) => clsx(css.link, isActive && css.active);
 
@@ -39,7 +39,7 @@ const Navigation = ({ category, id, player }) => {
           >
             Create Question
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to={`/edit-question/${category}/${id}`}
             className={activeLink}
             aria-label="Edit card"
@@ -52,7 +52,7 @@ const Navigation = ({ category, id, player }) => {
             aria-label="View players"
           >
             View Players
-          </NavLink>
+          </NavLink> */}
         </>
       )}
     </div>

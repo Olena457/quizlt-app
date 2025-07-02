@@ -37,7 +37,13 @@
     align-items: start;
   }
 }
-
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--gold-color);
+  text-align: center;
+  margin: 10px 0px 20px 0px;
+}
 .buttonWrapper {
   position: absolute;
   display: flex;
