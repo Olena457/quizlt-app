@@ -26,10 +26,11 @@
   align-items: center;
   margin-top: 10px;
 }
-.selected {
-  background-color: var(--form-color);
-}
 
+.selected {
+  background-color: var(--light-gray-color);
+  color: var(--gray-color);
+}
 .buttonNext {
   background-color: var(--gold-color);
   color: var(--black-color);

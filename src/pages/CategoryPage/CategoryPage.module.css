@@ -8,12 +8,12 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .pageGame {
-    padding: 40px;
+    padding: 20px 40px;
   }
 }
 @media screen and (min-width: 1025px) {
   .pageGame {
-    padding: 50px;
+    padding: 20px 50px;
   }
 }
 .containerCategories {
@@ -31,13 +31,13 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .containerCategories {
-    margin-top: 10px;
-    padding: 0px 40px 20px 30px;
+    /* margin-top: 10px; */
+    padding: 0px 0px 40px 0px;
   }
 }
 @media screen and (min-width: 1025px) {
   .containerCategories {
-    padding: 0px 50px 22px 22px;
+    padding: 0px 0px 60px 0px;
   }
 }
 .title {

@@ -47,12 +47,12 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .startContainer {
     margin-top: 10px;
-    padding: 0px 40px 20px 30px;
+    padding: 0px 0px 40px 0px;
   }
 }
 @media screen and (min-width: 1025px) {
   .startContainer {
-    padding: 0px 50px 22px 22px;
+    padding: 0px 0px 60px 0px;
   }
 }
 .startQuiz {
@@ -65,7 +65,7 @@
   border-radius: 10px;
   min-width: 320px;
   max-height: 600px;
-  padding: 20px;
+  padding: 50px 20px;
   border: 1px solid var(--gold-color);
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6),
     -8px -8px 16px rgba(255, 255, 255, 0.08);
@@ -73,14 +73,14 @@
 }
 @media (min-width: 375px) and (max-width: 768px) {
   .startQuiz {
-    max-height: 400px;
+    max-height: 500px;
+    gap: 20px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .startQuiz {
     gap: 40px;
-    min-height: 380px;
-    padding: 20px 30px;
+    padding: 70px 30px 30px 60px;
     border-radius: 20px;
   }
 }
@@ -95,18 +95,22 @@
 
 .title {
   font-size: 20px;
-  text-align: center;
+  margin-left: 20px;
+  /* text-align: center; */
+  margin-bottom: 20px;
   font-weight: 500;
   color: var(--gold-color);
 }
 @media screen and (min-width: 768px) {
   .title {
+    margin-left: 40px;
     font-weight: 600;
     font-size: 24px;
   }
 }
 @media screen and (min-width: 1025px) {
   .title {
+    margin-left: 60px;
     font-size: 32px;
     font-weight: 700;
   }
@@ -115,11 +119,11 @@
 .description p {
   font-size: 14px;
   color: var(--gold-color);
-  line-height: 1;
+  line-height: 1.25;
   max-width: 600px;
   position: relative;
   padding-left: 16px;
-  margin: 8px 0;
+  margin: 12px 0;
 }
 
 .description p::before {

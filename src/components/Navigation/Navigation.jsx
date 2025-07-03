@@ -32,13 +32,13 @@ const Navigation = () => {
       )}
       {isLoggedIn && (
         <>
-          <NavLink
+          {/* <NavLink
             to="/create-question"
             className={activeLink}
             aria-label="Create card"
           >
             Create Question
-          </NavLink>
+          </NavLink> */}
           {/* <NavLink
             to={`/edit-question/${category}/${id}`}
             className={activeLink}

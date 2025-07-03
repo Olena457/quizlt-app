@@ -68,13 +68,13 @@ const MobileMenu = () => {
 
             {isLoggedIn && (
               <>
-                <NavLink
+                {/* <NavLink
                   to="/create-question"
                   className={css.link}
                   onClick={() => setIsOpen(false)}
                 >
                   Create Quize
-                </NavLink>
+                </NavLink> */}
 
                 {/* <NavLink
                   to={`/edit-question/${category}/${id}`}

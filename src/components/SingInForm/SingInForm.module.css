@@ -7,7 +7,7 @@
   margin: 0 auto;
   padding: 30px 50px;
   border: 2px solid var(--gold-color);
-  background: var(--form-gradient-color);
+  background-color: var(--form-color);
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6),
     -8px -8px 16px rgba(255, 255, 255, 0.08);
   border-radius: 20px;
@@ -27,12 +27,16 @@
 }
 
 .title {
-  font-weight: 500;
+  font-weight: 800;
   font-size: 28px;
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin-bottom: 15px;
-  color: var(--button-bgr-color);
+  background-image: linear-gradient(135deg, #181a1d, #2e8894, #84d8db, #1aabae);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .text {
@@ -99,7 +103,7 @@ label {
   color: var(--gold-color);
   border-radius: 20px;
   cursor: pointer;
-  background-color: var(--button-bgr-color);
+  background: var(--linear-gradient-color);
   border: 2px solid var(--gold-color);
   transition: background-color 0.3s ease;
 }
