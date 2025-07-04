@@ -1,0 +1,632 @@
+{
+  "categories": {
+    "general": {
+      "title": "General Knowledge Quiz",
+      "description": "Test your general knowledge across various topics!",
+      "quizzes": {
+        "-Nv8a1LxOeXkR7YkAqPd": {
+          "question": "Which planet is known as the Red Planet?",
+          "options": ["Mars", "Venus", "Jupiter", "Saturn"],
+          "correctAnswers": ["Mars"]
+        },
+        "-Nv8a3UiyjK8HcPWbG9x": {
+          "question": "What is the largest mammal in the world?",
+          "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+          "correctAnswers": ["Blue Whale"]
+        },
+        "-Nv8a5EeV34kKJrBqJQz": {
+          "question": "Who painted the Mona Lisa?",
+          "options": [
+            "Vincent van Gogh",
+            "Pablo Picasso",
+            "Leonardo da Vinci",
+            "Claude Monet"
+          ],
+          "correctAnswers": ["Leonardo da Vinci"]
+        },
+        "-Nv8a6WoLqYEHgTic9Vr": {
+          "question": "What is the capital of Italy?",
+          "options": ["Venice", "Milan", "Rome", "Florence"],
+          "correctAnswers": ["Rome"]
+        },
+        "-Nv8a8HFztJAdAjpPtBt": {
+          "question": "Which element has the atomic number 1?",
+          "options": ["Helium", "Oxygen", "Hydrogen", "Carbon"],
+          "correctAnswers": ["Hydrogen"]
+        },
+        "-Nv8a9tK6NqKM9r37tDn": {
+          "question": "What is the hardest natural substance on Earth?",
+          "options": ["Gold", "Iron", "Diamond", "Quartz"],
+          "correctAnswers": ["Diamond"]
+        },
+        "-Nv8ab15H5ZzVoSMD4hP": {
+          "question": "Who is known as the Father of Computers?",
+          "options": [
+            "Alan Turing",
+            "Charles Babbage",
+            "Thomas Edison",
+            "Nikola Tesla"
+          ],
+          "correctAnswers": ["Charles Babbage"]
+        },
+        "-Nv8acmFaGeT2wjAWgnX": {
+          "question": "What is the smallest prime number?",
+          "options": ["0", "1", "2", "3"],
+          "correctAnswers": ["2"]
+        },
+        "-NvEXAMPLEgen01": {
+          "question": "Which of these animals are mammals?\n(Select two correct answers)",
+          "options": ["Dolphin", "Shark", "Bat", "Crocodile"],
+          "correctAnswers": ["Dolphin", "Bat"]
+        },
+        "-Nv8ccmFaGeW1wjAWgnX": {
+          "question": "What is the capital of Japan?",
+          "options": ["Tokyo", "Seoul", "Beijing", "Bangkok"],
+          "correctAnswers": ["Tokyo"]
+        },
+        "-Nv8bdmFbGeW9wjAWgnY": {
+          "question": "Who wrote 'To Kill a Mockingbird'?",
+          "options": [
+            "Harper Lee",
+            "Mark Twain",
+            "Ernest Hemingway",
+            "F. Scott Fitzgerald"
+          ],
+          "correctAnswers": ["Harper Lee"]
+        }
+      }
+    },
+    "geography": {
+      "title": "Geography Quiz",
+      "description": "Test your knowledge in the world of geography!",
+      "quizzes": {
+        "-Nv8i1Dksm4TXvoXCrVu": {
+          "question": "What is the largest desert in the world?",
+          "options": ["Sahara", "Arabian", "Gobi", "Kalahari"],
+          "correctAnswers": ["Sahara"]
+        },
+        "-Nv8i3AK7fjWiZrzFBUO": {
+          "question": "Which country is known as the Land of the Rising Sun?",
+          "options": ["China", "Japan", "Thailand", "South Korea"],
+          "correctAnswers": ["Japan"]
+        },
+        "-NvEXAMPLEgeo01": {
+          "question": "Which of these countries are landlocked?\n(Select two correct answers)",
+          "options": ["Austria", "Thailand", "Nepal", "Portugal"],
+          "correctAnswers": ["Austria", "Nepal"]
+        },
+        "-Nv8i4qtvJeGmtyL3ngP": {
+          "question": "What is the smallest country in the world?",
+          "options": ["Monaco", "Nauru", "Vatican City", "San Marino"],
+          "correctAnswers": ["Vatican City"]
+        },
+        "-Nv8i61XtqKveDVmYkNK": {
+          "question": "Which continent is known as the Dark Continent?",
+          "options": ["Asia", "Africa", "Australia", "South America"],
+          "correctAnswers": ["Africa"]
+        },
+        "-Nv8i7X2FHnLTu9LE1KH": {
+          "question": "What mountain range separates Europe and Asia?",
+          "options": ["Himalayas", "Rockies", "Ural Mountains", "Andes"],
+          "correctAnswers": ["Ural Mountains"]
+        },
+        "-Nv8i91WdUUkdu2saTVZ": {
+          "question": "Which ocean is the largest?",
+          "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Pacific Ocean"
+          ],
+          "correctAnswers": ["Pacific Ocean"]
+        },
+        "-Nv8iAUU6cLDEG3W9z5L": {
+          "question": "What is the capital of Australia?",
+          "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+          "correctAnswers": ["Canberra"]
+        },
+        "-Nv8iCfLgtaWoCAKTKtw": {
+          "question": "Which country has the most natural lakes?",
+          "options": ["Canada", "Russia", "United States", "India"],
+          "correctAnswers": ["Canada"]
+        },
+        "-Nv8iENsGk7BBNVC46N2": {
+          "question": "What is the official language of Brazil?",
+          "options": ["Spanish", "Portuguese", "English", "French"],
+          "correctAnswers": ["Portuguese"]
+        },
+        "-Nv8iGEfJZ5XHPbEi9NU": {
+          "question": "Which country is home to the kangaroo?",
+          "options": ["New Zealand", "Australia", "South Africa", "India"],
+          "correctAnswers": ["Australia"]
+        },
+        "-Nv8iI7oMP5DR70M9nTW": {
+          "question": "What is the capital city of Egypt?",
+          "options": ["Cairo", "Alexandria", "Giza", "Luxor"],
+          "correctAnswers": ["Cairo"]
+        },
+        "-Nv8iK1ez8gjQ4G9sD0L": {
+          "question": "Which continent is the Sahara Desert located in?",
+          "options": ["Asia", "Africa", "North America", "Australia"],
+          "correctAnswers": ["Africa"]
+        },
+        "-Nv8iLdc0a1mUVOvYZrK": {
+          "question": "What is the largest island in the world?",
+          "options": ["Greenland", "New Guinea", "Borneo", "Madagascar"],
+          "correctAnswers": ["Greenland"]
+        },
+        "-Nv8iNKBffM0n1f2ybKH": {
+          "question": "Which country is known for the Great Wall?",
+          "options": ["India", "China", "Japan", "Mongolia"],
+          "correctAnswers": ["China"]
+        },
+        "-Nv8iPP2sN0TuTbXztKY": {
+          "question": "What is the capital of Canada?",
+          "options": ["Toronto", "Ottawa", "Vancouver", "Montreal"],
+          "correctAnswers": ["Ottawa"]
+        }
+      }
+    },
+    "movies": {
+      "title": "Movies Quiz",
+      "description": "Test your knowledge in the world of movies!",
+      "quizzes": {
+        "-Nv8q1ToRSObUWdA6coF": {
+          "question": "Which movie features the character Jack Sparrow?",
+          "options": [
+            "The Lord of the Rings",
+            "Pirates of the Caribbean",
+            "Harry Potter",
+            "Star Wars"
+          ],
+          "correctAnswers": ["Pirates of the Caribbean"]
+        },
+        "-Nv8q3BQkzEG6tcW8d9S": {
+          "question": "What year was the original 'Jurassic Park' released?",
+          "options": ["1990", "1993", "1995", "1997"],
+          "correctAnswers": ["1993"]
+        },
+        "-Nv8q4ZqQbAMF9zrJRAe": {
+          "question": "Who won the Academy Award for Best Actor in 2020?",
+          "options": [
+            "Joaquin Phoenix",
+            "Leonardo DiCaprio",
+            "Brad Pitt",
+            "Tom Hanks"
+          ],
+          "correctAnswers": ["Joaquin Phoenix"]
+        },
+        "-NvEXAMPLEmov01": {
+          "question": "Which of these are science fiction movies?\n(Select two correct answers)",
+          "options": ["Inception", "The Matrix", "Titanic", "The Godfather"],
+          "correctAnswers": ["Inception", "The Matrix"]
+        },
+        "-Nv8q62MreR8AzCaN1xB": {
+          "question": "Which animated film features a talking snowman named Olaf?",
+          "options": ["Frozen", "Moana", "Zootopia", "Tangled"],
+          "correctAnswers": ["Frozen"]
+        },
+        "-Nv8q7XDrVC96N6ABqWq": {
+          "question": "What is the name of the fictional African country in 'Black Panther'?",
+          "options": ["Wakanda", "Zamunda", "Genosha", "Elbonia"],
+          "correctAnswers": ["Wakanda"]
+        },
+        "-Nv8q8xNqBtb7txpnkUt": {
+          "question": "Which film features the quote 'Here's looking at you, kid'?",
+          "options": [
+            "Casablanca",
+            "Gone with the Wind",
+            "The Godfather",
+            "Citizen Kane"
+          ],
+          "correctAnswers": ["Casablanca"]
+        },
+        "-Nv8qAOTC0jExSL0vFNy": {
+          "question": "What is the name of the hobbit played by Elijah Wood in 'The Lord of the Rings'?",
+          "options": ["Frodo", "Sam", "GGandalf", "Bilbo"],
+          "correctAnswers": ["Frodo"]
+        },
+        "-Nv8qBYOT8yUEegKjxJv": {
+          "question": "Which movie features a character named Andy Dufresne?",
+          "options": [
+            "The Shawshank Redemption",
+            "Forrest Gump",
+            "The Green Mile",
+            "Fight Club"
+          ],
+          "correctAnswers": ["The Shawshank Redemption"]
+        },
+        "-Nv8qDBB9TJq4YvynI1j": {
+          "question": "What is the name of the princess in 'The Princess Bride'?",
+          "options": ["Buttercup", "Zelda", "Leia", "Aurora"],
+          "correctAnswers": ["Buttercup"]
+        },
+        "-Nv8qEgd1nbLgJZaAOqU": {
+          "question": "Who played the role of the Joker in 'The Dark Knight'?",
+          "options": [
+            "Heath Ledger",
+            "Jared Leto",
+            "Jack Nicholson",
+            "Joaquin Phoenix"
+          ],
+          "correctAnswers": ["Heath Ledger"]
+        },
+        "-Nv8qGGGXJhvBQzA2zRP": {
+          "question": "What is the main theme of the movie 'The Matrix'?",
+          "options": [
+            "Time travel",
+            "Artificial intelligence",
+            "Space exploration",
+            "Superheroes"
+          ],
+          "correctAnswers": ["Artificial intelligence"]
+        },
+        "-Nv8qHPbP1kgJIkJFM5L": {
+          "question": "Which film features a character named Forrest Gump?",
+          "options": [
+            "Forrest Gump",
+            "The Green Mile",
+            "Cast Away",
+            "Saving Private Ryan"
+          ],
+          "correctAnswers": ["Forrest Gump"]
+        },
+        "-Nv8qJIPY0S57cg2RQyO": {
+          "question": "What is the name of the fictional school in 'Harry Potter'?",
+          "options": ["Hogwarts", "Narnia", "Middle-earth", "Neverland"],
+          "correctAnswers": ["Hogwarts"]
+        },
+        "-Nv8qKqf0FnmvCmU0y9v": {
+          "question": "Which movie features a character named Tony Stark?",
+          "options": ["Spider-Man", "Iron Man", "Thor", "The Avengers"],
+          "correctAnswers": ["Iron Man"]
+        },
+        "-Nv8qM4UUsRbszsp90Fo": {
+          "question": "What is the name of the spaceship in 'Star Wars'?",
+          "options": [
+            "Enterprise",
+            "Millennium Falcon",
+            "Serenity",
+            "Nostromo"
+          ],
+          "correctAnswers": ["Millennium Falcon"]
+        }
+      }
+    },
+    "coding": {
+      "title": "Programming Quiz",
+      "description": "Test your knowledge in the world of programming!",
+      "quizzes": {
+        "-Nv8w1DLFzBNqaKcB8x1": {
+          "question": "What is the main purpose of CSS?",
+          "options": [
+            "To structure web pages",
+            "To style web pages",
+            "To program web pages",
+            "To store web pages"
+          ],
+          "correctAnswers": ["To style web pages"]
+        },
+        "-Nv8w3AHieEmrYZnQdUR": {
+          "question": "Which of the following is a programming language?",
+          "options": ["HTML", "CSS", "JavaScript", "All of the above"],
+          "correctAnswers": ["All of the above"]
+        },
+        "-Nv8w4RMoEJZ5E3PNzEU": {
+          "question": "What does SQL stand for?",
+          "options": [
+            "Structured Query Language",
+            "Structured Question Language",
+            "Simple Query Language",
+            "Simple Question Language"
+          ],
+          "correctAnswers": ["Structured Query Language"]
+        },
+        "-Nv8w5oy_7Nd36VTnpGe": {
+          "question": "Which of the following are Python frameworks?\n(Select two correct answers)",
+          "options": ["Django", "Flask", "Ruby on Rails", "Laravel"],
+          "correctAnswers": ["Django", "Flask"]
+        },
+        "-Nv8w7gSh_cBNvwXtkwk": {
+          "question": "What is the purpose of a version control system?",
+          "options": [
+            "To manage changes to source code",
+            "To store data",
+            "To run applications",
+            "To design web pages"
+          ],
+          "correctAnswers": ["To manage changes to source code"]
+        },
+        "-Nv8w9NaFeaqaxzFJcv0": {
+          "question": "Which of the following is a front-end framework?",
+          "options": ["Django", "React", "Node.js", "Flask"],
+          "correctAnswers": ["React"]
+        },
+        "-Nv8wAD0cogazk81SPpY": {
+          "question": "What is the main function of a compiler?",
+          "options": [
+            "To execute code",
+            "To convert source code into machine code",
+            "To debug code",
+            "To write code"
+          ],
+          "correctAnswers": ["To convert source code into machine code"]
+        },
+        "-NvEXAMPLEcod02": {
+          "question": "Which of these tools are used for styling web pages?\n(Select two correct answers)",
+          "options": ["CSS", "Bootstrap", "Node.js", "Express"],
+          "correctAnswers": ["CSS", "Bootstrap"]
+        },
+        "-Nv8wBctKSAJUbL7t1tO": {
+          "question": "Which of the following is a NoSQL database?",
+          "options": ["MySQL", "PostgreSQL", "MongoDB", "SQLite"],
+          "correctAnswers": ["MongoDB"]
+        },
+        "-Nv8wD1K0XGQMDZTGGxX": {
+          "question": "What does API stand for?",
+          "options": [
+            "Application Programming Interface",
+            "Application Program Interface",
+            "Application Programming Integration",
+            "Application Program Integration"
+          ],
+          "correctAnswers": ["Application Programming Interface"]
+        },
+        "-Nv8wEeO1ROhJCTsP7rR": {
+          "question": "Which language is known for its use in data analysis?",
+          "options": ["Java", "Python", "C#", "Swift"],
+          "correctAnswers": ["Python"]
+        },
+        "-Nv8wFxCR4-q7a4Xh4oQ": {
+          "question": "What is the purpose of a debugger?",
+          "options": [
+            "To write code",
+            "To test code",
+            "To find and fix errors in code",
+            "To compile code"
+          ],
+          "correctAnswers": ["To find and fix errors in code"]
+        },
+        "-Nv8wHbSK3JwnvRxEs1s": {
+          "question": "Which of the following is a popular JavaScript library?",
+          "options": ["jQuery", "Django", "Flask", "Ruby on Rails"],
+          "correctAnswers": ["jQuery"]
+        },
+        "-Nv8wJHhCC2AByXB0_XW": {
+          "question": "What is the main use of Git?",
+          "options": [
+            "To write code",
+            "To manage version control",
+            "To design web pages",
+            "To run applications"
+          ],
+          "correctAnswers": ["To manage version control"]
+        },
+        "-Nv8wKv9hFn5Z01cW2J4": {
+          "question": "Which of the following is a back-end programming language?",
+          "options": ["HTML", "CSS", "Java ", "JavaScript"],
+          "correctAnswers": ["Java"]
+        },
+        "-Nv8wMyAy7LvqV1H4blV": {
+          "question": "What is the purpose of a framework in programming?",
+          "options": [
+            "To provide a structure for building applications",
+            "To write code",
+            "To debug code",
+            "To manage databases"
+          ],
+          "correctAnswers": ["To provide a structure for building applications"]
+        }
+      }
+    },
+    "science": {
+      "title": "Science Quiz",
+      "description": "Test your knowledge in the world of science!",
+      "quizzes": {
+        "-Nv93i1xtQmQ1BshJuqB": {
+          "question": "What is the powerhouse of the cell?",
+          "options": [
+            "Nucleus",
+            "Mitochondria",
+            "Ribosome",
+            "Endoplasmic Reticulum"
+          ],
+          "correctAnswers": ["Mitochondria"]
+        },
+        "-Nv93jFpmELUFXxiSvD8": {
+          "question": "What is the speed of light?",
+          "options": [
+            "300,000 km/s",
+            "150,000 km/s",
+            "1,000 km/s",
+            "3,000 km/s"
+          ],
+          "correctAnswers": ["300,000 km/s"]
+        },
+        "-Nv93kQ-qWro8YYOmr95": {
+          "question": "What gas do plants absorb from the atmosphere?",
+          "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+          "correctAnswers": ["Carbon Dioxide"]
+        },
+        "-Nv93mS7-NuwmjrtpLmh": {
+          "question": "What is the most abundant gas in the Earth's atmosphere?",
+          "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Argon"],
+          "correctAnswers": ["Nitrogen"]
+        },
+        "-NvEXAMPLEsci01": {
+          "question": "Which of these are parts of the human nervous system?\n(Select two correct answers)",
+          "options": ["Spinal cord", "Neurons", "Kidneys", "Liver"],
+          "correctAnswers": ["Spinal cord", "Neurons"]
+        },
+        "-Nv93ncv96gUKmUohWJK": {
+          "question": "What is the main organ of the circulatory system?",
+          "options": ["Liver", "Heart", "Lungs", "Kidneys"],
+          "correctAnswers": ["Heart"]
+        },
+        "-Nv93p1TbXCPAEvrBvV0": {
+          "question": "What is the chemical formula for water?",
+          "options": ["H2O", "CO2", "O2", "NaCl"],
+          "correctAnswers": ["H2O"]
+        },
+        "-Nv93qGzwCiYZTZcQYGr": {
+          "question": "What is the hardest natural substance on Earth?",
+          "options": ["Gold", "Iron", "Diamond", "Quartz"],
+          "correctAnswers": ["Diamond"]
+        },
+        "-Nv93rUOzccx4dq70zhn": {
+          "question": "What is the process by which plants make their food?",
+          "options": [
+            "Photosynthesis",
+            "Respiration",
+            "Digestion",
+            "Transpiration"
+          ],
+          "correctAnswers": ["Photosynthesis"]
+        },
+        "-Nv93sXotzXScBP3_Afn": {
+          "question": "What is the largest organ in the human body?",
+          "options": ["Heart", "Liver", "Skin", "Lungs"],
+          "correctAnswers": ["Skin"]
+        }
+      }
+    },
+    "technologies": {
+      "title": "Technologies Quiz",
+      "description": "Test your knowledge in the world of technologies!",
+      "quizzes": {
+        "-Nv99evu33jRGFcHOZQy": {
+          "question": "What is the main programming language used for web development?",
+          "options": ["Python", "Java", "JavaScript", "C++"],
+          "correctAnswers": ["JavaScript"]
+        },
+        "-Nv99gAtG26Am5NDnbTu": {
+          "question": "What does AI stand for?",
+          "options": [
+            "Artificial Intelligence",
+            "Automated Interface",
+            "Advanced Integration",
+            "Artificial Integration"
+          ],
+          "correctAnswers": ["Artificial Intelligence"]
+        },
+        "-Nv99hpQvDRv8LwVLwTa": {
+          "question": "What is the name of the first electronic computer?",
+          "options": ["ENIAC", "UNIVAC", "IBM", "Colossus"],
+          "correctAnswers": ["ENIAC"]
+        },
+        "-Nv99j8VVWyqQ0wHdcYl": {
+          "question": "Which technology is used to make telephone calls over the Internet?",
+          "options": ["VoIP", "ISDN", "PSTN", "DSL"],
+          "correctAnswers": ["VoIP"]
+        },
+        "-Nv99kbQ-vP5vw8kkZ3P": {
+          "question": "What does the acronym 'USB' stand for?",
+          "options": [
+            "Universal Serial Bus",
+            "Universal System Bus",
+            "Unified Serial Bus",
+            "Unified System Bus"
+          ],
+          "correctAnswers": ["Universal Serial Bus"]
+        },
+        "-NvEXAMPLEtech01": {
+          "question": "Which of these are cloud computing platforms?\n(Select two correct answers)",
+          "options": ["AWS", "Azure", "Photoshop", "MySQL"],
+          "correctAnswers": ["AWS", "Azure"]
+        },
+        "-Nv99mKlZl6OG1cZ9Cau": {
+          "question": "Which programming language is known for its use in data science?",
+          "options": ["Java", "Python", "C#", "Ruby"],
+          "correctAnswers": ["Python"]
+        },
+        "-Nv99nnpCe9YFJae6ANL": {
+          "question": "What is the primary function of an operating system?",
+          "options": [
+            "Manage hardware resources",
+            "Run applications",
+            "Provide security",
+            "All of the above"
+          ],
+          "correctAnswers": ["All of the above"]
+        },
+        "-Nv99p7O3FD3aP6t1nON": {
+          "question": "What does 'cloud computing' refer to?",
+          "options": [
+            "Storing data on local servers",
+            "Storing data on remote servers accessed via the Internet",
+            "Using physical storage devices",
+            "None of the above"
+          ],
+          "correctAnswers": [
+            "Storing data on remote servers accessed via the Internet"
+          ]
+        },
+        "-Nv99qWRJGiTCMQ5cZ3n": {
+          "question": "What is the main purpose of a firewall?",
+          "options": [
+            "To speed up the Internet",
+            "To protect a network from unauthorized access",
+            "To store data",
+            "To manage network traffic"
+          ],
+          "correctAnswers": ["To protect a network from unauthorized access"]
+        },
+        "-Nv99sE6KynM8JByS4VX": {
+          "question": "Which of the following is a popular web browser?",
+          "options": [
+            "Microsoft Word",
+            "Google Chrome",
+            "Adobe Photoshop",
+            "Windows Media Player"
+          ],
+          "correctAnswers": ["Google Chrome"]
+        },
+        "-Nv99tr8BBb9g5Y7OIF5": {
+          "question": "What is the function of a router?",
+          "options": [
+            "To connect multiple networks",
+            "To store data",
+            "To run applications",
+            "To provide security"
+          ],
+          "correctAnswers": ["To connect multiple networks"]
+        },
+        "-Nv99vbNOU9kZ3VaY70V": {
+          "question": "What does 'SEO' stand for?",
+          "options": [
+            "Search Engine Optimization",
+            "Search Engine Operation",
+            "Systematic Engine Optimization",
+            "Systematic Engine Operation"
+          ],
+          "correctAnswers": ["Search Engine Optimization"]
+        },
+        "-Nv99wrrp3EV1MBXu-CN": {
+          "question": "Which of the following is a type of malware?",
+          "options": ["Antivirus", "Spyware", "Firewall", "Router"],
+          "correctAnswers": ["Spyware"]
+        },
+        "-Nv99yj1gSnvZez63dMY": {
+          "question": "What is the purpose of a database?",
+          "options": [
+            "To store and manage data",
+            "To run applications",
+            "To connect networks",
+            "To provide security"
+          ],
+          "correctAnswers": ["To store and manage data"]
+        },
+        "-Nv99zXZ3--tAPwR1_tG": {
+          "question": "What does 'IoT' stand for?",
+          "options": [
+            "Internet of Things",
+            "Internet of Technology",
+            "Integration of Things",
+            "Integration of Technology"
+          ],
+          "correctAnswers": ["Internet of Things"]
+        }
+      }
+    }
+  }
+}
