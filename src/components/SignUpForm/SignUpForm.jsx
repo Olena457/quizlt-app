@@ -136,9 +136,9 @@ const SignUpForm = () => {
             aria-label={isPassword ? 'Show password' : 'Hide password'}
           >
             {isPassword ? (
-              <img src={openEye} alt="eye pen" className={css.eye} />
-            ) : (
               <img src={eye} alt="eye" className={css.eye} />
+            ) : (
+              <img src={openEye} alt="eye open" className={css.eye} />
             )}
           </button>
           {errors.password && (

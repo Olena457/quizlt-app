@@ -74,9 +74,8 @@ const SignInForm = () => {
         <span>
           You already have an account?
           <span className={css.link} onClick={() => navigate('/register')}>
-            Registered
+            Registration.
           </span>
-          ?
         </span>
         <br />
         Please enter your credentials.
@@ -123,9 +122,9 @@ const SignInForm = () => {
             aria-label={isPassword ? 'Show password' : 'Hide password'}
           >
             {isPassword ? (
-              <img src={openEye} alt="eye pen" className={css.eye} />
-            ) : (
               <img src={eye} alt="eye" className={css.eye} />
+            ) : (
+              <img src={openEye} alt="eye open" className={css.eye} />
             )}
           </button>
           {errors.password && (
