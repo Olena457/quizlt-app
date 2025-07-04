@@ -1,22 +1,52 @@
+.pageGame {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+/* @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .pageGame {
+    padding: 20px 40px 20px 40px;
+    padding: 20px;
+  }
+} */
+@media screen and (min-width: 1025px) {
+  .pageGame {
+    padding: 50px;
+  }
+}
+.pageTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.questionCount {
+  color: var(--super-light-color);
+}
 .containerGame {
   display: flex;
   flex-direction: column;
-  padding: 30px 10px;
+  /* padding: 30px 10px; */
   align-items: center;
   justify-content: center;
   min-height: 500px;
   /* padding: 50px 20px 50px 20px; */
-  width: 100%;
+  padding: 0px 20px 30px 20px;
+  height: 100vh;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .containerGame {
-    padding: 50px 30px 50px 30px;
+    padding: 0px 40px 40px 40px;
   }
 }
 @media screen and (min-width: 1025px) {
   .containerGame {
-    padding: 80px 50px 80px 50px;
+    padding: 15px 50px 15px 50px;
   }
 }
 .titleError {

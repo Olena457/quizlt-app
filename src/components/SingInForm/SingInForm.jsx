@@ -55,7 +55,7 @@ const SignInForm = () => {
         toast.success('User logged in successfully!', {
           position: 'top-center',
         });
-        navigate('/category');
+        navigate('/start');
       })
       .catch(errMessage => {
         toast.error(errMessage, {

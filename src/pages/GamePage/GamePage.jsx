@@ -155,51 +155,53 @@ const GamePage = () => {
   };
 
   return (
-    <div className={css.containerGame}>
-      <QuizeContainer>
-        {loading && <p>Loading questions...</p>}
-        {error && <p className={css.errorMessage}>Error: {error}</p>}
+    <div className={css.pageGame}>
+      <div className={css.containerGame}>
+        <QuizeContainer>
+          {loading && <p>Loading questions...</p>}
+          {error && <p className={css.errorMessage}>Error: {error}</p>}
 
-        {!loading && !error && filteredQuestions.length === 0 && (
-          <p className={css.titleError}>
-            No questions available for this category.
-          </p>
-        )}
-
-        {!loading && !error && currentQuestion && (
-          <>
-            <h2>Category: {selectedCategory}</h2>{' '}
-            {/* <--- Using `selectedCategory` from `location.state` */}
-            <p>
-              Question {currentQuestionIndex + 1} / {filteredQuestions.length}
+          {!loading && !error && filteredQuestions.length === 0 && (
+            <p className={css.titleError}>
+              No questions available for this category.
             </p>
-            <p>
-              Correct Answers: {correctAnswersCount} /{filteredQuestions.length}
-            </p>
-            <CategoryCard
-              question={currentQuestion.question}
-              options={currentQuestion.options}
-              isLastQuestion={
-                currentQuestionIndex === filteredQuestions.length - 1
-              }
-              onAnswer={handleAnswer}
-              onNext={handleNextQuestion}
-              questionData={currentQuestion}
-              onDelete={openDeleteModal}
-              onEdit={question =>
-                navigate(`/edit-question/${question.category}/${question.id}`)
-              }
-            />
-          </>
-        )}
+          )}
 
-        <ConfirmModal
-          isOpen={showModal}
-          message="Are you sure you want to delete this question?"
-          onConfirm={confirmDelete}
-          onCancel={cancelDelete}
-        />
-      </QuizeContainer>
+          {!loading && !error && currentQuestion && (
+            <>
+              <h2 className={css.pageTitle}>Category: {selectedCategory}</h2>
+              <p className={css.questionCount}>
+                Question {currentQuestionIndex + 1} / {filteredQuestions.length}
+              </p>
+              {/* <p>
+                Correct Answers: {correctAnswersCount} /
+                {filteredQuestions.length}
+              </p> */}
+              <CategoryCard
+                question={currentQuestion.question}
+                options={currentQuestion.options}
+                isLastQuestion={
+                  currentQuestionIndex === filteredQuestions.length - 1
+                }
+                onAnswer={handleAnswer}
+                onNext={handleNextQuestion}
+                questionData={currentQuestion}
+                onDelete={openDeleteModal}
+                onEdit={question =>
+                  navigate(`/edit-question/${question.category}/${question.id}`)
+                }
+              />
+            </>
+          )}
+
+          <ConfirmModal
+            isOpen={showModal}
+            message="Are you sure you want to delete this question?"
+            onConfirm={confirmDelete}
+            onCancel={cancelDelete}
+          />
+        </QuizeContainer>
+      </div>
     </div>
   );
 };
