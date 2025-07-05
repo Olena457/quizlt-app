@@ -6,7 +6,7 @@ const BrandLogo = () => {
   return (
     <div className={css.brand}>
       <NavLink to="/">
-        <h2 className={css.title}>Quizlet game</h2>
+        <h2 className={css.title}>Quizlet</h2>
       </NavLink>
       <div className={css.logoContainer}>
         <img

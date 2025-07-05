@@ -56,39 +56,44 @@
   }
 }
 .startQuiz {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
   border-radius: 10px;
-  min-width: 320px;
+  min-width: 290px;
   max-height: 600px;
-  padding: 50px 20px;
+  padding: 40px 20px 10px 20px;
   border: 1px solid var(--gold-color);
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6),
     -8px -8px 16px rgba(255, 255, 255, 0.08);
   background: linear-gradient(185deg, #181a1d, #2e8894);
 }
-@media (min-width: 375px) and (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 767px) {
   .startQuiz {
-    max-height: 500px;
+    padding: 60px 20px 60px 20px;
+    max-height: 580px;
+    min-width: 350px;
     gap: 20px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .startQuiz {
     gap: 40px;
-    padding: 70px 30px 30px 60px;
+    max-width: 580px;
+    padding: 40px 30px 20px 30px;
     border-radius: 20px;
   }
 }
 @media screen and (min-width: 1025px) {
   .startQuiz {
-    width: 60%;
-    height: 95%;
-    gap: 50px;
+    /* width: 60%; */
+    max-width: 800px;
+    /* height: 95%; */
+    padding: 30px;
+    gap: 20px;
     border-radius: 20px;
   }
 }
@@ -163,7 +168,7 @@
 .playButton {
   width: 120px;
   height: 46px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   display: flex;
   justify-content: center;
   align-items: center;

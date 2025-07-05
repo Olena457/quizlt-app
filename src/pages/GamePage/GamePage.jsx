@@ -38,11 +38,17 @@ const GamePage = () => {
   const [showModal, setShowModal] = useState(false);
   const [questionToDelete, setQuestionToDelete] = useState(null);
 
+  // useEffect(() => {
+  //   if (selectedCategory && filteredQuestions.length === 0) {
+  //     dispatch(fetchQuizzesByCategory(selectedCategory));
+  //   }
+  // }, [dispatch, selectedCategory, filteredQuestions.length]);
+
   useEffect(() => {
-    if (selectedCategory && filteredQuestions.length === 0) {
+    if (selectedCategory) {
       dispatch(fetchQuizzesByCategory(selectedCategory));
     }
-  }, [dispatch, selectedCategory, filteredQuestions.length]);
+  }, [dispatch, selectedCategory]);
 
   useEffect(() => {
     setStartTime(Date.now());

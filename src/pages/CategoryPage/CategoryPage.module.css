@@ -64,10 +64,10 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
   border-radius: 10px;
   min-width: 320px;
-  max-height: 600px;
+  /* max-height: 600px; */
   padding: 20px 10px;
   border: 1px solid var(--gold-color);
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6),
@@ -84,12 +84,15 @@
   .gameContainerQuiz {
     gap: 40px;
     min-height: 380px;
+    max-width: 750px;
     border-radius: 20px;
   }
 }
 @media screen and (min-width: 1025px) {
   .gameContainerQuiz {
-    width: 60%;
+    /* width: 60%; */
+    max-width: 800px;
+    padding: 20px;
     height: 95%;
     gap: 50px;
     border-radius: 20px;
@@ -137,7 +140,7 @@
 @media screen and (min-width: 768px) {
   .buttonWrapper {
     gap: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 }
 

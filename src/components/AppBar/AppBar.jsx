@@ -47,6 +47,8 @@ const AppBar = ({ id, player, category }) => {
               aria-label="log out"
             >
               <img
+                width={40}
+                height={40}
                 src={logOutIcon}
                 alt="logout icon"
                 className={css.logoutIcon}

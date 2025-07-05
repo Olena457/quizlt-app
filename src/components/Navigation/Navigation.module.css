@@ -11,8 +11,8 @@
 
 .link {
   display: inline-block;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   padding: 30px 20px 30px 20px;
   color: var(--accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -49,4 +49,22 @@
 }
 .hiddenLink {
   visibility: hidden;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .link {
+    font-size: 18px;
+    /* font-weight: 600; */
+    /* align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px; */
+  }
+}
+@media screen and (min-width: 1025px) {
+  .link {
+    font-size: 24px;
+    /* font-weight: 600; */
+    /* padding: 10px 70px;
+    align-items: center;
+    justify-content: space-between; */
+  }
 }
