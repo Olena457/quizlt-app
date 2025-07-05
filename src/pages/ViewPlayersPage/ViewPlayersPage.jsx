@@ -27,7 +27,7 @@ const ViewPlayersPage = () => {
   }, [players, dispatch, id]);
 
   const sortedPlayers = players
-    ? [...players].sort((a, b) => b.correctAnswer - a.correctAnswer)
+    ? [...players].sort((a, b) => b.score - a.score)
     : [];
 
   return (

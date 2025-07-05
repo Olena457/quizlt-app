@@ -53,7 +53,7 @@ const ResultPage = () => {
             ⏳ Time taken: {timeTaken} seconds.
           </div>
           <div className={css.description}>
-            ✅ You answered {correctAnswersCount} out of {totalQuestions}
+            ✅ You answered {correctAnswersCount} out of {totalQuestions}&nbsp;
             questions correctly.
           </div>
           <div className={css.description}>
