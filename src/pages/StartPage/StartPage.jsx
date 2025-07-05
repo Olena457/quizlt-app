@@ -1,10 +1,7 @@
-// import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-// import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth';
 import css from './StartPage.module.css';
 
 const StartPage = () => {
-  // const isLoggedIn = useSelector(selectIsLoggedIn);
   const navigate = useNavigate();
 
   const handlePlayClick = () => {

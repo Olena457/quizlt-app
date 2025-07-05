@@ -15,7 +15,7 @@ const PlayerList = ({ players }) => {
           />
           <div className={css.participantInfo}>
             <p className={css.participantName}>
-              Name: {player.fullname || player.name || 'Unknown'}
+              Name: {player.userName || 'Unknown'}
             </p>
             <p className={css.participantCategory}>
               Category: {player.category}

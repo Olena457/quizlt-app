@@ -41,29 +41,32 @@ const ResultPage = () => {
     <div className={css.containerResult}>
       <QuizContainer>
         <div className={css.title}>Quiz Results for {userName}</div>
+
         <div className={css.description}>
           {passed ? '✅ You passed the quiz!' : '❌ You failed the quiz!'}
         </div>
 
         <div className={css.box}>
+          <div className={css.description}>🎯 Category: {category}</div>
           <div className={css.description}>✅ You scored {accuracy}%!</div>
-
           <div className={css.description}>
-            {correctAnswersCount === totalQuestions
-              ? '🎉 Perfect score! You nailed every question!'
-              : '✨ Not bad! Review your answers and try again to improve your score.'}
+            ⏳ Time taken: {timeTaken} seconds.
           </div>
           <div className={css.description}>
             ✅ You answered {correctAnswersCount} out of {totalQuestions}
             questions correctly.
           </div>
           <div className={css.description}>
-            ⏳ Time taken: {timeTaken} seconds.
+            {correctAnswersCount === totalQuestions
+              ? '🎉 Perfect score! You nailed every question!'
+              : '✨ Not bad!Try again to improve your score.'}
           </div>
-          <div className={css.description}>🎯 Category: {category}</div>
         </div>
-
-        <button type="submit" onClick={() => navigate('/category')}>
+        <button
+          className={css.btnAgain}
+          type="button"
+          onClick={() => navigate('/category')}
+        >
           Try Again
         </button>
         <button

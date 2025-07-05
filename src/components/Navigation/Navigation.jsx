@@ -30,31 +30,6 @@ const Navigation = () => {
           </NavLink>
         </>
       )}
-      {isLoggedIn && (
-        <>
-          {/* <NavLink
-            to="/create-question"
-            className={activeLink}
-            aria-label="Create card"
-          >
-            Create Question
-          </NavLink> */}
-          {/* <NavLink
-            to={`/edit-question/${category}/${id}`}
-            className={activeLink}
-            aria-label="Edit card"
-          >
-            Edit Question
-          </NavLink>
-          <NavLink
-            to={`/players/${player.id}`}
-            className={activeLink}
-            aria-label="View players"
-          >
-            View Players
-          </NavLink> */}
-        </>
-      )}
     </div>
   );
 };

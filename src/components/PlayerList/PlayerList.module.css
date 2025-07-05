@@ -16,32 +16,40 @@
     -8px -8px 16px rgba(255, 255, 255, 0.08);
   background: linear-gradient(185deg, #181a1d, #2e8894);
 }
-
 .participantAvatar {
-  width: 100px;
-  height: 100px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  object-fit: cover;
 }
 
+@media screen and (min-width: 1025px) {
+  .participantAvatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
 .participantInfo {
   text-align: center;
 }
 
 .participantName {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
+  color: var(--gold-color);
 }
 
 .participantQuestions {
   font-size: 19px;
-  color: var(--black-color);
+  color: var(--hover-color);
 }
 .participantCategory {
   font-size: 19px;
-  color: var(--black-color);
+  color: var(--hover-color);
 }
 .participantScore {
   font-size: 19px;
-  color: var(--black-color);
+  color: var(--hover-color);
 }

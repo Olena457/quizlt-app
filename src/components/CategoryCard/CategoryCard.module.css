@@ -14,7 +14,6 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  /* max-width: 300px; */
   padding: 12px 20px;
   font-size: 18px;
   border-radius: 12px;
@@ -22,7 +21,7 @@
   background-color: var(--accent--color);
   color: #fff;
   cursor: pointer;
-  /* transition: transform 0.2s ease, background-color 0.3s ease; */
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 /* .containerButton:hover {
   background-color: var(--hover-color);
@@ -37,13 +36,12 @@
   min-width: 250px;
 }
 /* .buttonQuestion:hover, */
-.buttonQuestion:focus,
+/* .buttonQuestion:focus,
 .buttonQuestion:active {
   border: 1px solid var(--super-light-color);
   background-color: rgba(204, 204, 204, 1);
-  color: var(--button-bgr-color);
-  /* background-color: var(--light-gray-color); */
-}
+  color: var(--gray-color);
+} */
 .containerBtnNext {
   display: flex;
   justify-content: flex-end;
@@ -54,18 +52,10 @@
 .selected {
   background-color: var(--light-gray-color);
   color: var(--gray-color);
-}
-/* .buttonNext {
-  background-color: var(--gold-color);
-  color: var(--black-color);
-  border-radius: 200px;
-  width: 200px;
+  border: 2px solid var(--hover-color);
+  box-shadow: 0 0 5px rgba(76, 241, 241, 0.5);
 }
 
-.submitButton {
-  color: var(--white-color);
-  background-color: var(--button-bgr-color);
-} */
 .buttonNext {
   width: 100px;
   height: 40px;
@@ -92,6 +82,7 @@
     0 4px 15px rgba(76, 241, 241, 0.4);
   color: var(--hover-color);
 }
+
 @media screen and (min-width: 768px) {
   .buttonNext {
     width: 120px;

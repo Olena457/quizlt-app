@@ -38,12 +38,6 @@ const GamePage = () => {
   const [showModal, setShowModal] = useState(false);
   const [questionToDelete, setQuestionToDelete] = useState(null);
 
-  // useEffect(() => {
-  //   if (selectedCategory && filteredQuestions.length === 0) {
-  //     dispatch(fetchQuizzesByCategory(selectedCategory));
-  //   }
-  // }, [dispatch, selectedCategory, filteredQuestions.length]);
-
   useEffect(() => {
     if (selectedCategory) {
       dispatch(fetchQuizzesByCategory(selectedCategory));
@@ -105,7 +99,7 @@ const GamePage = () => {
       navigate('/result', {
         state: {
           correctAnswersCount,
-          category: selectedCategory, // <--- Using `selectedCategory` from `location.state`
+          category: selectedCategory,
           timeTaken,
           totalQuestions: filteredQuestions.length,
         },
@@ -179,10 +173,7 @@ const GamePage = () => {
               <p className={css.questionCount}>
                 Question {currentQuestionIndex + 1} / {filteredQuestions.length}
               </p>
-              {/* <p>
-                Correct Answers: {correctAnswersCount} /
-                {filteredQuestions.length}
-              </p> */}
+
               <CategoryCard
                 question={currentQuestion.question}
                 options={currentQuestion.options}
@@ -213,16 +204,3 @@ const GamePage = () => {
 };
 
 export default GamePage;
-
-// const handleAnswer = answer => {
-//   if (!currentQuestion) return;
-
-//   const updatedAnswers = [...userAnswers];
-//   updatedAnswers[currentQuestionIndex] = {
-//     question: currentQuestion.question,
-//     answer,
-//     isCorrect: answer === currentQuestion.correctAnswer,
-//   };
-
-//   setUserAnswers(updatedAnswers);
-// };

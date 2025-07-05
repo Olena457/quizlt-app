@@ -43,10 +43,14 @@ const ViewPlayersPage = () => {
           <p className={css.noPlayers}>No players in this category yet.</p>
         )}
       </div>
-
-      <button onClick={() => navigate('/category')} className={css.backButton}>
-        ← Go Back
-      </button>
+      <div className={css.buttonWrapper}>
+        <button
+          onClick={() => navigate('/category')}
+          className={css.backButton}
+        >
+          Go Back
+        </button>
+      </div>
     </>
   );
 };

@@ -42,13 +42,15 @@ export const registerGameParticipant = createAsyncThunk(
       const playerResultRef = ref(database, `players/${category}/${userId}`);
 
       const playerData = {
-        fullname: currentUser?.displayName || 'Anonymous',
+        userName: currentUser?.displayName || currentUser?.name || 'Anonymous',
+        // fullname: currentUser?.displayName || 'Anonymous',
         // email: currentUser?.email || 'N/A',
         score: correctAnswersCount,
         timeTaken: timeTaken,
         totalQuestions: totalQuestions, //  total questions
         // playedAt: new Date().toISOString(),
         userId: currentUser.uid,
+        category,
       };
 
       await set(playerResultRef, playerData); // save or udate player data

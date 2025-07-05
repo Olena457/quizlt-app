@@ -1,5 +1,4 @@
 :root {
-  /* --accent-color: #2e8894; */
   --accent-color: #84d8db;
   --secondary-color: #1aabae;
   --accent-light-color: #84d8db;
@@ -21,18 +20,12 @@
   --background-color-transition: var(--background-color);
   /* --accent--color: #1f949b; */
   /* --secondary-color: #1aabae; */
-  /* --accent-light-color: #32dedf; */
-  /* --box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5),
-  10px 0 10px -10px rgba(215, 99, 99, 0.5),
-    0 10px 10px -10px rgba(0, 0, 0, 0.5); */
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  /* height: 100vh; */
   font-weight: 400;
   font-style: normal;
-  /* background: radial-gradient(circle at 40% 30%, #328fa0 0%, #181a1d 100%); */
   background: var(--linear-gradient-color);
   /* background-image: url('../../assets/images/start.jpg');
   background-size: cover;

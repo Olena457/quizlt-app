@@ -12,7 +12,7 @@ const PlayerItem = ({ cards }) => {
         Object.entries(card.players).map(([id, player]) => (
           <div key={id} className={css.partInfoWrapper}>
             <div className={css.partName}>
-              Name: {player.fullName || player.name || 'Unknown'}
+              Name: {player.userName || 'Unknown'}
             </div>
             <div className={css.partInfo}>
               <p className={css.partName}>Category: {player.category}</p>
