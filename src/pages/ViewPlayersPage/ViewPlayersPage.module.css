@@ -13,7 +13,7 @@
   color: var(--gold-color);
 }
 .wrapperCard {
-  padding: 20px;
+  padding: 0px;
 }
 .noPlayers {
   font-weight: 500;
@@ -44,7 +44,7 @@
   flex: none;
   order: 1;
   flex-grow: 0;
-  right: 20px;
+  right: 50px;
   z-index: 50;
   width: 120px;
   height: 46px;
@@ -90,11 +90,11 @@
     width: 173px;
     height: 56px;
     display: flex;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    padding: 15px 60px;
+    padding: 15px 40px;
     flex: none;
     order: 1;
     flex-grow: 0;

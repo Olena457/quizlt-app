@@ -1,15 +1,15 @@
 import { createSelector } from '@reduxjs/toolkit';
 
-export const selectCustomCardsState = state => state.customCards;
-export const selectCustomCardsData = state => state.customCards.data;
-export const selectCustomCardsLoading = state => state.customCards.loading;
-export const selectCustomCardsError = state => state.customCards.error;
+export const selectCustomCardsState = state => state.custom;
+export const selectCustomCardsData = state => state.custom.data;
+export const selectCustomCardsLoading = state => state.custom.loading;
+export const selectCustomCardsError = state => state.custom.error;
+
 export const selectSelectedCustomCard = state =>
-  state.customCards.selectedCustomCard;
+  state.custom.selectedCustomCard;
 
 export const selectCustomCardsByCategory = createSelector(
   [selectCustomCardsData, (_, category) => category],
-
   (customCardsData, category) => {
     const categoryCardsObject = customCardsData[category];
     return categoryCardsObject ? Object.values(categoryCardsObject) : [];

@@ -70,7 +70,7 @@ function App() {
             />
 
             <Route
-              path="/create-question"
+              path="/create-question/:category"
               element={
                 <PrivateRoute
                   redirectTo="/"

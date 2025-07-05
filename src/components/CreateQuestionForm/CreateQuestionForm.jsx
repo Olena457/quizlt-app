@@ -21,6 +21,7 @@ import css from './CreateQuestionForm.module.css';
 
 const CreateQuestionForm = () => {
   const { category: urlCategory, id } = useParams();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userId = useSelector(selectUserId);
@@ -29,7 +30,7 @@ const CreateQuestionForm = () => {
   const loading = useSelector(selectCustomCardsLoading);
   const error = useSelector(selectCustomCardsError);
 
-  const [category, setCategory] = useState(urlCategory || '');
+  // const [category, setCategory] = useState(urlCategory || '');
   const [questionText, setQuestionText] = useState('');
   const [option1, setOption1] = useState('');
   const [option2, setOption2] = useState('');
@@ -48,7 +49,7 @@ const CreateQuestionForm = () => {
 
   useEffect(() => {
     if (id && cardToEdit && cardToEdit.id === id) {
-      setCategory(urlCategory);
+      // setCategory(urlCategory);
       setQuestionText(cardToEdit.question || '');
       setOption1(cardToEdit.options?.[0] || '');
       setOption2(cardToEdit.options?.[1] || '');
@@ -73,7 +74,7 @@ const CreateQuestionForm = () => {
       opt.trim()
     );
     const isValid =
-      category.trim() &&
+      // category.trim() &&
       questionText.trim() &&
       allOptions.every(opt => opt.length > 0) &&
       correctAnswers.length > 0;
@@ -99,7 +100,7 @@ const CreateQuestionForm = () => {
       if (id) {
         await dispatch(
           editCustomCard({
-            category: category.trim(),
+            // category: category.trim(),
             updatedCard: cardData,
           })
         ).unwrap();
@@ -108,7 +109,8 @@ const CreateQuestionForm = () => {
         });
       } else {
         await dispatch(
-          addCustomCard({ ...cardData, category: category.trim() })
+          // addCustomCard({ ...cardData, category: category.trim() })
+          addCustomCard({ ...cardData, category: urlCategory.trim() })
         ).unwrap();
         toast.success('Question created successfully!', {
           position: 'top-center',
@@ -125,8 +127,10 @@ const CreateQuestionForm = () => {
   return (
     <form onSubmit={handleSubmit} className={css.formContainer}>
       <h2 className={css.title}>{id ? 'Edit Question' : 'Create Question'}</h2>
-
-      <label className={css.label}>
+      <p className={css.label}>
+        Category: <span className={css.categoryDisplay}>{urlCategory}</span>
+      </p>
+      {/* <label className={css.label}>
         Category:
         <input
           type="text"
@@ -135,7 +139,7 @@ const CreateQuestionForm = () => {
           className={css.input}
           readOnly={Boolean(id)}
         />
-      </label>
+      </label> */}
 
       <label className={css.label}>
         Question:
@@ -196,3 +200,4 @@ const CreateQuestionForm = () => {
 };
 
 export default CreateQuestionForm;
+// await dispatch(addCustomCard({ ...cardData, category: urlCategory.trim() }));

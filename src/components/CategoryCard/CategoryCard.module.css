@@ -33,6 +33,8 @@
   padding: 8px;
   border-radius: 200px;
   background-color: var(--white-color);
+  border: 2px solid #999;
+  /* border: 2px solid var(--gray-color); */
   min-width: 250px;
 }
 /* .buttonQuestion:hover, */

@@ -67,11 +67,16 @@ const CategoryPage = () => {
   };
 
   const handleCreateQuestion = () => {
+    if (!selectedCategory) {
+      toast.error('Please select a category before creating a quiz!');
+      return;
+    }
+
     if (!isLoggedIn) {
       toast.info('Please log in to create a question.');
       navigate('/login');
     } else {
-      navigate('/create-question');
+      navigate(`/create-question/${selectedCategory}`);
     }
   };
 
