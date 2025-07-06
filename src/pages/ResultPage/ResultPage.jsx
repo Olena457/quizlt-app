@@ -36,9 +36,9 @@ const ResultPage = () => {
   const accuracy = ((correctAnswersCount / totalQuestions) * 100).toFixed(2);
   const passed = accuracy >= 50;
 
-  const handleBonusClick = () => {
-    navigate('/bonus');
-  };
+  // const handleBonusClick = () => {
+  //   navigate('/bonus');
+  // };
 
   return (
     <div className={css.containerResult}>
@@ -85,7 +85,7 @@ const ResultPage = () => {
         {correctAnswersCount === totalQuestions && (
           <button
             type="button"
-            onClick={handleBonusClick}
+            // onClick={handleBonusClick}
             className={css.bonusButton}
           >
             Bonys fact 🎉
