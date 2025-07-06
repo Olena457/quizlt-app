@@ -8,6 +8,8 @@
   margin-top: 20px;
   padding: 30px 50px;
   border-radius: 20px;
+  scroll-behavior: smooth;
+
   /* border: 2px solid #fffacd; */
   border: 2px solid var(--gold-color);
   background-color: var(--form-color);

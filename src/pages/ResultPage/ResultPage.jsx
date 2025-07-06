@@ -36,8 +36,11 @@ const ResultPage = () => {
   const accuracy = ((correctAnswersCount / totalQuestions) * 100).toFixed(2);
   const passed = accuracy >= 50;
 
+  const handleBonusClick = () => {
+    navigate('/bonus');
+  };
+
   return (
-    // <div className={css.resultPage}>
     <div className={css.containerResult}>
       <QuizContainer>
         <div className={css.title}>Quiz Results for {userName}</div>
@@ -62,6 +65,7 @@ const ResultPage = () => {
               : '✨ Not bad!Try again to improve your score.'}
           </div>
         </div>
+
         <button
           className={css.btnAgain}
           type="button"
@@ -69,6 +73,7 @@ const ResultPage = () => {
         >
           Try Again
         </button>
+
         <button
           type="button"
           onClick={() => navigate(`/players/${category}`)}
@@ -76,9 +81,18 @@ const ResultPage = () => {
         >
           Result All Players from "{category}"
         </button>
+
+        {correctAnswersCount === totalQuestions && (
+          <button
+            type="button"
+            onClick={handleBonusClick}
+            className={css.bonusButton}
+          >
+            Bonys fact 🎉
+          </button>
+        )}
       </QuizContainer>
     </div>
-    // </div>
   );
 };
 

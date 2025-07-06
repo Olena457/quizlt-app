@@ -184,9 +184,11 @@ const GamePage = () => {
                 onNext={handleNextQuestion}
                 questionData={currentQuestion}
                 onDelete={openDeleteModal}
-                onEdit={question =>
-                  navigate(`/edit-question/${question.category}/${question.id}`)
-                }
+                onEdit={question => {
+                  navigate(
+                    `/edit-question/${question.category}/${question.id}`
+                  );
+                }}
               />
             </>
           )}

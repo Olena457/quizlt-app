@@ -49,7 +49,6 @@ const CreateQuestionForm = () => {
 
   useEffect(() => {
     if (id && cardToEdit && cardToEdit.id === id) {
-      // setCategory(urlCategory);
       setQuestionText(cardToEdit.question || '');
       setOption1(cardToEdit.options?.[0] || '');
       setOption2(cardToEdit.options?.[1] || '');
@@ -74,7 +73,6 @@ const CreateQuestionForm = () => {
       opt.trim()
     );
     const isValid =
-      // category.trim() &&
       questionText.trim() &&
       allOptions.every(opt => opt.length > 0) &&
       correctAnswers.length > 0;
@@ -100,7 +98,8 @@ const CreateQuestionForm = () => {
       if (id) {
         await dispatch(
           editCustomCard({
-            // category: category.trim(),
+            category: urlCategory,
+            id: id,
             updatedCard: cardData,
           })
         ).unwrap();
@@ -109,14 +108,13 @@ const CreateQuestionForm = () => {
         });
       } else {
         await dispatch(
-          // addCustomCard({ ...cardData, category: category.trim() })
           addCustomCard({ ...cardData, category: urlCategory.trim() })
         ).unwrap();
         toast.success('Question created successfully!', {
           position: 'top-center',
         });
       }
-      navigate('/categories');
+      navigate('/category');
     } catch (err) {
       toast.error(`An error occurred: ${err.message || 'Please try again.'}`, {
         position: 'top-center',
@@ -127,20 +125,9 @@ const CreateQuestionForm = () => {
   return (
     <form onSubmit={handleSubmit} className={css.formContainer}>
       <h2 className={css.title}>{id ? 'Edit Question' : 'Create Question'}</h2>
-      <p className={css.label}>
+      <h4 className={css.subtitleContainer}>
         Category: <span className={css.categoryDisplay}>{urlCategory}</span>
-      </p>
-      {/* <label className={css.label}>
-        Category:
-        <input
-          type="text"
-          value={category}
-          onChange={e => setCategory(e.target.value)}
-          className={css.input}
-          readOnly={Boolean(id)}
-        />
-      </label> */}
-
+      </h4>
       <label className={css.label}>
         Question:
         <textarea
@@ -168,7 +155,7 @@ const CreateQuestionForm = () => {
       })}
 
       <fieldset className={css.correctAnswerBox}>
-        <legend>Choose correct answer(s):</legend>
+        <legend className={css.choose}>Choose correct answer(s):</legend>
         {[option1, option2, option3, option4].map((option, idx) => (
           <label key={idx} className={css.checkboxLabel}>
             <input
@@ -200,4 +187,3 @@ const CreateQuestionForm = () => {
 };
 
 export default CreateQuestionForm;
-// await dispatch(addCustomCard({ ...cardData, category: urlCategory.trim() }));

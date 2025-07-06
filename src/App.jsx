@@ -32,7 +32,7 @@ const NotFoundPage = lazy(() =>
 const ViewPlayersPage = lazy(() =>
   import('./pages/ViewPlayersPage/ViewPlayersPage.jsx')
 );
-
+const BonusPage = lazy(() => import('./pages/BonusPage/BonusPage.jsx'));
 function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
@@ -82,7 +82,12 @@ function App() {
               path="/edit-question/:category/:id"
               element={<PrivateRoute redirectTo="/" component={<EditPage />} />}
             />
-
+            <Route
+              path="/bonus"
+              element={
+                <PrivateRoute redirectTo="/" component={<BonusPage />} />
+              }
+            />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

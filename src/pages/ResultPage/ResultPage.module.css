@@ -153,3 +153,21 @@
     font-size: 20px;
   }
 }
+/* ResultPage.module.css */
+
+.bonusButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bonusButton:hover {
+  background-color: #218838;
+}

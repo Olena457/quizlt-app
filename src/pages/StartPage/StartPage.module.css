@@ -89,9 +89,8 @@
 }
 @media screen and (min-width: 1025px) {
   .startQuiz {
-    /* width: 60%; */
     max-width: 800px;
-    /* height: 95%; */
+
     padding: 30px;
     gap: 20px;
     border-radius: 20px;

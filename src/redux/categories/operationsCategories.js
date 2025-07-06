@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ref, get } from 'firebase/database';
+import { ref, get, child } from 'firebase/database'; // Додав 'child'
 import { database } from '../../firebase/firebaseConfig.js';
 
 // __________________fetchAllCategoriesData
@@ -31,7 +31,9 @@ export const fetchQuizzesByCategory = createAsyncThunk(
   'categories/fetchQuizzesByCategory',
   async (categoryName, thunkAPI) => {
     try {
-      const categoryRef = ref(database, `categories/${categoryName}`);
+      const dbRef = ref(database); // Отримайте посилання на корінь бази даних
+
+      const categoryRef = child(dbRef, `categories/${categoryName}`); // Використовуємо child
       const categorySnap = await get(categoryRef);
 
       let officialQuestions = [];
@@ -43,21 +45,22 @@ export const fetchQuizzesByCategory = createAsyncThunk(
         categoryMetaData = metaData;
 
         if (quizzes) {
-          // 'card' замінено на 'question'
           officialQuestions = Object.entries(quizzes).map(([id, data]) => ({
             id,
+            category: categoryName, // <--- ВАЖЛИВО: ДОДАНО category до офіційних питань
             ...data,
           }));
         }
       }
 
       // 'customCards' 'customQuestions'
-      const customRef = ref(database, `customCards/${categoryName}`);
+      const customRef = child(dbRef, `customCards/${categoryName}`); // Використовуємо child
       const customSnap = await get(customRef);
       const customQuestions = customSnap.exists()
         ? Object.entries(customSnap.val()).map(([id, data]) => ({
             id,
             isCustom: true,
+            category: categoryName, // <--- ВАЖЛИВО: ДОДАНО category до кастомних питань
             ...data,
           }))
         : [];

@@ -12,7 +12,7 @@ const ConfirmModal = ({ isOpen, message, onConfirm, onCancel }) => {
             Yes
           </button>
           <button className={css.cancel} onClick={onCancel}>
-            Cancel
+            No
           </button>
         </div>
       </div>
