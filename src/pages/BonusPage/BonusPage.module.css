@@ -1,0 +1,169 @@
+.bonusFactsContainer {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0px 10px 20px 10px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .bonusFactsContainer {
+    padding: 20px 40px 20px 40px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .bonusFactsContainer {
+    padding: 50px 80px;
+  }
+}
+.bonusQuiz {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 10px;
+  min-width: 290px;
+  max-height: 600px;
+  padding: 40px 20px 10px 20px;
+  border: 1px solid var(--gold-color);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6),
+    -8px -8px 16px rgba(255, 255, 255, 0.08);
+  background: linear-gradient(185deg, #181a1d, #2e8894);
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .bonusQuiz {
+    padding: 60px 20px 60px 20px;
+    max-height: 580px;
+    min-width: 350px;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .bonusQuiz {
+    gap: 40px;
+    max-width: 580px;
+    padding: 40px 30px 20px 30px;
+    border-radius: 20px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .bonusQuiz {
+    max-width: 800px;
+    padding: 30px;
+    gap: 20px;
+    border-radius: 20px;
+  }
+}
+.loading {
+  font-size: 16px;
+  color: var(--gold-color);
+  line-height: 1.25;
+  max-width: 600px;
+}
+.title {
+  font-size: 20px;
+  margin-left: 20px;
+  /* text-align: center; */
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: var(--gold-color);
+}
+@media screen and (min-width: 768px) {
+  .title {
+    margin-left: 40px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .title {
+    margin-left: 60px;
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+.factText {
+  color: var(--gold-color);
+  line-height: 1.25;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 25px 35px;
+  margin: 20px 0;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.error {
+  font-size: 16px;
+  font-family: 500px;
+  color: var(--red-color);
+  margin-top: 20px;
+}
+
+.backButton {
+  position: fixed;
+  bottom: 20px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  right: 50px;
+  z-index: 50;
+  width: 120px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  border-radius: 200px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--gold-color);
+  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
+  border: 2px solid var(--gold-color);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.backButton:hover,
+.backButton:focus {
+  border: 2px solid var(--hover-color);
+  box-shadow: -15px 0 20px -5px rgba(76, 241, 241, 0.7),
+    15px 0 20px -5px rgba(76, 241, 241, 0.7),
+    0 15px 20px -5px rgba(76, 241, 241, 0.7);
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .backButton {
+    width: 150px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .backButton {
+    width: 173px;
+    height: 56px;
+    display: flex;
+    /* margin-left: 50px; */
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 15px 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+}

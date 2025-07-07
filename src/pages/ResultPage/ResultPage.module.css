@@ -82,7 +82,11 @@
   font-size: 16px;
   color: var(--red-color);
 }
-
+.containerButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .btnAgain {
   width: 100px;
   display: flex;
@@ -103,6 +107,31 @@
 
 .buttonNext:hover,
 .buttonNext:focus {
+  border: 2px solid var(--hover-color);
+  box-shadow: 0 0 10px rgba(76, 241, 241, 0.6),
+    0 4px 15px rgba(76, 241, 241, 0.4);
+  color: var(--hover-color);
+}
+.bonusButton {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
+  color: var(--gold-color);
+  border: 2px solid var(--gold-color);
+  transition: background-color var(--transition), color var(--transition),
+    box-shadow 0.3s ease;
+}
+
+.bonusButton:hover,
+.bonusButton:focus {
   border: 2px solid var(--hover-color);
   box-shadow: 0 0 10px rgba(76, 241, 241, 0.6),
     0 4px 15px rgba(76, 241, 241, 0.4);
@@ -152,22 +181,4 @@
     padding: 5px 25px;
     font-size: 20px;
   }
-}
-/* ResultPage.module.css */
-
-.bonusButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #28a745;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.bonusButton:hover {
-  background-color: #218838;
 }
