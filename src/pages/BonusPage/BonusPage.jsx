@@ -36,17 +36,23 @@ const BonusPage = () => {
   return (
     <div className={css.bonusFactsContainer}>
       <div className={css.bonusQuiz}>
-        <h1 className={css.title}>Your bonus fact!</h1>
+        <h1 className={css.title}>
+          Your bonus fact!&nbsp;
+          {/* <br /> */}
+          Did you know this?
+        </h1>
         {loading && <p className={css.loading}>Loading fact...</p>}
         {error && <p className={css.error}>Error: {error}</p>}
         {!loading && !error && !fact && <p>Failed to load fact.Try later.</p>}
         {!loading && !error && fact && <p className={css.factText}>{fact}</p>}
-        <button
-          onClick={() => navigate('/category')}
-          className={css.backButton}
-        >
-          Go back
-        </button>
+        <div className="bonusQuiz">
+          <button
+            onClick={() => navigate('/category')}
+            className={css.backButton}
+          >
+            Go back
+          </button>
+        </div>
       </div>
     </div>
   );
