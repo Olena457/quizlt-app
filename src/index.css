@@ -21,7 +21,10 @@
   /* --accent--color: #1f949b; */
   /* --secondary-color: #1aabae; */
 }
-
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
