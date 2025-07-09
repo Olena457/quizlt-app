@@ -1,184 +1,24 @@
-/* .containerPage {
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-   display: flex; 
-  padding: 5px; 
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cubeBlock {
-  width: 100%;
-}
-
-.containerHome {
-  display: flex;
-  height: 100vh;
-  padding: 50px 15px;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 30px;
-  width: 100%;
-}
-@media screen and (min-width: 425px) and (max-width: 767px) {
-  .containerHome {
-    padding: 70px 25px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .containerHome {
-    margin-left: auto; 
-    margin-right: auto; 
-    padding: 25px 40px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .containerHome {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    gap: 30px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .containerHome {
-    padding: 10px;
-    max-width: 1200px;
-    gap: 10px;
-  }
-}
-.introBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-.title {
-  font-size: 26px;
-  font-weight: bolder;
-
-  color: azure;
-}
-.titleAndButtonWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 800px;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.subtitle {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--gold-color);
-  text-align: center;
-  margin: 10px 0px 20px 0px;
-}
-
-
-@media screen and (min-width: 768px) {
-  .subtitle {
-    font-size: 28px;
-  }
-  .title {
-    font-size: 34px;
-    font-weight: bolder;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .subtitle {
-    font-size: 26px;
-  }
-  .title {
-    font-size: 30px;
-    font-weight: bolder;
-  }
- 
-}
-
-.buttonHome {
-  width: 90px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 15px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  border-radius: 200px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
-  white-space: nowrap;
-  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
-  color: var(--gold-color);
-  border: 2px solid var(--gold-color);
-  transition: background-color var(--transition), color var(--transition);
-}
-
-.buttonHome:hover,
-.buttonHome:focus {
-  border: 2px solid var(--hover-color);
-  box-shadow: -15px 0 20px -5px rgba(76, 241, 241, 0.7),
-    15px 0 20px -5px rgba(76, 241, 241, 0.7),
-    0 15px 20px -5px rgba(76, 241, 241, 0.7);
-  color: var(--hover-color);
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .buttonHome {
-    width: 160px;
-    height: 42px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 20px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    font-size: 24px;
-    line-height: 1.5;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .buttonHome {
-    width: 175px;
-    display: flex;
-    font-size: 28px;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 60px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-  }
-} */
-/* HomePage.module.css */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .containerPage {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   overflow-x: hidden;
-  padding: 5px;
+  overflow-y: hidden;
+  padding: 50px 5px 20px 5px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .containerPage {
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .containerPage {
+    padding: 10px 5px;
+  }
 }
 
 .containerHome {
@@ -186,38 +26,39 @@
   flex-direction: column;
   gap: 30px;
   width: 100%;
-  padding: 50px 15px;
+  padding: 30px 15px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1400px;
+  height: auto;
 }
 
-@media screen and (min-width: 425px) and (max-width: 767px) {
+@media screen and (min-width: 375px) and (max-width: 425px) {
   .containerHome {
-    padding: 70px 25px;
+    padding: 50px 25px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
   .containerHome {
-    padding: 25px 40px;
-    max-width: 900px;
+    padding: 20px 50px 60px 50px;
+    gap: 15px;
+    max-width: 700px;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .containerHome {
-    padding: 20px 50px;
-    gap: 40px;
-    max-width: 1000px;
+    padding: 10px 200px 20px 200px;
+    max-width: 1100px;
+    gap: 10px;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .containerHome {
-    padding: 20px 80px;
+    padding: 10px 210px 10px 210px;
     max-width: 1200px;
-    gap: 50px;
   }
 }
 
@@ -229,22 +70,45 @@
   justify-content: center;
   width: 100%;
 }
-
+@media screen and (min-width: 1025px) {
+  .introBlock {
+    justify-content: flex-start;
+  }
+}
 .title {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bolder;
-  color: azure;
-  text-align: center;
+  background-image: var(--title-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+@media screen and (min-width: 375px) {
+  .title {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .title {
+    font-size: 40px;
+  }
 }
 
 .titleAndButtonWrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   max-width: 800px;
   gap: 20px;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .titleAndButtonWrapper {
+    justify-content: space-between;
+    gap: 0px;
+  }
 }
 
 .subtitle {
@@ -252,23 +116,18 @@
   font-weight: 500;
   color: var(--gold-color);
   text-align: center;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
   .subtitle {
-    font-size: 28px;
-  }
-  .title {
-    font-size: 34px;
+    display: none;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .subtitle {
-    font-size: 26px;
-  }
   .title {
-    font-size: 30px;
+    font-size: 50px;
   }
 }
 
@@ -301,20 +160,20 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .buttonHome {
-    width: 160px;
+    width: 120px;
     height: 42px;
     padding: 15px 20px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.5;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .buttonHome {
-    width: 175px;
-    height: 56px;
-    font-size: 28px;
-    padding: 15px 60px;
+    width: 130px;
+    height: 46px;
+    font-size: 22px;
+    padding: 15px 20px;
   }
 }
 

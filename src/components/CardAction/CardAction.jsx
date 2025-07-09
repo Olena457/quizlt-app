@@ -1,6 +1,6 @@
 import css from './CardAction.module.css';
-import { useSelector } from 'react-redux'; // Імпортуємо useSelector для доступу до стану Redux
-import { selectUser } from '../../redux/auth/selectorsAuth'; // Імпортуємо селектор для отримання поточного користувача
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../redux/auth/selectorsAuth';
 
 const CardAction = ({ card, onDelete, onEdit }) => {
   const currentUser = useSelector(selectUser);
@@ -18,10 +18,10 @@ const CardAction = ({ card, onDelete, onEdit }) => {
   return (
     <div className={css.actions}>
       <button onClick={() => onEdit(card)} className={css.edit}>
-        ✏️ edit
+        Edit
       </button>
       <button onClick={() => onDelete(card)} className={css.delete}>
-        🗑 delete
+        Delete
       </button>
     </div>
   );

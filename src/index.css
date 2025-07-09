@@ -14,12 +14,19 @@
   --button-hover-color: #328fa0;
   --light-gray-color: rgba(247, 246, 248, 0.85);
   --form-color: #cdeeee;
+  --title-gradient: linear-gradient(
+    135deg,
+    #6e5c2f,
+    #c8b26d,
+    #f0e68c,
+    #c8b26d,
+    #6e5c2f
+  );
   --linear-gradient-color: linear-gradient(135deg, #181a1d, #2e8894);
   --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   --transition: 0.5s ease-in-out;
+  --swiper-navigation-color: #c8b26d;
   --background-color-transition: var(--background-color);
-  /* --accent--color: #1f949b; */
-  /* --secondary-color: #1aabae; */
 }
 *::before,
 *::after {
@@ -28,12 +35,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-style: normal;
   background: var(--linear-gradient-color);
-  /* background-image: url('../../assets/images/start.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
 }
 
 h1,

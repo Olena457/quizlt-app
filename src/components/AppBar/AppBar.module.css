@@ -1,14 +1,11 @@
 .container {
   display: flex;
   width: 100%;
-  /* padding: 0 16px; */
 }
 
 .header {
   width: 100%;
   position: relative;
-
-  /* max-width: 1400px; */
   margin-left: auto;
   margin-right: auto;
   justify-content: space-evenly;
@@ -16,7 +13,6 @@
   display: flex;
   background: linear-gradient(135deg, #181a1d, #2e8894);
   padding: 20px 10px;
-  /* justify-content: center; */
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom: 0.5px solid var(--gold-color);
@@ -34,7 +30,6 @@
   .header {
     padding: 10px 70px;
     align-items: anchor-center;
-    /* align-items: center; */
     justify-content: space-between;
   }
 }
@@ -49,11 +44,15 @@
   display: flex;
   align-items: center;
   padding: 5px 0px 0px 25px;
-  /* padding: 8px 0px 0px 10px; */
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
+.buttonLogout :hover,
+.buttonLogout :focus {
+  transform: scale(1.2);
+}
+
 @media screen and (min-width: 425px) {
   .buttonLogout {
     padding-left: 90px;
@@ -65,28 +64,9 @@
   }
 }
 
-/* .logoutText {
-  display: inline-block;
-  text-shadow: 1px 1px 2px black, 0 0 1em #115e95, 0 0 0.2em #1f9596;
-  color: var(--white-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  text-decoration: none;
-} */
 .img.logOutIcon {
   width: 45px;
   height: 45px;
   cursor: pointer;
   object-fit: contain;
 }
-
-.logOutIcon :hover,
-.logOutIcon :focus {
-  transform: scale(1.2);
-}
-/* @media screen and (min-width: 1025px) {
-  .img.logOutIcon {
-    width: 80px;
-    height: 80px;
-  }
-} */

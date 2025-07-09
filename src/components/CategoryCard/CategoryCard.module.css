@@ -23,10 +23,7 @@
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
-/* .containerButton:hover {
-  background-color: var(--hover-color);
-  transform: scale(1.03);
-} */
+
 .buttonQuestion {
   display: block;
   color: var(--black-color);
@@ -34,16 +31,9 @@
   border-radius: 200px;
   background-color: var(--white-color);
   border: 2px solid #999;
-  /* border: 2px solid var(--gray-color); */
   min-width: 250px;
 }
-/* .buttonQuestion:hover, */
-/* .buttonQuestion:focus,
-.buttonQuestion:active {
-  border: 1px solid var(--super-light-color);
-  background-color: rgba(204, 204, 204, 1);
-  color: var(--gray-color);
-} */
+
 .containerBtnNext {
   display: flex;
   justify-content: flex-end;

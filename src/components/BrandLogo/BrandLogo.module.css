@@ -12,8 +12,9 @@
 
 .title {
   font-size: 24px;
+  font-weight: bold;
+  color: transparent;
   color: var(--gold-color);
-  font-weight: 600;
   text-shadow: 1px 1px 2px black, 0 0 1em #115e95, 0 0 0.2em #1f9596;
   transition: color var(--transition), text-shadow var(--transition);
 }
@@ -28,7 +29,6 @@
 @media screen and (min-width: 1025px) {
   .title {
     font-size: 28px;
-    font-weight: 500;
   }
 }
 .title.active,

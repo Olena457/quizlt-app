@@ -2,8 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCube, Navigation } from 'swiper/modules';
 import androidImg from '../../assets/images/android.jpg';
 import planetImg from '../../assets/images/planet.jpg';
-import youngImg from '../../assets/images/young.jpg';
-import scienceImg from '../../assets/images/science.jpg';
+import wildImg from '../../assets/images/wild.jpg';
+import dnaImg from '../../assets/images/dna.jpg';
 import 'swiper/css';
 import 'swiper/css/effect-cube';
 import 'swiper/css/navigation';
@@ -33,10 +33,10 @@ const CubeGallery = () => {
         <img src={androidImg} alt="Side 2" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={scienceImg} alt="Side 3" />
+        <img src={dnaImg} alt="Side 3" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={youngImg} alt="Side 4" />
+        <img src={wildImg} alt="Side 4" />
       </SwiperSlide>
     </Swiper>
   );
