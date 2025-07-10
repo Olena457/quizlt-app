@@ -38,7 +38,6 @@ const BonusPage = () => {
       <div className={css.bonusQuiz}>
         <h1 className={css.title}>
           Your bonus fact!&nbsp;
-          {/* <br /> */}
           Did you know this?
         </h1>
         {loading && <p className={css.loading}>Loading fact...</p>}

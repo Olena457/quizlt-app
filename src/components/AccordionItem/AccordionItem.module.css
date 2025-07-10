@@ -1,0 +1,65 @@
+.accordionItem {
+  border-top: 1px solid var(--gold-color);
+  border-radius: 0;
+  padding: 5px 15px;
+  background: linear-gradient(90deg, #181a1d, #2e8894);
+  box-shadow: none;
+  margin: 0;
+}
+
+.titleButton {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gold-color);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 12px 0;
+}
+
+.titleButton:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 4px rgba(76, 241, 241, 0.7);
+}
+
+.ruleDescription {
+  font-size: 16px;
+  color: var(--gold-color);
+  margin-top: 8px;
+  padding-left: 12px;
+  animation: fadeIn 0.3s ease;
+  border-left: 2px solid var(--gold-color);
+}
+/* .panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s ease;
+}
+
+.open {
+  max-height: 200px;
+} */
+.panel {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  overflow: hidden;
+  transition: max-height 1.5s ease, opacity 0.8s ease, transform 0.8s ease;
+}
+
+.open {
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+}
+.accordionItem:first-child {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.accordionItem:last-child {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
