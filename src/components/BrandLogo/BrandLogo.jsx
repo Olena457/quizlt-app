@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import quizletGame from '../../assets/images/quizlet.png';
+import cupImg from '../../assets/icons/cup.svg';
+import photoImg from '../../assets/images/photo.png';
 import css from './BrandLogo.module.css';
 
 const BrandLogo = () => {
@@ -9,12 +10,13 @@ const BrandLogo = () => {
         <h2 className={css.title}>Quizlet</h2>
       </NavLink>
       <div className={css.logoContainer}>
+        <img src={photoImg} alt="background" className={css.pngLayer} />
         <img
-          src={quizletGame}
-          alt="quizlet"
-          width="20"
-          height="20"
-          className={css.logo}
+          src={cupImg}
+          alt="cup"
+          width={40}
+          height={40}
+          className={css.svgLayer}
         />
       </div>
     </div>

@@ -16,31 +16,37 @@
   border: none;
   cursor: pointer;
   text-align: left;
-  padding: 12px 0;
+  padding: 5px 0 0 15px;
 }
 
 .titleButton:hover {
   color: var(--accent-color);
   text-shadow: 0 0 4px rgba(76, 241, 241, 0.7);
 }
-
+@media screen and (min-width: 1025px) {
+  .titleButton {
+    display: flex;
+    justify-content: center;
+    font-size: 19px;
+    padding: 5px 5px 5px 15px;
+  }
+}
 .ruleDescription {
   font-size: 16px;
   color: var(--gold-color);
-  margin-top: 8px;
+  margin: 4px 0px;
   padding-left: 12px;
   animation: fadeIn 0.3s ease;
   border-left: 2px solid var(--gold-color);
 }
-/* .panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 1.5s ease;
+
+@media screen and (min-width: 1025px) {
+  .ruleDescription {
+    font-size: 18px;
+    margin: 4px 0px 4px 130px;
+  }
 }
 
-.open {
-  max-height: 200px;
-} */
 .panel {
   max-height: 0;
   opacity: 0;

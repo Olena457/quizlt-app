@@ -22,6 +22,11 @@
   color: var(--gold-color);
   margin-bottom: 10px;
   text-align: center;
+  background-image: var(--title-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .questionCount {
   color: var(--super-light-color);

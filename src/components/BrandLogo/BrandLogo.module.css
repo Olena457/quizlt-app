@@ -4,13 +4,36 @@
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (min-width: 1025px) {
+/* @media screen and (min-width: 1025px) {
   .brand {
     gap: 10px;
   }
-}
-
+} */
 .title {
+  font-size: 28px;
+  font-weight: bolder;
+  background-image: var(--title-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: transform 0.3s ease;
+}
+@media screen and (min-width: 375px) {
+  .title {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .title {
+    font-size: 40px;
+  }
+}
+.title:focus,
+.title:hover {
+  transform: scale(1.1);
+}
+/* .title {
   font-size: 24px;
   font-weight: bold;
   color: transparent;
@@ -37,15 +60,51 @@
   position: relative;
   color: var(--accent-color);
   text-shadow: 1px 1px 2px black, 0 0 0.5em #c8b26d, 0 0 0.2em #f4e2a9;
-}
+} */
 .logoContainer {
   display: flex;
   align-items: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
   gap: 8px;
 }
 @media screen and (min-width: 768px) {
   .logoContainer {
     gap: 10px;
+  }
+}
+.logoContainer {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+/* Фоновий PNG */
+.pngLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* SVG поверх PNG */
+.svgLayer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .logoContainer {
+    width: 75px;
+    height: 75px;
   }
 }
 

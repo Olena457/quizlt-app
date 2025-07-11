@@ -1,97 +1,3 @@
-/* .loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-   
-
-.spinner {
-  width: 70px;
-  height: 70px;
-  border: 5px solid #00eeff;
-  border-top-color: #115e95;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-} */
-/* .skeletonWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  background-color: rgba(249, 249, 249, 0.55);
-}
-
-.navSkeleton {
-  display: flex;
-  gap: 12px;
-}
-
-.navItem {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  background-color: rgba(112, 112, 112, 0.55);
-  position: relative;
-  overflow: hidden;
-}
-
-.headlineSkeleton {
-  width: 60%;
-  height: 20px;
-  border-radius: 10px;
-  background-color: rgba(112, 112, 112, 0.55);
-  position: relative;
-  overflow: hidden;
-}
-
-.contentSkeleton .line {
-  height: 14px;
-  width: 100%;
-  border-radius: 7px;
-  background-color: rgba(112, 112, 112, 0.55);
-  margin-bottom: 8px;
-  position: relative;
-  overflow: hidden;
-}
-
-.line.short {
-  width: 70%;
-}
-
-.navItem::after,
-.headlineSkeleton::after,
-.contentSkeleton .line::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -150px;
-  height: 100%;
-  width: 150px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.6),
-    transparent
-  );
-  animation: shimmer 1.5s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-150px);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-} */
-/* Wrapper */
 .skeletonWrapper {
   display: flex;
   flex-direction: column;
@@ -101,8 +7,7 @@
   min-height: 100vh;
   box-sizing: border-box;
 }
-
-/* Навігація */
+/* navigation */
 .navSkeleton {
   display: flex;
   gap: 12px;
@@ -118,7 +23,7 @@
   overflow: hidden;
 }
 
-/* Заголовок */
+/* title */
 .headlineSkeleton {
   width: 60%;
   height: 20px;
@@ -129,7 +34,7 @@
   overflow: hidden;
 }
 
-/* Картинка */
+/* container*/
 .thumbnail {
   width: 100%;
   max-width: 800px;
@@ -141,7 +46,7 @@
   overflow: hidden;
 }
 
-/* Контент */
+/* content */
 .textBlock {
   display: flex;
   flex-direction: column;
@@ -179,7 +84,7 @@
   width: 70%;
 }
 
-/* Анімація shimmer */
+/*anamation  shimmer */
 .navItem::after,
 .headlineSkeleton::after,
 .thumbnail::after,
@@ -210,7 +115,6 @@
   }
 }
 
-/* Адаптивність */
 @media (max-width: 768px) {
   .headlineSkeleton {
     width: 80%;
