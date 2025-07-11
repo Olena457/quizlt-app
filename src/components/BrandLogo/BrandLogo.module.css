@@ -33,34 +33,7 @@
 .title:hover {
   transform: scale(1.1);
 }
-/* .title {
-  font-size: 24px;
-  font-weight: bold;
-  color: transparent;
-  color: var(--gold-color);
-  text-shadow: 1px 1px 2px black, 0 0 1em #115e95, 0 0 0.2em #1f9596;
-  transition: color var(--transition), text-shadow var(--transition);
-}
 
-@media screen and (min-width: 768px) {
-  .title {
-    font-size: 26px;
-    white-space: nowrap;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .title {
-    font-size: 28px;
-  }
-}
-.title.active,
-.title:focus,
-.title:hover {
-  position: relative;
-  color: var(--accent-color);
-  text-shadow: 1px 1px 2px black, 0 0 0.5em #c8b26d, 0 0 0.2em #f4e2a9;
-} */
 .logoContainer {
   display: flex;
   align-items: center;

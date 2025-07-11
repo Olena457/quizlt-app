@@ -51,6 +51,7 @@
   flex-direction: column;
   gap: 10px;
 }
+
 .descriptionMain {
   display: flex;
   align-items: flex-end;
@@ -73,6 +74,8 @@
   font-size: 16px;
   font-weight: 500;
   color: var(--gold-color);
+  gap: 5px;
+
   margin-left: 15px;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -81,9 +84,12 @@
     font-weight: 600;
     color: var(--gold-color);
   }
+  .descriptionMain,
   .description {
     font-size: 20px;
     font-weight: 500;
+    gap: 6px;
+
     margin-left: 0;
   }
 }
@@ -93,9 +99,11 @@
     font-weight: 700;
     color: var(--gold-color);
   }
+  .descriptionMain,
   .description {
     font-size: 24px;
     font-weight: 600;
+    gap: 8px;
     margin-left: 0;
   }
 }

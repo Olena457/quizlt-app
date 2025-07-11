@@ -83,8 +83,8 @@ const MobileMenu = () => {
                 >
                   Edit Quize
                 </NavLink>
-
-                <NavLink
+*/}
+                {/* <NavLink
                   to={`/players/${player.id}`}
                   className={css.link}
                   onClick={() => setIsOpen(false)}

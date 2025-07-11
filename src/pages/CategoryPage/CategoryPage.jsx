@@ -86,7 +86,7 @@ const CategoryPage = () => {
         <div className={css.gameContainerQuiz}>
           <div className={css.title}>Select Category</div>
 
-          {loading && <p>Loading categories...</p>}
+          {loading && <p className={css.loading}>Loading categories...</p>}
           {error && <p className={css.errorMessage}>Error: {error}</p>}
           {!loading && !error && categoriesFromRedux.length === 0 && (
             <p className={css.titleError}>

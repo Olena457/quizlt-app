@@ -1,7 +1,8 @@
-// src/pages/BonusFactsPage/BonusFactsPage.jsx
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import cupImg from '../../assets/icons/cup.svg';
+
 import css from './BonusPage.module.css';
 
 const BonusPage = () => {
@@ -36,13 +37,25 @@ const BonusPage = () => {
   return (
     <div className={css.bonusFactsContainer}>
       <div className={css.bonusQuiz}>
-        <h1 className={css.title}>
-          Your bonus fact!&nbsp;
-          Did you know this?
-        </h1>
+        <div className={css.titleWithLogo}>
+          <div className={css.logoContainer}>
+            <img
+              src={cupImg}
+              alt="cup"
+              width={30}
+              height={30}
+              className={css.svgLayer}
+            />
+          </div>
+          <h1 className={css.title}>
+            Your bonus fact!&nbsp; Did you know this?
+          </h1>
+        </div>
         {loading && <p className={css.loading}>Loading fact...</p>}
         {error && <p className={css.error}>Error: {error}</p>}
-        {!loading && !error && !fact && <p>Failed to load fact.Try later.</p>}
+        {!loading && !error && !fact && (
+          <p className={css.error}>Failed to load fact.Try later.</p>
+        )}
         {!loading && !error && fact && <p className={css.factText}>{fact}</p>}
         <div className="bonusQuiz">
           <button

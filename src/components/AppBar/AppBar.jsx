@@ -53,7 +53,6 @@ const AppBar = ({ id, player, category }) => {
                 alt="logout icon"
                 className={css.logoutIcon}
               />
-              {/* <span className={css.logoutText}>Log out</span> */}
             </button>
           </div>
         )}
