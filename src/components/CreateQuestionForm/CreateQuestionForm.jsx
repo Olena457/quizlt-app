@@ -125,7 +125,8 @@ const CreateQuestionForm = () => {
     <form onSubmit={handleSubmit} className={css.formContainer}>
       <h2 className={css.title}>{id ? 'Edit Question' : 'Create Question'}</h2>
       <h4 className={css.subtitleContainer}>
-        Category: <span className={css.categoryDisplay}>{urlCategory}</span>
+        Category:&nbsp;
+        <span className={css.categoryDisplay}>{urlCategory}</span>
       </h4>
       <label className={css.label}>
         Question:

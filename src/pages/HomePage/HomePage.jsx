@@ -29,7 +29,6 @@ const HomePage = () => {
               </NavLink>
             </div>
           </div>
-          <h3 className={css.subtitle}>Dive into the quiz.Play and win!</h3>
         </div>
         <div className="cubeBlock">
           <CubeGallery />

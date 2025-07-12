@@ -33,7 +33,6 @@
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  margin-bottom: 15px;
   color: var(--gold-color);
 }
 .wrapperCard {
@@ -60,4 +59,65 @@
   justify-content: flex-end;
   margin-top: auto;
   padding: 20px;
+}
+.backButton {
+  position: fixed;
+  bottom: 20px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  right: 50px;
+  z-index: 50;
+  width: 120px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  border-radius: 200px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--gold-color);
+  background: var(--linear-gradient-color);
+  border: 2px solid var(--gold-color);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.backButton:hover,
+.backButton:focus {
+  border: 2px solid var(--hover-color);
+  box-shadow: -15px 0 20px -5px rgba(76, 241, 241, 0.7),
+    15px 0 20px -5px rgba(76, 241, 241, 0.7),
+    0 15px 20px -5px rgba(76, 241, 241, 0.7);
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .backButton {
+    width: 150px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .backButton {
+    width: 173px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 15px 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
 }

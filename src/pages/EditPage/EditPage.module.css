@@ -1,24 +1,96 @@
 .editPage {
   display: flex;
   justify-content: center;
-  padding: 50px 10px 20px 10px;
+  padding: 0px 10px 20px 10px;
   height: 100vh;
   width: 100%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .editPage {
-    padding: 20px 40px 40px 40px;
+    padding: 0px 40px 40px 40px;
   }
 }
 @media screen and (min-width: 1025px) {
   .editPage {
-    padding: 15px 50px 15px 50px;
+    padding: 5px 50px 15px 50px;
   }
 }
 .editForm {
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 500px;
+  max-width: 700px;
+}
+.container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.backButton {
+  display: flex;
+  order: 1;
+  flex-grow: 0;
+  z-index: 50;
+  width: 120px;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  border-radius: 200px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--gold-color);
+  background: var(--linear-gradient-color);
+  border: 2px solid var(--gold-color);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.backButton:hover,
+.backButton:focus {
+  border: 2px solid var(--hover-color);
+  box-shadow: -15px 0 20px -5px rgba(76, 241, 241, 0.7),
+    15px 0 20px -5px rgba(76, 241, 241, 0.7),
+    0 15px 20px -5px rgba(76, 241, 241, 0.7);
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .backButton {
+    width: 150px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .backButton {
+    width: 173px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 15px 40px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
 }
