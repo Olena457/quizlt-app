@@ -32,10 +32,19 @@
 *::after {
   box-sizing: border-box;
 }
-body {
+/* body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   background: var(--linear-gradient-color);
+} */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background-image: url('./assets/icons/hex.svg'),
+    linear-gradient(135deg, #181a1d, #2e8894);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 h1,

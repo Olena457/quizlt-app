@@ -22,6 +22,9 @@ const ResultPage = () => {
   const totalQuestions = location.state?.totalQuestions ?? null;
   const timeTaken = location.state?.timeTaken ?? null;
   const category = location.state?.category || 'Unknown Category';
+  const minutes = Math.floor(timeTaken / 60);
+  const seconds = timeTaken % 60;
+  const formattedTime = `${minutes}m ${seconds}s.`;
 
   if (
     correctAnswersCount === null ||
@@ -50,7 +53,6 @@ const ResultPage = () => {
     <div className={css.containerResult}>
       <QuizContainer>
         <div className={css.title}>Quiz Results for {userName}</div>
-
         <div className={css.descriptionMain}>
           <span className={css.inlineBlock}>
             <img
@@ -100,7 +102,7 @@ const ResultPage = () => {
                 className={css.icon}
               />
             </span>
-            Time : {timeTaken} seconds.
+            Time : {formattedTime}
           </div>
 
           <div className={css.description}>

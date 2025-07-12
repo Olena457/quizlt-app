@@ -1,6 +1,7 @@
 import { memo } from 'react';
 // import avatarUser from '../../assets/icons/avatarUser.svg';
 import css from './PlayerList.module.css';
+import cupImg from '../../assets/icons/cup.svg';
 
 const PlayerList = ({ players }) => {
   return (
@@ -8,9 +9,21 @@ const PlayerList = ({ players }) => {
       {players.map(player => (
         <div key={player.userId} className={css.participantCard}>
           <div className={css.participantInfo}>
-            <p className={css.participantName}>
-              Name: {player.userName || 'Unknown'}
-            </p>
+            <div className={css.titleWithLogo}>
+              <div className={css.logoContainer}>
+                <img
+                  src={cupImg}
+                  alt="cup"
+                  width={20}
+                  height={20}
+                  className={css.svgLayer}
+                />
+              </div>
+              <p className={css.participantName}>
+                Name: {player.userName || 'Unknown'}
+              </p>
+            </div>
+
             <p className={css.participantCategory}>
               Category: {player.category}
             </p>

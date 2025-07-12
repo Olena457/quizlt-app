@@ -155,7 +155,6 @@
   height: 40px;
 }
 
-/* Фоновий PNG */
 .pngLayer {
   position: absolute;
   top: 0;
@@ -165,7 +164,6 @@
   z-index: 1;
 }
 
-/* SVG поверх PNG */
 .svgLayer {
   position: absolute;
   top: 50%;
@@ -175,13 +173,6 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
-
-/* @media screen and (min-width: 768px) {
-  .logoContainer {
-    width: 75px;
-    height: 75px;
-  }
-} */
 
 .logo {
   display: block;
@@ -196,12 +187,7 @@
 .logo:focus {
   transform: scale(1.2);
 }
-/* @media screen and (min-width: 768px) {
-  .logo {
-    width: 55px;
-    height: 55px;
-  }
-} */
+
 .buttonHome {
   width: 90px;
   height: 32px;
@@ -214,10 +200,9 @@
   font-weight: 500;
   line-height: 1;
   white-space: nowrap;
-  background: linear-gradient(180deg, var(--accent--color), var(--hover-color));
+  background: linear-gradient(135deg, #181a1d, #2e8894);
   color: var(--gold-color);
-  border: 2px solid var(--gold-color);
-  transition: background-color var(--transition), color var(--transition);
+  border: 1px solid var(--gold-color);
 }
 
 .buttonHome:hover,
@@ -242,8 +227,8 @@
 @media screen and (min-width: 1025px) {
   .buttonHome {
     width: 130px;
-    height: 46px;
     font-size: 22px;
+    height: 46px;
     padding: 15px 20px;
   }
 }
