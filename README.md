@@ -10,17 +10,33 @@
 
 ---
 
-## 📷 Gallery
+## Gallery
 
-<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
-  <img src="./src/assets/images/home.jpg" width="30%" height="120px" alt="home"/>
-  <img src="./src/assets/images/start.jpg" width="30%" height="120px" alt="start"/>
-  <img src="./src/assets/images/category.jpg" width="30%" height="120px" alt="category"/>
-  <img src="./src/assets/images/game.jpg" width="30%" height="120px" alt="game"/>
-  <img src="./src/assets/images/result.jpg" width="30%" height="120px" alt="result"/>
-  <img src="./src/assets/images/play.jpg" width="30%" height="120px" alt="view Players"/>
-  <img src="./src/assets/images/form.jpg" width="30%" height="120px" alt="create/Edit Question"/>
-  <img src="./src/assets/images/bonus.jpg" width="30%" height="120px" alt="bonus Fact"/>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/home.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Home" />
+  </div>
+  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/start.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Start" />
+  </div>
+  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/category.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Category" />
+  </div>
+  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/game.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Game" />
+  </div>
+  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/result.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Result" />
+  </div>
+  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/play.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="View Players" />
+  </div>
+  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/form.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Create/Edit Question" />
+  </div>
+  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/bonus.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Bonus Fact" />
+  </div>
 </div>
 
 ---
@@ -47,7 +63,7 @@
 
 ---
 
-## 🛠️ Technologies & Libraries
+## Technologies & Libraries
 
 - **React & React Router** – app structure and routing
 - **Firebase** – user authentication and data base
