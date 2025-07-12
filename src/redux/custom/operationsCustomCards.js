@@ -15,13 +15,11 @@ export const addCustomCard = createAsyncThunk(
       //  customCards/{categoryName}/{_ID_question}
       const cardsRef = ref(database, `customCards/${category}`);
       const newRef = push(cardsRef);
-
       const dataToSave = {
         question,
         options,
         correctAnswers,
         createdBy: userId,
-        // createdAt: new Date().toISOString(), //  ISO fomat date
       };
 
       await set(newRef, dataToSave);
@@ -37,7 +35,7 @@ export const editCustomCard = createAsyncThunk(
   async ({ category, id, updatedCard }, thunkAPI) => {
     try {
       const refToCard = ref(database, `customCards/${category}/${id}`);
-      // updatedCard { question, options, correctAnswer, createdBy }
+      // updatedCard  question, options, correctAnswer
       await update(refToCard, updatedCard);
       return { category, id, ...updatedCard };
     } catch (error) {

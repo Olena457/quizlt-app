@@ -18,7 +18,6 @@ import CategoryCard from '../../components/CategoryCard/CategoryCard.jsx';
 import QuizeContainer from '../../components/QuizeContainer/QuizeContainer.jsx';
 import ConfirmModal from '../../components/ConfirmModal/ConfirmModal.jsx';
 import secretImg from '../../assets/icons/secret.svg';
-
 import css from './GamePage.module.css';
 
 const GamePage = () => {
@@ -27,7 +26,6 @@ const GamePage = () => {
   const location = useLocation();
 
   const selectedCategory = location.state?.categoryName;
-
   const filteredQuestions = useSelector(selectSelectedCategoryQuestions);
   const loading = useSelector(selectCategoriesLoading);
   const error = useSelector(selectCategoriesError);
@@ -36,7 +34,6 @@ const GamePage = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [startTime, setStartTime] = useState(null);
-
   const [showModal, setShowModal] = useState(false);
   const [questionToDelete, setQuestionToDelete] = useState(null);
 

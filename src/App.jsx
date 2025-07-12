@@ -4,35 +4,37 @@ import { Suspense, lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+
 import { auth } from './firebase/firebaseConfig.js';
 import { refreshUser } from './redux/auth/operationsAuth.js';
 import { selectIsRefreshing } from './redux/auth/selectorsAuth.js';
 
 import Loader from './components/Loader/Loader.jsx';
 import Layout from './components/Layout/Layout.jsx';
+
 import PrivateRoute from './components/PrivateRoute.jsx';
 import CategoryPage from './pages/CategoryPage/CategoryPage.jsx';
 import './App.css';
-
 const CreateQuestionPage = lazy(() =>
   import('./pages/CreateQuestionPage/CreateQuestionPage.jsx')
 );
-const EditPage = lazy(() => import('./pages/EditPage/EditPage.jsx'));
 const HomePage = lazy(() => import('./pages/HomePage/HomePage.jsx'));
-const StartPage = lazy(() => import('./pages/StartPage/StartPage.jsx'));
-const GamePage = lazy(() => import('./pages/GamePage/GamePage.jsx'));
-const ResultPage = lazy(() => import('./pages/ResultPage/ResultPage.jsx'));
 const RegistrationPage = lazy(() =>
   import('./pages/RegistrationPage/RegistrationPage.jsx')
 );
 const LogInPage = lazy(() => import('./pages/LogInPage/LogInPage.jsx'));
-const NotFoundPage = lazy(() =>
-  import('./pages/NotFoundPage/NotFoundPage.jsx')
-);
+const StartPage = lazy(() => import('./pages/StartPage/StartPage.jsx'));
+const GamePage = lazy(() => import('./pages/GamePage/GamePage.jsx'));
+const ResultPage = lazy(() => import('./pages/ResultPage/ResultPage.jsx'));
+const EditPage = lazy(() => import('./pages/EditPage/EditPage.jsx'));
 const ViewPlayersPage = lazy(() =>
   import('./pages/ViewPlayersPage/ViewPlayersPage.jsx')
 );
 const BonusPage = lazy(() => import('./pages/BonusPage/BonusPage.jsx'));
+const NotFoundPage = lazy(() =>
+  import('./pages/NotFoundPage/NotFoundPage.jsx')
+);
+
 function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
@@ -65,7 +67,10 @@ function App() {
             <Route
               path="players/:id"
               element={
-                <PrivateRoute redirectTo="/" component={<ViewPlayersPage />} />
+                <PrivateRoute
+                  redirectTo="/start"
+                  component={<ViewPlayersPage />}
+                />
               }
             />
 
@@ -73,19 +78,21 @@ function App() {
               path="/create-question/:category"
               element={
                 <PrivateRoute
-                  redirectTo="/"
+                  redirectTo="/start"
                   component={<CreateQuestionPage />}
                 />
               }
             />
             <Route
               path="/edit-question/:category/:id"
-              element={<PrivateRoute redirectTo="/" component={<EditPage />} />}
+              element={
+                <PrivateRoute redirectTo="/start" component={<EditPage />} />
+              }
             />
             <Route
               path="/bonus"
               element={
-                <PrivateRoute redirectTo="/" component={<BonusPage />} />
+                <PrivateRoute redirectTo="/start" component={<BonusPage />} />
               }
             />
             <Route path="*" element={<NotFoundPage />} />

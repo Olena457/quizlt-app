@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import CubeGallery from '../../components/CubeGallery/CubeGallery.jsx';
-import css from './HomePage.module.css';
 import cupImg from '../../assets/icons/cup.svg';
 import photoImg from '../../assets/images/photo.png';
+import css from './HomePage.module.css';
 
 const HomePage = () => {
   return (

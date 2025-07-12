@@ -10,7 +10,6 @@ const Loader = () => {
       </div>
 
       <div className={css.headlineSkeleton}></div>
-
       <div className={css.thumbnail}></div>
 
       <div className={css.textBlock}>

@@ -1,7 +1,6 @@
 import { memo } from 'react';
-// import avatarUser from '../../assets/icons/avatarUser.svg';
-import css from './PlayerList.module.css';
 import cupImg from '../../assets/icons/cup.svg';
+import css from './PlayerList.module.css';
 
 const PlayerList = ({ players }) => {
   return (
@@ -31,10 +30,7 @@ const PlayerList = ({ players }) => {
               Total Questions: {player.totalQuestions}
             </p>
             <p className={css.participantScore}>Score: {player.score}</p>
-            {/* <p className={css.participantAccuracy}>
-              Accuracy:{' '}
-              {((player.score / player.totalQuestions) * 100).toFixed(1)}%
-            </p> */}
+
             {player.timeTaken && (
               <p className={css.participantTime}>
                 Time: {player.timeTaken} seconds

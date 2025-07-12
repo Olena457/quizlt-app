@@ -1,25 +1,3 @@
-// import css from './AccordionItem.module.css';
-
-// const AccordionItem = ({ title, description, isOpen, onClick }) => {
-//   return (
-//     <div className={css.accordionItem}>
-//       <button
-//         onClick={onClick}
-//         className={css.titleButton}
-//         aria-expanded={isOpen}
-//         aria-controls={`desc-${title}`}
-//       >
-//         {title}
-//       </button>
-//       {isOpen && (
-//         <p className={css.ruleDescription} id={`desc-${title}`}>
-//           {description}
-//         </p>
-//       )}
-//     </div>
-//   );
-// };
-// export default AccordionItem;
 import css from './AccordionItem.module.css';
 
 const AccordionItem = ({ title, description, isOpen, onClick }) => {

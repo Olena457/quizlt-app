@@ -100,12 +100,6 @@
     gap: 16px;
   }
 }
-/* .checkboxLabel {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 15px;
-  color: var(--button-bgr-color);
-} */
 .choose {
   color: var(--gray-color);
 }

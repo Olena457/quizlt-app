@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth.js';
-import css from './MobileMenu.module.css';
+
 import burgerIcon from '../../assets/icons/burgerIcon.svg';
 import crossIcon from '../../assets/icons/crossIcon.svg';
+import css from './MobileMenu.module.css';
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,34 +64,6 @@ const MobileMenu = () => {
                 >
                   Login
                 </NavLink>
-              </>
-            )}
-
-            {isLoggedIn && (
-              <>
-                {/* <NavLink
-                  to="/create-question"
-                  className={css.link}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Create Quize
-                </NavLink> */}
-
-                {/* <NavLink
-                  to={`/edit-question/${category}/${id}`}
-                  className={css.link}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Edit Quize
-                </NavLink>
-*/}
-                {/* <NavLink
-                  to={`/players/${player.id}`}
-                  className={css.link}
-                  onClick={() => setIsOpen(false)}
-                >
-                  View Players
-                </NavLink> */}
               </>
             )}
           </nav>

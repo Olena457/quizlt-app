@@ -7,6 +7,7 @@ import {
   selectPlayersLoading,
   selectPlayersError,
 } from '../../redux/players/selectotsPlayers.js';
+
 import Loader from '../../components/Loader/Loader.jsx';
 import PlayersList from '../../components/PlayerList/PlayerList.jsx';
 import css from './ViewPlayersPage.module.css';

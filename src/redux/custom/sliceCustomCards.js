@@ -1,14 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import {
   addCustomCard,
   editCustomCard,
   deleteCustomCard,
   fetchCustomCardsByCategory,
-  fetchCustomCardById, // <--- Додано імпорт нового Thunk'а
+  fetchCustomCardById,
 } from './operationsCustomCards';
 
 const initialState = {
-  data: {}, // { [category]: { [cardId]: cardData } }
+  data: {}, // {[category]: { [cardId]: cardData } }
   selectedCustomCard: null, // edit card data
   loading: false,
   error: null,
@@ -57,7 +58,6 @@ const slice = createSlice({
         state.error = action.payload;
       })
       .addCase(addCustomCard.pending, state => {
-        // Додайте pending
         state.loading = true;
         state.error = null;
       })
@@ -66,7 +66,6 @@ const slice = createSlice({
       .addCase(editCustomCard.fulfilled, (state, action) => {
         const { id, category, ...updatedCardData } = action.payload;
         if (state.data[category] && state.data[category][id]) {
-          //  ID
           state.data[category][id] = {
             ...state.data[category][id],
             ...updatedCardData,

@@ -10,10 +10,12 @@ const handlePending = state => {
   state.loading = true;
   state.error = null;
 };
+
 const handleRejected = (state, action) => {
   state.loading = false;
   state.error = action.payload;
 };
+
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
@@ -23,6 +25,7 @@ const authSlice = createSlice({
     loading: false,
     error: null,
   },
+
   extraReducers: builder => {
     builder
       .addCase(registerUser.pending, handlePending)

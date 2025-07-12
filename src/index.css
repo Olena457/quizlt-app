@@ -32,11 +32,7 @@
 *::after {
   box-sizing: border-box;
 }
-/* body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  background: var(--linear-gradient-color);
-} */
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;

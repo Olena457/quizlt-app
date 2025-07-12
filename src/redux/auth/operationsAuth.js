@@ -1,11 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { auth, database } from '../../firebase/firebaseConfig.js';
+import { get, ref, set } from 'firebase/database';
+
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
 } from 'firebase/auth';
-import { get, ref, set } from 'firebase/database';
 
 //____________________ Register a user
 export const registerUser = createAsyncThunk(
@@ -28,8 +29,6 @@ export const registerUser = createAsyncThunk(
           email: user.email,
           name: name,
           createdAt: new Date().toISOString(),
-          // favorites: JSON.stringify([]),
-          favorites: {},
         });
       }
 

@@ -72,7 +72,6 @@ const StartPage = () => {
               />
             ))}
           </div>
-
           <button onClick={handlePlayClick} className={css.playButton}>
             Play Now
           </button>

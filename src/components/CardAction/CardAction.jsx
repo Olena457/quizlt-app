@@ -1,6 +1,6 @@
-import css from './CardAction.module.css';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../redux/auth/selectorsAuth';
+import css from './CardAction.module.css';
 
 const CardAction = ({ card, onDelete, onEdit }) => {
   const currentUser = useSelector(selectUser);

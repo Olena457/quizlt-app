@@ -6,8 +6,6 @@ import { logoutUser } from '../../redux/auth/operationsAuth.js';
 import Navigation from '../Navigation/Navigation.jsx';
 import MobileMenu from '../MobileMenu/MobileMenu.jsx';
 import Brandlogo from '../BrandLogo/BrandLogo.jsx';
-// import logOutIcon from '../../assets/icons/logOutIcon.svg';
-
 import css from './AppBar.module.css';
 
 const AppBar = ({ id, player, category }) => {
@@ -47,13 +45,6 @@ const AppBar = ({ id, player, category }) => {
               aria-label="log out"
             >
               logout
-              {/* <img
-                width={40}
-                height={40}
-                src={logOutIcon}
-                alt="logout icon"
-                className={css.logoutIcon}
-              /> */}
             </button>
           </div>
         )}

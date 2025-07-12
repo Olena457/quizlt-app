@@ -7,11 +7,11 @@ import { toast } from 'react-toastify';
 import * as yup from 'yup';
 import clsx from 'clsx';
 import { loginUser } from '../../redux/auth/operationsAuth.js';
-const emailRegExp = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
 import eye from '../../assets/icons/eye.svg';
 import openEye from '../../assets/icons/openEye.svg';
 import css from './SingInForm.module.css';
 
+const emailRegExp = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
 const minPasswordLength = 7;
 const maxPasswordLength = 22;
 

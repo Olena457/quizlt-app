@@ -8,6 +8,7 @@ import {
   editCustomCard,
   fetchCustomCardById,
 } from '../../redux/custom/operationsCustomCards.js';
+
 import {
   selectSelectedCustomCard,
   selectCustomCardsLoading,
@@ -15,7 +16,6 @@ import {
 } from '../../redux/custom/selectorsCustomCards.js';
 
 import { clearSelectedCustomCard } from '../../redux/custom/sliceCustomCards.js';
-
 import { selectUserId } from '../../redux/auth/selectorsAuth.js';
 import css from './CreateQuestionForm.module.css';
 
@@ -30,7 +30,6 @@ const CreateQuestionForm = () => {
   const loading = useSelector(selectCustomCardsLoading);
   const error = useSelector(selectCustomCardsError);
 
-  // const [category, setCategory] = useState(urlCategory || '');
   const [questionText, setQuestionText] = useState('');
   const [option1, setOption1] = useState('');
   const [option2, setOption2] = useState('');

@@ -3,15 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
-import { fetchAllCategoriesData } from '../../redux/categories/operationsCategories.js';
 import {
   selectAllCategories,
   selectCategoriesLoading,
   selectCategoriesError,
 } from '../../redux/categories/selectorsCategories.js';
 
+import { fetchAllCategoriesData } from '../../redux/categories/operationsCategories.js';
 import { selectIsLoggedIn } from '../../redux/auth/selectorsAuth.js';
-
 import CategoryItem from '../../components/CategoryItem/CategoryItem.jsx';
 import css from './CategoryPage.module.css';
 

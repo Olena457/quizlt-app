@@ -9,7 +9,7 @@ const CategoryCard = ({
   isLastQuestion,
   onAnswer,
   onNext,
-  questionData, // This is the data for the question, used for actions
+  questionData, //data for the question
   onEdit,
   onDelete,
 }) => {

@@ -31,9 +31,9 @@ export const fetchQuizzesByCategory = createAsyncThunk(
   'categories/fetchQuizzesByCategory',
   async (categoryName, thunkAPI) => {
     try {
-      const dbRef = ref(database); // Отримайте посилання на корінь бази даних
+      const dbRef = ref(database); //link root data base
 
-      const categoryRef = child(dbRef, `categories/${categoryName}`); // Використовуємо child
+      const categoryRef = child(dbRef, `categories/${categoryName}`); // use child
       const categorySnap = await get(categoryRef);
 
       let officialQuestions = [];
@@ -47,20 +47,20 @@ export const fetchQuizzesByCategory = createAsyncThunk(
         if (quizzes) {
           officialQuestions = Object.entries(quizzes).map(([id, data]) => ({
             id,
-            category: categoryName, // <--- ВАЖЛИВО: ДОДАНО category до офіційних питань
+            category: categoryName,
             ...data,
           }));
         }
       }
 
       // 'customCards' 'customQuestions'
-      const customRef = child(dbRef, `customCards/${categoryName}`); // Використовуємо child
+      const customRef = child(dbRef, `customCards/${categoryName}`);
       const customSnap = await get(customRef);
       const customQuestions = customSnap.exists()
         ? Object.entries(customSnap.val()).map(([id, data]) => ({
             id,
             isCustom: true,
-            category: categoryName, // <--- ВАЖЛИВО: ДОДАНО category до кастомних питань
+            category: categoryName,
             ...data,
           }))
         : [];

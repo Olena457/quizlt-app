@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCube, Navigation } from 'swiper/modules';
-import androidImg from '../../assets/images/android.jpg';
 import planetImg from '../../assets/images/planet.jpg';
-import wildImg from '../../assets/images/wild.jpg';
+import androidImg from '../../assets/images/android.jpg';
 import dnaImg from '../../assets/images/dna.jpg';
+import wildImg from '../../assets/images/wild.jpg';
+
 import 'swiper/css';
 import 'swiper/css/effect-cube';
 import 'swiper/css/navigation';

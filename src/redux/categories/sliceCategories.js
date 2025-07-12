@@ -6,8 +6,8 @@ import {
 
 const initialState = {
   allCategories: [],
-  selectedCategoryData: null, // (title, description)
-  selectedCategoryQuestions: [], // quizz questions for the selected category
+  selectedCategoryData: null, //title, description
+  selectedCategoryQuestions: [], // quizz questions
   loading: false,
   error: null,
 };
@@ -23,7 +23,6 @@ const categoriesSlice = createSlice({
   },
   extraReducers: builder => {
     builder
-      // fetchAllCategoriesData (CategoryPage)
       .addCase(fetchAllCategoriesData.pending, state => {
         state.loading = true;
         state.error = null;
@@ -37,7 +36,7 @@ const categoriesSlice = createSlice({
         state.error = action.payload;
       })
 
-      // Обробка fetchQuizzesByCategory
+      // fetchQuizzesByCategory
       .addCase(fetchQuizzesByCategory.pending, state => {
         state.loading = true;
         state.error = null;
