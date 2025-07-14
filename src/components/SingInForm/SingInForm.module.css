@@ -4,13 +4,22 @@
   max-width: 550px;
   height: 80vh;
   overflow-y: auto;
-  margin: 0 auto;
   padding: 30px 50px;
   border: 2px solid var(--gold-color);
   background-color: var(--form-color);
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6),
     -8px -8px 16px rgba(255, 255, 255, 0.08);
   border-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .container {
+    margin-top: 5px;
+  }
 }
 .container::-webkit-scrollbar {
   width: 8px;
