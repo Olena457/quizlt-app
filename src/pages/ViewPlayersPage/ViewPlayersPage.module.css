@@ -68,12 +68,12 @@
   flex-grow: 0;
   right: 50px;
   z-index: 50;
-  width: 120px;
-  height: 46px;
+  width: 90px;
+  height: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px 20px;
   border-radius: 200px;
   font-size: 14px;
   font-weight: 500;
@@ -94,12 +94,12 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .backButton {
-    width: 150px;
+    width: 120px;
     height: 46px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 40px;
+    padding: 12px 30px;
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -109,13 +109,13 @@
 }
 @media screen and (min-width: 1025px) {
   .backButton {
-    width: 173px;
-    height: 56px;
+    width: 156px;
+    height: 46px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    padding: 15px 40px;
+    padding: 15px 30px;
     flex: none;
     order: 1;
     flex-grow: 0;
