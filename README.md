@@ -12,30 +12,24 @@
 
 ## Gallery
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/home.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Home" />
+<div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/category.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="category" />
   </div>
-  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/start.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Start" />
+  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/game.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="game" />
   </div>
-  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/category.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Category" />
+  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/result.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="result" />
   </div>
-  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/game.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Game" />
+  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/play.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="players" />
   </div>
-  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/result.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Result" />
+  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/form.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt=" question" />
   </div>
-  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/play.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="View Players" />
-  </div>
-  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/form.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Create/Edit Question" />
-  </div>
-  <div style="width: 30%; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/bonus.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Bonus Fact" />
+  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
+    <img src="./src/assets/images/bonus.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="fact" />
   </div>
 </div>
 
