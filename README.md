@@ -12,25 +12,13 @@
 
 ## Gallery
 
-<div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/category.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="category" />
-  </div>
-  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/game.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="game" />
-  </div>
-  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/result.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="result" />
-  </div>
-  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/play.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="players" />
-  </div>
-  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/form.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt=" question" />
-  </div>
-  <div style="width: 23%; height: 130px; overflow: hidden; border-radius: 8px;">
-    <img src="./src/assets/images/bonus.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="fact" />
-  </div>
+<div style="display: flex; flex-wrap: wrap; gap: 15px;">
+    <img src="./src/assets/images/category.jpg "width="23%" height="130px" alt="category" />
+    <img src="./src/assets/images/game.jpg" width="23%" height="130px" alt="game" />
+    <img src="./src/assets/images/result.jpg"  width="23%" height="130px" alt="result" />
+    <img src="./src/assets/images/play.jpg" width="23%" height="130px" alt="players" />
+    <img src="./src/assets/images/form.jpg" width="23%" height="130px" alt=" question" />
+    <img src="./src/assets/images/bonus.jpg" width="23%" height="130px"  alt="fact" />
 </div>
 
 ---
